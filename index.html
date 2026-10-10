@@ -680,11 +680,23 @@ document.querySelector('#about .offline').textContent='When this page is served 
 const map=L.map('map',{zoomControl:false,minZoom:11,maxZoom:19,zoomSnap:0.25,preferCanvas:true});L.control.zoom({position:'topright'}).addTo(map);L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
 const municipalBasemap=L.imageOverlay('milan-municipal-basemap.png',[[45.438,9.14],[45.502,9.224]],{opacity:.92,interactive:false,attribution:'Basemap: Comune di Milano, CTC 2012 (CC BY 4.0)'});
 const useMunicipalBasemap=()=>{if(!map.hasLayer(municipalBasemap)) municipalBasemap.addTo(map)};
-if(location.protocol==='http:'||location.protocol==='https:'){
-  const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
-  let basemapFallback=false;
-  osm.on('tileerror',()=>{if(!basemapFallback){basemapFallback=true;map.removeLayer(osm);useMunicipalBasemap()}});
-}else useMunicipalBasemap();
+/* ---- BASEMAPS: tried in order; after 3 failed tiles the next one is used ---- */
+const CARTO_KEY='cb1_4glx_1_5b335e4039dcabf8d77cca07'; /* <- paste your free CARTO key between the quotes (get one at https://carto.com/basemaps/apikey/). Leave empty to skip CARTO. */
+const BASEMAPS=[];
+if(CARTO_KEY) BASEMAPS.push({url:'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key='+CARTO_KEY,opts:{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, © <a href="https://carto.com/attributions">CARTO</a>'}});
+BASEMAPS.push({url:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',opts:{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}});
+let basemapIndex=-1,basemapLayer=null;
+function nextBasemap(){
+  if(basemapLayer){map.removeLayer(basemapLayer);basemapLayer=null}
+  basemapIndex++;
+  if(basemapIndex>=BASEMAPS.length){useMunicipalBasemap();return}
+  const cfg=BASEMAPS[basemapIndex];
+  const layer=L.tileLayer(cfg.url,cfg.opts).addTo(map);
+  basemapLayer=layer;
+  let errors=0;
+  layer.on('tileerror',()=>{if(basemapLayer===layer&&++errors>=3)nextBasemap()});
+}
+if(location.protocol==='http:'||location.protocol==='https:')nextBasemap();else useMunicipalBasemap();
 const boundary=L.polygon(RING.map(p=>[p[1],p[0]]),{color:'#9d894e',weight:2,dashArray:'6 6',fillColor:'#759e7b',fillOpacity:.035,interactive:false}).addTo(map);const bounds=boundary.getBounds();
 function home(){map.fitBounds(bounds,{padding:[16,20]})}home();
 const labelLayer=L.layerGroup().addTo(map);[['DUOMO',45.464,9.191],['ISOLA',45.4872,9.190],['NAVIGLI',45.451,9.169],['PORTA VENEZIA',45.476,9.204],['PORTA ROMANA',45.4526,9.201],['SEMPIONE',45.480,9.167]].forEach(([name,lat,lon])=>L.marker([lat,lon],{icon:L.divIcon({className:'placelabel',html:name,iconSize:[130,15],iconAnchor:[65,8]}),interactive:false}).addTo(labelLayer));
