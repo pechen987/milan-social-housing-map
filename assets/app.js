@@ -40,6 +40,7 @@ let DATA = [], BY_ID = new Map(), DATA_BOUNDS = null;
 let STUDY = null;                       // { rings, features, bounds } when the city has a study area
 let MGR = {}, MGR_LIST = [], SRC = {};
 let map, layer, pinLayer, satLayer;
+let areaLayers = [];
 let manager = 'all', visible = [], selected = null, markers = new Map();
 let pin = null, satOn = false, clustering = false, picking = false, hashReady = false;
 let hasCluster = false, geoBusy = false, aboutLoaded = false, H;
@@ -386,12 +387,56 @@ function addBasemaps(map, fb) {
   next();
 }
 
+
+/* ---------- administrative / neighbourhood areas ---------- */
+function initAreaLayers() {
+  const specs = CFG.areaLayers || [];
+  if (!specs.length) return;
+  map.on('zoomend', syncAreaLayers);
+  specs.forEach((spec, i) => {
+    const url = spec.url || (spec.file ? rel(BASE, spec.file) : '');
+    if (!url) return;
+    getJSON(url).then(gj => {
+      const pane = 'areas-' + i;
+      map.createPane(pane);
+      map.getPane(pane).style.zIndex = String(spec.zIndex || 370);
+      map.getPane(pane).style.pointerEvents = 'none';
+      const style = Object.assign({ color: '#38645e', weight: 1.15, opacity: .62, fillColor: '#86a89a', fillOpacity: .035 }, spec.style || {}, { pane });
+      const shapes = L.geoJSON(gj, { pane, interactive: false, style });
+      const labels = L.layerGroup();
+      if (spec.labels !== false) shapes.eachLayer(shape => {
+        const p = shape.feature && shape.feature.properties || {};
+        const keys = Array.isArray(spec.labelField) ? spec.labelField : [spec.labelField];
+        const value = keys.filter(Boolean).map(k => p[k]).find(v => v !== undefined && v !== null && String(v).trim());
+        if (value === undefined) return;
+        const text = (spec.labelPrefix || '') + value;
+        const center = shape.getBounds && shape.getBounds().getCenter();
+        if (center) L.marker(center, { pane, interactive: false, icon: L.divIcon({ className: 'arealabel', html: esc(text), iconSize: [150, 18], iconAnchor: [75, 9] }) }).addTo(labels);
+      });
+      areaLayers.push({ spec, shapes, labels });
+      syncAreaLayers();
+    }).catch(e => console.warn('Area layer unavailable:', spec.id || url, e.message));
+  });
+}
+function syncAreaLayers() {
+  const z = map.getZoom();
+  areaLayers.forEach(({ spec, shapes, labels }) => {
+    const visible = z >= (spec.minZoom ?? 0) && (spec.maxZoom == null || z <= spec.maxZoom);
+    const showLabels = visible && z >= (spec.labelZoom ?? spec.minZoom ?? 0);
+    if (visible && !map.hasLayer(shapes)) shapes.addTo(map);
+    if (!visible && map.hasLayer(shapes)) map.removeLayer(shapes);
+    if (showLabels && !map.hasLayer(labels)) labels.addTo(map);
+    if (!showLabels && map.hasLayer(labels)) map.removeLayer(labels);
+  });
+}
+
 function startMap() {
   map = L.map('map', { zoomControl: false, minZoom: CFG.map.minZoom, maxZoom: 19, zoomSnap: 0.25, preferCanvas: true });
   L.control.zoom({ position: 'topleft' }).addTo(map);
   L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
 
   addBasemaps(map, CFG.fallbackBasemap);
+  initAreaLayers();
 
   // --- study area outline ---
   if (STUDY) L.geoJSON(STUDY.geojson, { style: { color: '#9d894e', weight: 2, dashArray: '6 6', fillColor: '#759e7b', fillOpacity: .035 }, interactive: false }).addTo(map);
