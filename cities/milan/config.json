@@ -7,153 +7,26 @@
   "mapLabel": "Interactive map of Milan public housing",
   "searchPlaceholder": "Try Isola, Gola, Garibaldi…",
   "footnote": "<b>Documented locations, not a live census.</b> Based mainly on the Comune’s 2022 ERP list. Counts are addresses, not apartments or unique buildings.",
-  "terms": {
-    "area": "Neighbourhood / NIL",
-    "allAreas": "All neighbourhoods",
-    "district": "Municipio"
-  },
+  "terms": { "area": "Neighbourhood / NIL", "allAreas": "All neighbourhoods", "district": "Municipio" },
   "managers": [
-    {
-      "key": "MM",
-      "label": "MM",
-      "color": "#167869"
-    },
-    {
-      "key": "ALER",
-      "label": "ALER",
-      "color": "#bb593e"
-    }
+    { "key": "MM", "label": "MM", "color": "#167869" },
+    { "key": "ALER", "label": "ALER", "color": "#bb593e" }
   ],
   "sources": [
-    {
-      "key": "ERP 2022",
-      "label": "Official source",
-      "url": "https://servizi.comune.milano.it/documents/20121/25281772/ALLEGATO%2B5%2B-%2BELENCO%2BSTABILI%2BERP%2BRettificato.pdf/d1976b00-f442-5c7a-75ca-14f7a9774e2e?t=1664263551460",
-      "pageAnchor": true
-    },
-    {
-      "key": "MM residential list (undated)",
-      "label": "Official source",
-      "url": "https://portalqa.mmspa.eu/wps/wcm/connect/pon/3d61345f-7863-46ef-a49f-8015cbb3497f/elenco%2Balloggi.pdf?CVID=puHhwLJ&MOD=AJPERES",
-      "pageAnchor": true
-    }
+    { "key": "ERP 2022", "label": "Official source", "url": "https://servizi.comune.milano.it/documents/20121/25281772/ALLEGATO%2B5%2B-%2BELENCO%2BSTABILI%2BERP%2BRettificato.pdf/d1976b00-f442-5c7a-75ca-14f7a9774e2e?t=1664263551460", "pageAnchor": true },
+    { "key": "MM residential list (undated)", "label": "Official source", "url": "https://portalqa.mmspa.eu/wps/wcm/connect/pon/3d61345f-7863-46ef-a49f-8015cbb3497f/elenco%2Balloggi.pdf?CVID=puHhwLJ&MOD=AJPERES", "pageAnchor": true }
   ],
-  "map": {
-    "minZoom": 11
-  },
-  "studyArea": {
-    "file": "ring.geojson",
-    "name": "the boulevard ring",
-    "edgeMeters": 100,
-    "edgeLabel": "Near boundary",
-    "edgeWarning": "Within 100 m of the approximate ring. Check the street and boundary before treating this as definitively inside."
-  },
+  "map": { "minZoom": 11 },
+  "studyArea": { "file": "ring.geojson", "name": "the boulevard ring", "edgeMeters": 100, "edgeLabel": "Near boundary", "edgeWarning": "Within 100 m of the approximate ring. Check the street and boundary before treating this as definitively inside." },
   "labels": [
-    {
-      "name": "DUOMO",
-      "lat": 45.464,
-      "lon": 9.191
-    },
-    {
-      "name": "ISOLA",
-      "lat": 45.4872,
-      "lon": 9.19
-    },
-    {
-      "name": "NAVIGLI",
-      "lat": 45.451,
-      "lon": 9.169
-    },
-    {
-      "name": "PORTA VENEZIA",
-      "lat": 45.476,
-      "lon": 9.204
-    },
-    {
-      "name": "PORTA ROMANA",
-      "lat": 45.4526,
-      "lon": 9.201
-    },
-    {
-      "name": "SEMPIONE",
-      "lat": 45.48,
-      "lon": 9.167
-    }
+    { "name": "DUOMO", "lat": 45.464, "lon": 9.191 }, { "name": "ISOLA", "lat": 45.4872, "lon": 9.19 }, { "name": "NAVIGLI", "lat": 45.451, "lon": 9.169 }, { "name": "PORTA VENEZIA", "lat": 45.476, "lon": 9.204 }, { "name": "PORTA ROMANA", "lat": 45.4526, "lon": 9.201 }, { "name": "SEMPIONE", "lat": 45.48, "lon": 9.167 }
   ],
-  "fallbackBasemap": {
-    "image": "milan-municipal-basemap.png",
-    "bounds": [
-      [
-        45.438,
-        9.14
-      ],
-      [
-        45.502,
-        9.224
-      ]
-    ],
-    "attribution": "Basemap: Comune di Milano, CTC 2012 (CC BY 4.0)"
-  },
-  "geocoding": {
-    "suffix": ", Milano",
-    "countrycodes": "it",
-    "bbox": [
-      9.04,
-      45.38,
-      9.33,
-      45.56
-    ],
-    "example": "Via Tortona 20"
-  },
-  "export": {
-    "metadata": {
-      "compiled": "2026-10-10",
-      "coverage": "Documented addresses, mainly ERP 2022; not a complete current census.",
-      "coordinates": "Comune di Milano civic dataset 2026-10-01, CC BY 4.0"
-    }
-  },
+  "fallbackBasemap": { "image": "milan-municipal-basemap.png", "bounds": [[45.438, 9.14], [45.502, 9.224]], "attribution": "Basemap: Comune di Milano, CTC 2012 (CC BY 4.0)" },
+  "geocoding": { "suffix": ", Milano", "countrycodes": "it", "bbox": [9.04, 45.38, 9.33, 45.56], "example": "Via Tortona 20" },
+  "export": { "metadata": { "compiled": "2026-10-10", "coverage": "Documented addresses, mainly ERP 2022; not a complete current census.", "coordinates": "Comune di Milano civic dataset 2026-10-01, CC BY 4.0" } },
   "areaLayers": [
-    {
-      "id": "municipi",
-      "name": "Municipi",
-      "url": "https://geoportale.comune.milano.it/arcgisportalh/rest/services/OperationalLayers/Municipi/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson",
-      "minZoom": 10,
-      "maxZoom": 12.25,
-      "labelZoom": 10.75,
-      "labelField": [
-        "MUNICIPIO",
-        "NOME",
-        "nome"
-      ],
-      "labelPrefix": "Municipio ",
-      "style": {
-        "color": "#37645d",
-        "weight": 1.25,
-        "opacity": 0.68,
-        "fillColor": "#86a89a",
-        "fillOpacity": 0.045
-      }
-    },
-    {
-      "id": "nil",
-      "name": "Nuclei di Identità Locale",
-      "url": "https://geoportale.comune.milano.it/arcgisportal/rest/services/OperationalLayers/NIL_WM/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson",
-      "minZoom": 12.25,
-      "labelZoom": 13.25,
-      "labelField": [
-        "NIL",
-        "NOME_NIL",
-        "NOME",
-        "nome"
-      ],
-      "style": {
-        "color": "#356f66",
-        "weight": 1,
-        "opacity": 0.6,
-        "fillColor": "#a9c4b4",
-        "fillOpacity": 0.025
-      }
-    }
+    { "id": "municipi", "name": "Municipi", "url": "https://dati.comune.milano.it/dataset/36ba21c2-8b48-43ce-bbe1-e236a8a49ff6/resource/99ecd085-0b04-4fb2-a66e-9795694d4fc4/download/ds379_municipi_label.geojson", "minZoom": 10, "maxZoom": 12.25, "labelZoom": 10.75, "labelField": ["MUNICIPIO", "NOME", "nome"], "labelPrefix": "Municipio ", "style": { "color": "#37645d", "weight": 1.25, "opacity": 0.68, "fillColor": "#86a89a", "fillOpacity": 0.045 } },
+    { "id": "nil", "name": "Nuclei di Identità Locale", "url": "https://dati.comune.milano.it/dataset/e8e765fc-d882-40b8-95d8-16ff3d39eb7c/resource/9c4e0776-56fc-4f3d-8a90-f4992a3be426/download/ds964_nil_wm.geojson", "minZoom": 12.25, "labelZoom": 13.25, "labelField": ["NIL", "NOME_NIL", "NOME", "nome"], "style": { "color": "#356f66", "weight": 1, "opacity": 0.6, "fillColor": "#a9c4b4", "fillOpacity": 0.025 } }
   ],
   "credits": "Area boundaries: Comune di Milano open data — Municipi and NIL (CC BY 4.0)"
 }
