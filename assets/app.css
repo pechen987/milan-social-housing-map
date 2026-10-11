@@ -80,7 +80,10 @@ select{width:100%;border:1px solid #d3dcd4;border-radius:7px;padding:9px;backgro
 #map{width:100%;height:100%;background:#e7ece5}
 .legend{position:absolute;bottom:29px;left:20px;z-index:450;display:flex;gap:16px;align-items:center;border-radius:9px;padding:12px 15px;background:#fffdf7ed;box-shadow:0 3px 20px #29433612;font-size:11px}
 .legend span{display:flex;align-items:center;gap:6px}
-.maptools{position:absolute;top:20px;right:20px;z-index:450;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100% - 100px)}
+.maptools{position:absolute;top:20px;right:20px;z-index:450;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-
+/* The site title stays global; city choice belongs in the picker and sidebar. */
+header h1 span { display: none; }
+width:calc(100% - 100px)}
 .maptools button{box-shadow:0 2px 10px #29433614}
 .maptools button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .leaflet-tile-pane{filter:saturate(.48) contrast(.95)}
