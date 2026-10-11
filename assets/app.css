@@ -116,6 +116,14 @@ dialog a{color:var(--teal)}
 .source{border-top:1px solid var(--line);padding-top:14px}
 .source small{color:var(--muted)}
 
+/* overview (all cities) */
+a.card{text-decoration:none;color:inherit}
+a.card .neighbourhood{text-transform:none}
+.overview #sources,.overview #export,.overview .filters,.overview .check,.overview .resultbar,.overview .maptools,.overview .legend{display:none}
+.smallnote a{color:var(--teal)}
+.citylabel{background:none;border:0;box-shadow:none;font-weight:700;font-size:12px;color:var(--ink);text-shadow:0 1px 2px #fff,0 0 3px #fff;padding:0}
+.citylabel:before{display:none}
+
 /* fatal error screen */
 .fatal{max-width:560px;margin:12vh auto;padding:0 24px;line-height:1.65}
 .fatal h2{font:28px Georgia,serif}

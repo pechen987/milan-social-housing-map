@@ -2,7 +2,7 @@
 /* ==========================================================================
    Public-housing atlas — generic app.
    Boot order:  site.json  ->  cities/<id>/config.json  ->  addresses + study area  ->  render.
-   Nothing city-specific lives in this file; see README.md ("Adding a town").
+   Nothing city-specific lives in this file; see README.md ("Adding a city").
    ========================================================================== */
 
 /* ---------- small helpers ---------- */
@@ -39,10 +39,10 @@ let SITE, CFG, CITY_ID, BASE;
 let DATA = [], BY_ID = new Map(), DATA_BOUNDS = null;
 let STUDY = null;                       // { rings, features, bounds } when the city has a study area
 let MGR = {}, MGR_LIST = [], SRC = {};
-let map, layer, pinLayer, satLayer, nilLayer = null;
+let map, layer, pinLayer, satLayer;
 let manager = 'all', visible = [], selected = null, markers = new Map();
-let pin = null, satOn = false, nilOn = false, clustering = false, picking = false, hashReady = false;
-let hasCluster = false, nilLoading = false, geoBusy = false, aboutLoaded = false, H;
+let pin = null, satOn = false, clustering = false, picking = false, hashReady = false;
+let hasCluster = false, geoBusy = false, aboutLoaded = false, H;
 const statEls = new Map();
 
 /* ==========================================================================
@@ -63,9 +63,18 @@ async function boot() {
       ? '<p>This page was opened as a local file, and browsers block a page from reading its own data files that way.</p><p>Start a tiny local web server in this folder instead:</p><p><code>python3 -m http.server 8000</code></p><p>then open <code>http://localhost:8000</code>. (Published on GitHub Pages it just works.)</p>'
       : '<p>Could not read <code>site.json</code>.</p><p>' + esc(e.message) + '</p>');
   }
+  SITE.title = SITE.title || 'Social housing in Europe';
+  SITE.eyebrow = SITE.eyebrow || 'Europe · A social housing atlas';
+  SITE.intro = SITE.intro || 'Documented social-housing addresses, city by city. Pick a city to explore it.';
   const cities = SITE.cities || [];
   const ids = cities.map(c => c.id);
-  CITY_ID = new URLSearchParams(location.search).get('city') || SITE.defaultCity || ids[0];
+  if (!cities.length) return fatal('No cities yet', '<p><code>site.json</code> lists no cities. Add one with <code>python3 tools/city.py new &lt;id&gt;</code>.</p>');
+  const qs = new URLSearchParams(location.search);
+  CITY_ID = qs.get('city');
+  if (!CITY_ID) {
+    if (qs.get('view') === 'overview' || (!SITE.defaultCity && cities.length > 1)) return bootOverview(cities);
+    CITY_ID = SITE.defaultCity || ids[0];
+  }
   if (!ids.includes(CITY_ID)) {
     return fatal('Unknown city', '<p>There is no city called <code>' + esc(CITY_ID) + '</code>. Available:</p><ul>' +
       cities.map(c => '<li><a href="?city=' + encodeURIComponent(c.id) + '">' + esc(c.name || c.id) + '</a></li>').join('') + '</ul>');
@@ -97,6 +106,40 @@ async function boot() {
   startMap();
   startFeatures();
   if (skipped) toast(skipped + ' row' + (skipped === 1 ? ' was' : 's were') + ' skipped: missing address or coordinates.');
+}
+
+/* ==========================================================================
+   Overview: a map of all cities (shown when no city is chosen and there are 2+ cities)
+   ========================================================================== */
+function bootOverview(cities) {
+  document.body.classList.add('overview');
+  document.title = SITE.title;
+  $('eyebrow').textContent = SITE.eyebrow;
+  $('title').innerHTML = esc(SITE.title) + '<span>All cities</span>';
+  fillPicker(null);
+  const total = cities.reduce((n, c) => n + (c.count || 0), 0);
+  $('introH').textContent = 'Social housing, city by city.';
+  $('introP').textContent = SITE.intro;
+  $('stats').innerHTML = '<div class="stat"><strong>' + cities.length + '</strong><span>cities</span></div>' + (total ? '<div class="stat"><strong>' + total + '</strong><span>address locations</span></div>' : '');
+  const sorted = cities.slice().sort((a, b) => (a.name || a.id).localeCompare(b.name || b.id));
+  $('list').innerHTML = sorted.map(c => '<a class="card" href="?city=' + encodeURIComponent(c.id) + '"><span class="cardtop">' + esc(c.country || 'City') + '</span><span class="addr">' + esc(c.name || c.id) + '</span><span class="neighbourhood">' + (c.count ? c.count + ' documented addresses' : 'open the map') + '</span></a>').join('');
+  $('footnote').innerHTML = sanitizeHTML(SITE.footnote || '<b>Documented locations, not a live census.</b> Each city lists the addresses found in its public registers; absence from a map never proves absence of social housing.') +
+    (isHttp(SITE.repo) ? ' <a href="' + esc(SITE.repo) + '" target="_blank" rel="noopener">Add your city ↗</a>' : '');
+  map = L.map('map', { zoomControl: false, minZoom: 3, maxZoom: 12, zoomSnap: 0.25 });
+  L.control.zoom({ position: 'topleft' }).addTo(map);
+  addBasemaps(map, null);
+  const pts = [];
+  cities.forEach(c => {
+    if (!Array.isArray(c.center) || c.center.length !== 2) return;
+    const r = Math.max(9, Math.min(28, 7 + Math.sqrt(c.count || 1) * 1.4));
+    const m = L.circleMarker(c.center, { radius: r, fillColor: '#167869', color: '#fffdf6', weight: 2, fillOpacity: .85 }).addTo(map);
+    m.bindTooltip(esc(c.name || c.id) + (c.count ? ' · ' + c.count : ''), { permanent: true, direction: 'right', offset: [r + 2, 0], className: 'citylabel' });
+    m.on('click', () => { location.href = '?city=' + encodeURIComponent(c.id); });
+    pts.push(c.center);
+  });
+  if (pts.length > 1) map.fitBounds(L.latLngBounds(pts), { paddingTopLeft: [70, 70], paddingBottomRight: [90, 120], maxZoom: 7 });
+  else if (pts.length === 1) map.setView(pts[0], 9);
+  else map.setView([50, 10], 4);
 }
 
 /* ---------- data ---------- */
@@ -143,22 +186,17 @@ function buildManagers(cfgManagers) {
 
 function buildConfig(raw) {
   const name = raw.name || raw.id || CITY_ID;
-  const title = raw.title || name;
   const pad = 0.12, b = DATA_BOUNDS;
   return Object.assign({}, raw, {
-    name, title,
-    pageTitle: raw.pageTitle || (title === name ? name : title + ' · ' + name),
-    eyebrow: raw.eyebrow || name + ' · A public housing atlas',
-    subtitle: raw.subtitle || '',
-    introHeading: raw.introHeading || 'A closer look at the city.',
-    intro: raw.intro || 'Explore documented public housing addresses in ' + name + '.',
+    name,
+    introHeading: raw.introHeading || 'Social housing in ' + name + '.',
+    intro: raw.intro || 'Explore documented social-housing addresses in ' + name + '.',
     mapLabel: raw.mapLabel || 'Interactive map of ' + name,
     footnote: raw.footnote || '<b>Documented locations, not a live census.</b> Counts are addresses, not apartments or unique buildings.',
     terms: Object.assign({ area: 'Neighbourhood', allAreas: 'All areas', district: 'District' }, raw.terms),
     map: Object.assign({ minZoom: 9 }, raw.map),
     sources: raw.sources || [],
     labels: raw.labels || [],
-    areas: raw.areas || null,
     fallbackBasemap: raw.fallbackBasemap || null,
     geocoding: Object.assign({
       suffix: ', ' + name, countrycodes: '',
@@ -225,22 +263,16 @@ const sourceURL = d => {
    UI that depends on the city
    ========================================================================== */
 function buildUI() {
-  document.title = CFG.pageTitle;
-  $('eyebrow').textContent = CFG.eyebrow;
-  $('title').innerHTML = esc(CFG.title) + (CFG.subtitle ? '<span>' + esc(CFG.subtitle) + '</span>' : '');
+  document.title = CFG.name + ' · ' + SITE.title;
+  $('eyebrow').textContent = SITE.eyebrow;
+  $('title').innerHTML = esc(SITE.title) + '<span>' + esc(CFG.name + (CFG.country ? ', ' + CFG.country : '')) + '</span>';
   $('introH').textContent = CFG.introHeading;
   $('introP').textContent = CFG.intro;
   $('mapwrap').setAttribute('aria-label', CFG.mapLabel);
   $('footnote').innerHTML = sanitizeHTML(CFG.footnote) + ' <button class="linkbtn" id="coverage">Read coverage notes</button>';
 
   // city picker (only when there is more than one city)
-  const cities = SITE.cities || [];
-  if (cities.length > 1) {
-    const sel = $('citypick');
-    sel.innerHTML = cities.map(c => '<option value="' + esc(c.id) + '"' + (c.id === CITY_ID ? ' selected' : '') + '>' + esc(c.name || c.id) + '</option>').join('');
-    sel.hidden = false;
-    sel.onchange = () => { location.href = '?city=' + encodeURIComponent(sel.value); };
-  }
+  fillPicker(CITY_ID);
 
   // stats
   $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>address locations</span></div>' +
@@ -282,7 +314,6 @@ function buildUI() {
   // credits
   const credits = ['Basemap: © OpenStreetMap contributors, tiles by CARTO (OpenStreetMap standard tiles as a fallback)',
     'satellite imagery © Esri and its data providers'];
-  if (CFG.areas && CFG.areas.attribution) credits.push(CFG.areas.attribution);
   if (CFG.fallbackBasemap && CFG.fallbackBasemap.attribution) credits.push(CFG.fallbackBasemap.attribution);
   if (CFG.credits) credits.push(CFG.credits);
   $('credits').textContent = credits.join('; ') + '. The address check uses OpenStreetMap Nominatim, so the text you type is sent to OpenStreetMap. Libraries: Leaflet 1.9.4 (BSD-2-Clause) and Leaflet.markercluster 1.5.3 (MIT).';
@@ -298,6 +329,15 @@ function buildUI() {
   $('geojson').onclick = exportGeoJSON;
   let rt; $('search').oninput = () => { clearTimeout(rt); rt = setTimeout(render, 140); };
   $('list').onclick = e => { const c = e.target.closest('.card'); if (c) select(+c.dataset.id); };
+}
+
+function fillPicker(currentId) {
+  const cities = SITE.cities || [], sel = $('citypick');
+  if (cities.length < 2) return;
+  sel.innerHTML = '<option value="__all"' + (currentId ? '' : ' selected') + '>All cities</option>' +
+    cities.map(c => '<option value="' + esc(c.id) + '"' + (c.id === currentId ? ' selected' : '') + '>' + esc(c.name || c.id) + '</option>').join('');
+  sel.hidden = false;
+  sel.onchange = () => { location.href = sel.value === '__all' ? '?view=overview' : '?city=' + encodeURIComponent(sel.value); };
 }
 
 async function openAbout() {
@@ -326,35 +366,32 @@ function home() {
   else map.fitBounds(DATA_BOUNDS, { padding: [40, 40], maxZoom: 15 });
 }
 
-function startMap() {
-  map = L.map('map', { zoomControl: false, minZoom: CFG.map.minZoom, maxZoom: 19, zoomSnap: 0.25, preferCanvas: true });
-  L.control.zoom({ position: 'topleft' }).addTo(map);
-  L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
-
-  // --- basemaps: tried in order; after 3 failed tiles the next one is used ---
-  let fallbackImg = null;
-  if (CFG.fallbackBasemap && CFG.fallbackBasemap.image) {
-    const fb = CFG.fallbackBasemap;
-    fallbackImg = L.imageOverlay(rel(BASE, fb.image), fb.bounds, { opacity: .92, interactive: false, attribution: fb.attribution || '' });
-  }
+/* Basemaps are tried in order (CARTO -> OpenStreetMap -> the city's local image); after 3 failed tiles the next one is used. */
+function addBasemaps(map, fb) {
+  const fallbackImg = fb && fb.image ? L.imageOverlay(rel(BASE, fb.image), fb.bounds, { opacity: .92, interactive: false, attribution: fb.attribution || '' }) : null;
   const osmAttr = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
   const BASEMAPS = [];
   if (SITE.cartoKey) BASEMAPS.push({ url: 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=' + encodeURIComponent(SITE.cartoKey), opts: { maxZoom: 19, attribution: osmAttr + ', © <a href="https://carto.com/attributions">CARTO</a>' } });
   BASEMAPS.push({ url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', opts: { maxZoom: 19, attribution: osmAttr } });
   let bmIndex = -1, bmLayer = null;
-  const nextBasemap = () => {
+  const next = () => {
     if (bmLayer) { map.removeLayer(bmLayer); bmLayer = null; }
     bmIndex++;
-    if (bmIndex >= BASEMAPS.length) {
-      if (fallbackImg) fallbackImg.addTo(map); else $('mapfail').style.display = 'block';
-      return;
-    }
+    if (bmIndex >= BASEMAPS.length) { if (fallbackImg) fallbackImg.addTo(map); else $('mapfail').style.display = 'block'; return; }
     const cfg = BASEMAPS[bmIndex], l = L.tileLayer(cfg.url, cfg.opts).addTo(map);
     bmLayer = l;
     let errors = 0;
-    l.on('tileerror', () => { if (bmLayer === l && ++errors >= 3) nextBasemap(); });
+    l.on('tileerror', () => { if (bmLayer === l && ++errors >= 3) next(); });
   };
-  nextBasemap();
+  next();
+}
+
+function startMap() {
+  map = L.map('map', { zoomControl: false, minZoom: CFG.map.minZoom, maxZoom: 19, zoomSnap: 0.25, preferCanvas: true });
+  L.control.zoom({ position: 'topleft' }).addTo(map);
+  L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
+
+  addBasemaps(map, CFG.fallbackBasemap);
 
   // --- study area outline ---
   if (STUDY) L.geoJSON(STUDY.geojson, { style: { color: '#9d894e', weight: 2, dashArray: '6 6', fillColor: '#759e7b', fillOpacity: .035 }, interactive: false }).addTo(map);
@@ -480,57 +517,8 @@ function pushHash() {
   if (selected != null) p.set('s', selected);
   if (pin) { p.set('p', pin.lat.toFixed(5) + ',' + pin.lon.toFixed(5)); p.set('pl', pin.label); }
   if (satOn) p.set('sat', '1');
-  if (nilOn) p.set('nil', '1');
   if (hasCluster && !clustering) p.set('c', '0');
   try { history.replaceState(null, '', '#' + p.toString()); } catch (e) { /* ignore */ }
-}
-
-/* neighbourhood outlines */
-const merc = ([x, y]) => [x / 6378137 * 180 / Math.PI, (2 * Math.atan(Math.exp(y / 6378137)) - Math.PI / 2) * 180 / Math.PI];
-const mapCoords = (c, f) => typeof c[0] === 'number' ? f(c) : c.map(x => mapCoords(x, f));
-const firstNum = c => { while (Array.isArray(c)) c = c[0]; return c; };
-function areaName(props) {
-  const want = CFG.areas.nameProperty, keys = Array.isArray(want) ? want : want ? [want] : ['name', 'NAME', 'Name', 'NIL', 'nome', 'NOME', 'quartiere', 'neighbourhood'];
-  for (const k of keys) if (props && props[k] != null && props[k] !== '') return String(props[k]).trim();
-  return '';
-}
-async function loadAreas() {
-  const files = [].concat(CFG.areas.files || CFG.areas.file || []);
-  for (const f of files) { try { const r = await fetch(rel(BASE, f)); if (!r.ok) continue; const g = await r.json(); if (g && Array.isArray(g.features) && g.features.length) return g; } catch (e) { /* try the next one */ } }
-  return null;
-}
-async function setNil(on) {
-  nilOn = !!on; setBtn('nil', nilOn);
-  if (!nilOn) { if (nilLayer) map.removeLayer(nilLayer); pushHash(); return; }
-  if (!nilLayer) {
-    if (nilLoading) return;
-    nilLoading = true; const label = CFG.areas.label || 'Areas'; $('nil').textContent = 'Loading…';
-    const g = await loadAreas(); nilLoading = false; $('nil').textContent = label;
-    if (!g) { nilOn = false; setBtn('nil', false); toast('Area outlines could not be loaded. See the README, “Neighbourhood outlines”.'); pushHash(); return; }
-    const first = g.features.find(f => f.geometry);
-    if (first && Math.abs(firstNum(first.geometry.coordinates)) > 180) g.features.forEach(f => { if (f.geometry) f.geometry.coordinates = mapCoords(f.geometry.coordinates, merc); });   // projected (Web Mercator) file
-    const counts = {}, orig = {};
-    DATA.forEach(d => { if (!d.area) return; const k = d.area.toUpperCase(); counts[k] = (counts[k] || 0) + 1; orig[k] = d.area; });
-    const clip = (STUDY ? STUDY.bounds : DATA_BOUNDS).pad(0.3);
-    nilLayer = L.geoJSON(g, {
-      filter: f => f.geometry && L.geoJSON(f).getBounds().intersects(clip),
-      style: f => { const has = counts[areaName(f.properties).toUpperCase()]; return { color: has ? '#4f6a62' : '#8a9a93', weight: has ? 1.5 : 1, dashArray: '3 3', fillColor: has ? '#4f6a62' : '#8a9a93', fillOpacity: has ? .07 : .02 }; },
-      attribution: CFG.areas.attribution || '',
-      onEachFeature: (f, l) => {
-        const nm = areaName(f.properties), k = nm.toUpperCase(), n = counts[k] || 0;
-        l.bindTooltip(esc(prettyArea(nm)) + ' · ' + n + ' address' + (n === 1 ? '' : 'es'), { sticky: true });
-        l.on('mouseover', () => l.setStyle({ fillOpacity: .18 })); l.on('mouseout', () => nilLayer.resetStyle(l));
-        l.on('click', () => {
-          if (picking || !n) return;
-          $('area').value = orig[k]; render();
-          if (visible.length) map.fitBounds(L.latLngBounds(visible.map(d => [d.lat, d.lon])), { padding: [60, 70], maxZoom: 16 });
-          toast('Filtered to ' + prettyArea(nm));
-        });
-      }
-    });
-    if (!nilOn) return;     // switched off while loading
-  }
-  nilLayer.addTo(map); pushHash();
 }
 
 /* address check */
@@ -603,9 +591,6 @@ function startFeatures() {
   satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { pane: 'satPane', maxZoom: 19, attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community' });
   const setSat = on => { satOn = !!on; if (satOn) satLayer.addTo(map); else map.removeLayer(satLayer); setBtn('sat', satOn); $('sat').textContent = satOn ? 'Map' : 'Satellite'; pushHash(); };
   $('sat').onclick = () => setSat(!satOn);
-  // neighbourhood outlines (only when the city configures them)
-  map.createPane('nilPane').style.zIndex = 300;
-  if (CFG.areas) { $('nil').hidden = false; $('nil').textContent = CFG.areas.label || 'Areas'; $('nil').title = 'Show the official area outlines'; $('nil').onclick = () => setNil(!nilOn); }
   // address check
   $('addrgo').onclick = runCheck;
   $('addr').addEventListener('keydown', e => { if (e.key === 'Enter') runCheck(); });
@@ -625,7 +610,6 @@ function startFeatures() {
   const ll = (H.get('ll') || '').split(',').map(Number), z = parseFloat(H.get('z')), haveView = ll.length === 2 && ll.every(isFinite) && isFinite(z);
   if (haveView) map.setView(ll, z, { animate: false });
   if (H.get('sat') === '1') setSat(true);
-  if (H.get('nil') === '1' && CFG.areas) setNil(true);
   const p = (H.get('p') || '').split(',').map(Number);
   if (p.length === 2 && p.every(isFinite)) { $('addr').value = H.get('pl') && H.get('pl') !== 'Dropped pin' ? H.get('pl') : ''; setPin(p[0], p[1], H.get('pl') || 'Dropped pin', { fit: !haveView }); }
   const s = H.get('s'); if (s !== null && BY_ID.has(+s)) select(+s, false);

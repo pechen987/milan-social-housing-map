@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Helper for adding and checking towns.  Standard library only (Python 3.8+).
+"""Helper for adding and checking cities.  Standard library only (Python 3.8+).
 
   python3 tools/city.py new turin --name Turin       create cities/turin/ from the template and register it
   python3 tools/city.py geocode cities/turin/source/addresses.csv --city turin --email you@example.org
                                                      turn a CSV of addresses into cities/turin/addresses.json
   python3 tools/city.py validate turin               check one city   (or: validate --all)
+  python3 tools/city.py index                        refresh each city's position and address count in site.json
   python3 tools/city.py list                         show the registered cities
 
-See README.md, section "Adding a town".
+See README.md, section "Adding a city".
 """
 import argparse
 import csv
@@ -34,9 +35,18 @@ ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 KNOWN_CONFIG_KEYS = {
     "id", "name", "country", "data", "about", "credits",
-    "pageTitle", "eyebrow", "title", "subtitle", "introHeading", "intro", "mapLabel", "searchPlaceholder", "footnote",
-    "terms", "managers", "sources", "map", "studyArea", "labels", "areas", "fallbackBasemap", "geocoding", "export",
+    "introHeading", "intro", "mapLabel", "searchPlaceholder", "footnote",
+    "terms", "managers", "sources", "map", "studyArea", "labels", "fallbackBasemap", "geocoding", "export",
     "checkRadii", "listLimit", "coverageWarnMeters",
+}
+
+# settings that existed in earlier versions: tell people what to do instead of just "unknown key"
+REMOVED_KEYS = {
+    "title": "the page title is site-wide now (site.json 'title'); use 'introHeading' for the sidebar heading",
+    "subtitle": "use 'introHeading' / 'intro' instead",
+    "pageTitle": "the browser title is built from the city name and site.json 'title'",
+    "eyebrow": "set it once for the whole site in site.json",
+    "areas": "the neighbourhood-outline feature was removed (the area filter still works from your data)",
 }
 
 # CSV header -> field name (lower-case, accents not handled on purpose: keep it predictable)
@@ -143,7 +153,6 @@ def cmd_new(a):
 
     cfg = read_json(dest / "config.json")
     cfg["id"], cfg["name"] = cid, name
-    cfg["title"] = a.title or cfg.get("title") or name
     if a.country:
         cfg["country"] = a.country
     cfg.setdefault("geocoding", {})["suffix"] = ", " + name
@@ -162,6 +171,62 @@ def cmd_new(a):
     print("  3. Edit cities/%s/config.json (managers, sources, texts) and cities/%s/about.html." % (cid, cid))
     print("  4. python3 tools/city.py validate %s" % cid)
     print("  5. python3 -m http.server 8000   and open  http://localhost:8000/?city=%s" % cid)
+
+
+# ----------------------------------------------------------------------------- index
+def city_facts(cid):
+    """(country, [lat, lon] median, count) for a city folder; tolerant of missing/broken files."""
+    d = CITIES / cid
+    country, center, count = None, None, None
+    try:
+        cfg = read_json(d / "config.json")
+        country = cfg.get("country")
+        raw = read_json(d / (cfg.get("data") or "addresses.json"))
+        if isinstance(raw, dict) and raw.get("type") == "FeatureCollection":
+            pts = [(f["geometry"]["coordinates"][1], f["geometry"]["coordinates"][0]) for f in raw.get("features", [])
+                   if (f.get("geometry") or {}).get("type") == "Point" and (f.get("properties") or {}).get("address")]
+        else:
+            pts = [(num(r.get("lat")), num(r.get("lon", r.get("lng")))) for r in raw if isinstance(r, dict) and r.get("address")]
+        pts = [(a, b) for a, b in pts if a is not None and b is not None and not (a == 0 and b == 0)]
+        if pts:
+            count = len(pts)
+            center = [round(statistics.median(p[0] for p in pts), 4), round(statistics.median(p[1] for p in pts), 4)]
+    except (OSError, ValueError, KeyError, TypeError, IndexError, AttributeError):
+        pass
+    return country, center, count
+
+
+def update_index(only=None, quiet=False):
+    """Refresh country / center / count of the cities in site.json (used by the Europe overview map)."""
+    site = load_site()
+    changed = False
+    order = ["id", "name", "country", "center", "count"]
+    for c in site.get("cities", []):
+        if only and c.get("id") != only:
+            continue
+        country, center, count = city_facts(c["id"])
+        want = dict(c)
+        if country:
+            want["country"] = country
+        if center:
+            want["center"] = center
+        if count is not None:
+            want["count"] = count
+        want = dict([(k, want[k]) for k in order if k in want] + [(k, v) for k, v in want.items() if k not in order])
+        if want != c:
+            c.clear()
+            c.update(want)
+            changed = True
+            if not quiet:
+                print("  site.json: updated %s (%s addresses)" % (c["id"], c.get("count", "?")))
+    if changed:
+        write_json(SITE, site)
+    return changed
+
+
+def cmd_index(_):
+    if not update_index():
+        print("site.json is already up to date.")
 
 
 # ----------------------------------------------------------------------------- geocode
@@ -327,6 +392,8 @@ def cmd_geocode(a):
     print("Summary: %(given)d had coordinates · %(geocoded)d geocoded (%(approx)d street-level only) · %(failed)d failed" % stats)
     if stats["approx"]:
         print("Street-level matches are approximate: check them on the map, or add exact lat/lon in the CSV and re-run.")
+    if records and not a.dry_run and not a.out:
+        update_index(a.city)
     if records:
         print("Next: python3 tools/city.py validate %s" % a.city)
 
@@ -359,6 +426,11 @@ def check_city(cid, site):
         rep.err("folder cities/%s does not exist" % cid)
         return rep
     registered = {c.get("id") for c in site.get("cities", [])}
+    entry = next((c for c in site.get("cities", []) if c.get("id") == cid), None)
+    if entry is not None:
+        _, center, count = city_facts(cid)
+        if count is not None and (entry.get("count") != count or entry.get("center") != center):
+            rep.warn("site.json has an outdated position/count for this city: run  python3 tools/city.py index")
     if cid not in registered:
         rep.warn("not listed in site.json, so it will not appear in the city picker (it still works at ?city=%s)" % cid)
 
@@ -383,7 +455,9 @@ def check_city(cid, site):
     if re.search(r"example\.(org|com)", json.dumps(cfg)):
         rep.warn("config.json still contains example.org / example.com placeholder links")
     for k in cfg:
-        if k not in KNOWN_CONFIG_KEYS:
+        if k in REMOVED_KEYS:
+            rep.warn("config.json: %r is no longer used: %s" % (k, REMOVED_KEYS[k]))
+        elif k not in KNOWN_CONFIG_KEYS:
             rep.warn("config.json: unknown key %r (typo? it is ignored)" % k)
 
     managers = cfg.get("managers")
@@ -433,14 +507,6 @@ def check_city(cid, site):
         b = fb.get("bounds")
         if not (isinstance(b, list) and len(b) == 2 and all(isinstance(p, list) and len(p) == 2 for p in b)):
             rep.err("fallbackBasemap.bounds must be [[south, west], [north, east]]")
-    areas = cfg.get("areas")
-    if areas:
-        files = areas.get("files") or ([areas["file"]] if areas.get("file") else [])
-        if not files:
-            rep.err("areas needs 'files' (a list of GeoJSON paths or URLs)")
-        elif all(not re.match(r"https?://", f) for f in files) and not any((d / f).exists() for f in files):
-            rep.warn("areas: none of the listed files exist yet (%s); the Areas button will report an error" % ", ".join(files))
-
     # --- study area
     rings = None
     sa = cfg.get("studyArea")
@@ -565,8 +631,8 @@ def cmd_validate(a):
     for c in site.get("cities", []):
         if not c.get("id") or not c.get("name"):
             sr.err("every entry in 'cities' needs an id and a name: %r" % c)
-    if site.get("defaultCity") not in ids:
-        sr.err("defaultCity %r is not in 'cities'" % site.get("defaultCity"))
+    if site.get("defaultCity") and site["defaultCity"] not in ids:
+        sr.err("defaultCity %r is not in 'cities'" % site["defaultCity"])
     sr.show()
     rc |= bool(sr.errors)
     for cid in report_ids:
@@ -581,7 +647,10 @@ def cmd_list(_):
     for c in site.get("cities", []):
         mark = "*" if c.get("id") == site.get("defaultCity") else " "
         print(" %s %-18s %s" % (mark, c.get("id"), c.get("name")))
-    print("\n(* = default city)")
+    if site.get("defaultCity"):
+        print("\n(* = opens first)")
+    elif len(site.get("cities", [])) > 1:
+        print("\nNo defaultCity set: visitors land on the all-cities overview map.")
 
 
 # ----------------------------------------------------------------------------- main
@@ -592,7 +661,6 @@ def main():
     p = sub.add_parser("new", help="create a city folder from the template")
     p.add_argument("id", help="lower-case id used in the URL and folder name, e.g. turin")
     p.add_argument("--name", help="display name, e.g. 'Turin'")
-    p.add_argument("--title", help="page title (defaults to the city name)")
     p.add_argument("--country", help="optional, e.g. Italy")
     p.set_defaults(fn=cmd_new)
 
@@ -613,6 +681,9 @@ def main():
     p.add_argument("--all", action="store_true")
     p.add_argument("--strict", action="store_true", help="treat warnings as failures")
     p.set_defaults(fn=cmd_validate)
+
+    p = sub.add_parser("index", help="refresh each city's map position and address count in site.json")
+    p.set_defaults(fn=cmd_index)
 
     p = sub.add_parser("list", help="list registered cities")
     p.set_defaults(fn=cmd_list)

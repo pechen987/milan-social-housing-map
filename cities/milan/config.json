@@ -2,28 +2,28 @@
   "id": "milan",
   "name": "Milan",
   "country": "Italy",
-
-  "pageTitle": "Case popolari · Milan inside the ring",
-  "eyebrow": "Milano · A public housing atlas",
-  "title": "Case popolari",
-  "subtitle": "Inside the boulevard ring",
-  "introHeading": "A closer look at the city.",
-  "intro": "Explore documented public housing addresses within the road ring in your reference image.",
+  "introHeading": "Case popolari, inside the boulevard ring.",
+  "intro": "Explore documented public housing addresses (case popolari, ERP) within the road ring in your reference image.",
   "mapLabel": "Interactive map of Milan public housing",
   "searchPlaceholder": "Try Isola, Gola, Garibaldi…",
   "footnote": "<b>Documented locations, not a live census.</b> Based mainly on the Comune’s 2022 ERP list. Counts are addresses, not apartments or unique buildings.",
-
   "terms": {
     "area": "Neighbourhood / NIL",
     "allAreas": "All neighbourhoods",
     "district": "Municipio"
   },
-
   "managers": [
-    { "key": "MM",   "label": "MM",   "color": "#167869" },
-    { "key": "ALER", "label": "ALER", "color": "#bb593e" }
+    {
+      "key": "MM",
+      "label": "MM",
+      "color": "#167869"
+    },
+    {
+      "key": "ALER",
+      "label": "ALER",
+      "color": "#bb593e"
+    }
   ],
-
   "sources": [
     {
       "key": "ERP 2022",
@@ -38,9 +38,9 @@
       "pageAnchor": true
     }
   ],
-
-  "map": { "minZoom": 11 },
-
+  "map": {
+    "minZoom": 11
+  },
   "studyArea": {
     "file": "ring.geojson",
     "name": "the boulevard ring",
@@ -48,39 +48,63 @@
     "edgeLabel": "Near boundary",
     "edgeWarning": "Within 100 m of the approximate ring. Check the street and boundary before treating this as definitively inside."
   },
-
   "labels": [
-    { "name": "DUOMO",         "lat": 45.464,  "lon": 9.191 },
-    { "name": "ISOLA",         "lat": 45.4872, "lon": 9.190 },
-    { "name": "NAVIGLI",       "lat": 45.451,  "lon": 9.169 },
-    { "name": "PORTA VENEZIA", "lat": 45.476,  "lon": 9.204 },
-    { "name": "PORTA ROMANA",  "lat": 45.4526, "lon": 9.201 },
-    { "name": "SEMPIONE",      "lat": 45.480,  "lon": 9.167 }
+    {
+      "name": "DUOMO",
+      "lat": 45.464,
+      "lon": 9.191
+    },
+    {
+      "name": "ISOLA",
+      "lat": 45.4872,
+      "lon": 9.19
+    },
+    {
+      "name": "NAVIGLI",
+      "lat": 45.451,
+      "lon": 9.169
+    },
+    {
+      "name": "PORTA VENEZIA",
+      "lat": 45.476,
+      "lon": 9.204
+    },
+    {
+      "name": "PORTA ROMANA",
+      "lat": 45.4526,
+      "lon": 9.201
+    },
+    {
+      "name": "SEMPIONE",
+      "lat": 45.48,
+      "lon": 9.167
+    }
   ],
-
-  "areas": {
-    "label": "Areas",
-    "files": [
-      "nil.geojson",
-      "https://dati.comune.milano.it/dataset/e8e765fc-d882-40b8-95d8-16ff3d39eb7c/resource/9c4e0776-56fc-4f3d-8a90-f4992a3be426/download/ds964_nil_wm.geojson"
-    ],
-    "nameProperty": "NIL",
-    "attribution": "NIL boundaries: Comune di Milano (CC BY 4.0)"
-  },
-
   "fallbackBasemap": {
     "image": "milan-municipal-basemap.png",
-    "bounds": [[45.438, 9.14], [45.502, 9.224]],
+    "bounds": [
+      [
+        45.438,
+        9.14
+      ],
+      [
+        45.502,
+        9.224
+      ]
+    ],
     "attribution": "Basemap: Comune di Milano, CTC 2012 (CC BY 4.0)"
   },
-
   "geocoding": {
     "suffix": ", Milano",
     "countrycodes": "it",
-    "bbox": [9.04, 45.38, 9.33, 45.56],
+    "bbox": [
+      9.04,
+      45.38,
+      9.33,
+      45.56
+    ],
     "example": "Via Tortona 20"
   },
-
   "export": {
     "metadata": {
       "compiled": "2026-10-10",
