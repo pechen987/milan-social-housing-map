@@ -36,7 +36,7 @@ ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 KNOWN_CONFIG_KEYS = {
     "id", "name", "country", "data", "about", "credits",
     "introHeading", "intro", "mapLabel", "searchPlaceholder", "footnote",
-    "terms", "managers", "sources", "map", "studyArea", "labels", "fallbackBasemap", "geocoding", "export",
+    "terms", "managers", "sources", "map", "studyArea", "labels", "fallbackBasemap", "geocoding", "export", "areaLayers",
     "checkRadii", "listLimit", "coverageWarnMeters",
 }
 
@@ -575,9 +575,9 @@ def check_city(cid, site):
             rep.err("%s: coordinates are 0,0 (geocoding probably failed)" % where)
             continue
         good.append((where, r, lat, lon))
-        k = (addr.lower(), round(lat, 5), round(lon, 5))
+        k = (addr.lower(), str(r.get("manager", "")).lower(), round(lat, 5), round(lon, 5))
         if addr and k in seen:
-            rep.warn("%s: duplicate of row %d (same address and position)" % (where, seen[k]))
+            rep.warn("%s: duplicate of row %d (same address, manager and position)" % (where, seen[k]))
         seen.setdefault(k, i + 1)
         if "id" in r:
             if not isinstance(r["id"], int):
