@@ -1,0 +1,7 @@
+{
+  "defaultCity": "milan",
+  "cartoKey": "cb1_4glx_1_5b335e4039dcabf8d77cca07",
+  "cities": [
+    { "id": "milan", "name": "Milan" }
+  ]
+}
