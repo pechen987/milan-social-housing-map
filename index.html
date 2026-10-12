@@ -15,6 +15,7 @@
     <h1 id="title">Social housing in Europe</h1>
   </div>
   <div class="actions">
+    <button id="paneltoggle" aria-expanded="true" aria-controls="sidebar" title="Show or hide the research panel">Hide panel</button>
     <select id="citypick" aria-label="Choose a city" hidden></select>
     <button id="sources">Sources &amp; coverage ↗</button>
     <button id="export" class="primary">Download map data ↓</button>
@@ -22,7 +23,7 @@
 </header>
 
 <main>
-  <aside>
+  <aside id="sidebar">
     <div class="intro"><h2 id="introH"></h2><p id="introP"></p></div>
     <div class="stats" id="stats"></div>
 

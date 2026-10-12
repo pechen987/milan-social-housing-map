@@ -1,0 +1,50 @@
+{
+  "id": "venice",
+  "name": "Venice",
+  "country": "Italy",
+  "introHeading": "Documented public housing in Venice.",
+  "intro": "Explore 123 documented ATER public-housing locations in the Venice municipality. This first release covers addresses recorded in the regional 2013 register.",
+  "mapLabel": "Interactive map of Venice public housing",
+  "searchPlaceholder": "Try Mestre, Marghera, Chirignago…",
+  "footnote": "<b>123 documented locations, not a current census.</b> This initial Venice release maps 568 ATER dwelling entries from the 2013 Veneto register, consolidated by civic location. Three listed civics had no exact match in the Comune coordinate layer and are not plotted.",
+  "terms": {
+    "area": "Locality",
+    "allAreas": "All localities",
+    "district": "Municipality"
+  },
+  "sources": [
+    {
+      "key": "ATER Veneto 2013",
+      "label": "Regione del Veneto — ATER Venezia dwellings excluded from sale (2013)",
+      "url": "https://www.regione.veneto.it/c/document_library/get_file?groupId=10725&uuid=685b1f05-0327-4bbe-b407-21988f5248ee",
+      "pageAnchor": true
+    }
+  ],
+  "map": {
+    "center": [
+      45.461,
+      12.231
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Venezia, Italia",
+    "countrycodes": "it",
+    "bbox": [
+      12.18,
+      45.33,
+      12.42,
+      45.55
+    ],
+    "example": "Via Altobello 17, Mestre"
+  },
+  "export": {
+    "metadata": {
+      "compiled": "2026-10-12",
+      "coverage": "ATER Venezia locations listed as excluded from the Veneto regional 2013 sale plan; this is not a current or complete social-housing inventory.",
+      "source": "Regione del Veneto, DGR 1974/2013"
+    }
+  },
+  "credits": "Public-housing register: Regione del Veneto (DGR 1974/2013); mapped coordinates: OpenStreetMap Nominatim."
+}

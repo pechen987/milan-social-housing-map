@@ -24,6 +24,16 @@
         2.3544
       ],
       "count": 3876
+    },
+    {
+      "id": "venice",
+      "name": "Venice",
+      "country": "Italy",
+      "center": [
+        45.4856,
+        12.2481
+      ],
+      "count": 123
     }
   ]
 }
