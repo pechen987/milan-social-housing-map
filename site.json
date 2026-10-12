@@ -14,6 +14,16 @@
         9.1582
       ],
       "count": 1306
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "country": "France",
+      "center": [
+        48.8626,
+        2.3544
+      ],
+      "count": 3876
     }
   ]
 }
