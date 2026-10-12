@@ -2,18 +2,6 @@
   "id": "your-city",
   "name": "Your City",
   "intro": "Explore documented social housing addresses in Your City.",
-  "managers": [
-    {
-      "key": "Council",
-      "label": "Council",
-      "color": "#167869"
-    },
-    {
-      "key": "Housing association",
-      "label": "Housing assoc.",
-      "color": "#bb593e"
-    }
-  ],
   "sources": [
     {
       "key": "Council register 2024",

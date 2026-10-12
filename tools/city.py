@@ -6,12 +6,14 @@
                                                      turn a CSV of addresses into cities/turin/addresses.json
   python3 tools/city.py validate turin               check one city   (or: validate --all)
   python3 tools/city.py index                        refresh each city's position and address count in site.json
+  python3 tools/city.py stamp                        after editing assets/app.js or app.css: refresh the cache-busting version in index.html
   python3 tools/city.py list                         show the registered cities
 
 See README.md, section "Adding a city".
 """
 import argparse
 import csv
+import hashlib
 import json
 import math
 import os
@@ -36,12 +38,13 @@ ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 KNOWN_CONFIG_KEYS = {
     "id", "name", "country", "data", "about", "credits",
     "introHeading", "intro", "mapLabel", "searchPlaceholder", "footnote",
-    "terms", "managers", "sources", "map", "studyArea", "labels", "fallbackBasemap", "geocoding", "export", "areaLayers",
+    "terms", "sources", "map", "studyArea", "labels", "fallbackBasemap", "geocoding", "export",
     "checkRadii", "listLimit", "coverageWarnMeters",
 }
 
 # settings that existed in earlier versions: tell people what to do instead of just "unknown key"
 REMOVED_KEYS = {
+    "managers": "managers are plain information now: the 'manager' field in the data is shown on each building card (no colours or filters)",
     "title": "the page title is site-wide now (site.json 'title'); use 'introHeading' for the sidebar heading",
     "subtitle": "use 'introHeading' / 'intro' instead",
     "pageTitle": "the browser title is built from the city name and site.json 'title'",
@@ -168,9 +171,39 @@ def cmd_new(a):
     print("Next:")
     print("  1. Put your addresses in cities/%s/source/addresses.csv (see the example rows there)." % cid)
     print("  2. python3 tools/city.py geocode cities/%s/source/addresses.csv --city %s --email YOU@EXAMPLE.ORG" % (cid, cid))
-    print("  3. Edit cities/%s/config.json (managers, sources, texts) and cities/%s/about.html." % (cid, cid))
+    print("  3. Edit cities/%s/config.json (sources, texts) and cities/%s/about.html." % (cid, cid))
     print("  4. python3 tools/city.py validate %s" % cid)
     print("  5. python3 -m http.server 8000   and open  http://localhost:8000/?city=%s" % cid)
+
+
+# ----------------------------------------------------------------------------- stamp
+STAMP_RE = re.compile(r"(assets/app\.(?:css|js))(?:\?v=[0-9a-f]*)?")
+
+
+def assets_hash():
+    h = hashlib.sha1()
+    for f in ("assets/app.css", "assets/app.js"):
+        h.update((ROOT / f).read_bytes())
+    return h.hexdigest()[:10]
+
+
+def current_stamps():
+    html = (ROOT / "index.html").read_text(encoding="utf-8")
+    return set(re.findall(r"assets/app\.(?:css|js)\?v=([0-9a-f]+)", html)), len(re.findall(r"assets/app\.(?:css|js)", html))
+
+
+def cmd_stamp(_):
+    """Browsers (and GitHub Pages) cache files for ~10 minutes. Changing the ?v= value in index.html makes every
+    visitor fetch the new app.js / app.css instead of a stale copy."""
+    path = ROOT / "index.html"
+    html = path.read_text(encoding="utf-8")
+    v = assets_hash()
+    new = STAMP_RE.sub(lambda m: m.group(1) + "?v=" + v, html)
+    if new == html:
+        print("index.html is already stamped with v=%s." % v)
+    else:
+        path.write_text(new, encoding="utf-8")
+        print("index.html stamped with v=%s. Commit it together with your asset changes." % v)
 
 
 # ----------------------------------------------------------------------------- index
@@ -460,16 +493,6 @@ def check_city(cid, site):
         elif k not in KNOWN_CONFIG_KEYS:
             rep.warn("config.json: unknown key %r (typo? it is ignored)" % k)
 
-    managers = cfg.get("managers")
-    mkeys = None
-    if managers is not None:
-        if not isinstance(managers, list) or not all(isinstance(m, dict) and "key" in m for m in managers):
-            rep.err("config.json: 'managers' must be a list of objects with a 'key'")
-        else:
-            mkeys = {str(m["key"]) for m in managers}
-            for m in managers:
-                if "color" in m and not re.fullmatch(r"#[0-9a-fA-F]{3,8}", str(m["color"])):
-                    rep.warn("manager %r: color %r is not a #hex colour" % (m["key"], m["color"]))
     sources = cfg.get("sources")
     skeys = None
     if sources is not None:
@@ -575,9 +598,9 @@ def check_city(cid, site):
             rep.err("%s: coordinates are 0,0 (geocoding probably failed)" % where)
             continue
         good.append((where, r, lat, lon))
-        k = (addr.lower(), str(r.get("manager", "")).lower(), round(lat, 5), round(lon, 5))
+        k = (addr.lower(), round(lat, 5), round(lon, 5))
         if addr and k in seen:
-            rep.warn("%s: duplicate of row %d (same address, manager and position)" % (where, seen[k]))
+            rep.warn("%s: duplicate of row %d (same address and position)" % (where, seen[k]))
         seen.setdefault(k, i + 1)
         if "id" in r:
             if not isinstance(r["id"], int):
@@ -586,8 +609,6 @@ def check_city(cid, site):
                 rep.err("%s: id %s already used by row %d" % (where, r["id"], ids[r["id"]]))
             else:
                 ids[r["id"]] = i + 1
-        if mkeys is not None and r.get("manager") and str(r["manager"]) not in mkeys:
-            rep.warn("%s: manager %r is not listed in config.json (it gets an automatic colour)" % (where, r["manager"]))
         if skeys is not None and r.get("source") and str(r["source"]) not in skeys:
             rep.warn("%s: source %r is not listed in config.json 'sources', so it gets no link" % (where, r["source"]))
         if r.get("url") and not re.match(r"https?://", str(r["url"])):
@@ -633,6 +654,9 @@ def cmd_validate(a):
             sr.err("every entry in 'cities' needs an id and a name: %r" % c)
     if site.get("defaultCity") and site["defaultCity"] not in ids:
         sr.err("defaultCity %r is not in 'cities'" % site["defaultCity"])
+    stamps, n = current_stamps()
+    if stamps != {assets_hash()} or n < 2:
+        sr.err("assets/app.js or app.css changed since index.html was stamped (stale browser caches would mix old and new files): run  python3 tools/city.py stamp")
     sr.show()
     rc |= bool(sr.errors)
     for cid in report_ids:
@@ -681,6 +705,9 @@ def main():
     p.add_argument("--all", action="store_true")
     p.add_argument("--strict", action="store_true", help="treat warnings as failures")
     p.set_defaults(fn=cmd_validate)
+
+    p = sub.add_parser("stamp", help="refresh the cache-busting version in index.html (run after editing assets/app.js or app.css)")
+    p.set_defaults(fn=cmd_stamp)
 
     p = sub.add_parser("index", help="refresh each city's map position and address count in site.json")
     p.set_defaults(fn=cmd_index)
