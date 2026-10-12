@@ -1,5 +1,3 @@
-# Bologna research source
+# Bologna source
 
-Starting public source: [Comune di Bologna · ACER building map](https://sit-test-mappe.comune.bologna.it/arcgis/rest/services/ACER/EDIFICI_PATRIMONIO_ALLOGGI_ACER/MapServer)
-
-No address-level records have been published in this atlas yet.
+`addresses.json` is generated from the Comune di Bologna public ArcGIS layer `ACER/EDIFICI_PATRIMONIO_ALLOGGI_ACER`, retrieved October 2026. Each marker is the centroid of an official ACER building footprint.

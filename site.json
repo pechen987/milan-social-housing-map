@@ -90,9 +90,10 @@
       "name": "Genoa",
       "country": "Italy",
       "center": [
-        44.4056,
-        8.9463
+        44.4213,
+        8.9247
       ],
+      "count": 31,
       "status": "research"
     },
     {
@@ -100,9 +101,10 @@
       "name": "Bologna",
       "country": "Italy",
       "center": [
-        44.4949,
-        11.3426
+        44.5014,
+        11.3505
       ],
+      "count": 630,
       "status": "research"
     },
     {
@@ -110,9 +112,10 @@
       "name": "Florence",
       "country": "Italy",
       "center": [
-        43.7696,
-        11.2558
+        43.7674,
+        11.268
       ],
+      "count": 8,
       "status": "research"
     },
     {

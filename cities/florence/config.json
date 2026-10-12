@@ -2,35 +2,12 @@
   "id": "florence",
   "name": "Florence",
   "country": "Italy",
-  "status": "research",
-  "introHeading": "Florence social housing · research edition.",
-  "intro": "An address-level public source for Florence has been identified. Locations will appear after the register has been collected and checked.",
-  "mapLabel": "Interactive map of Florence",
-  "searchPlaceholder": "Address data is being prepared",
-  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
-  "sources": [
-    {
-      "key": "Casa S.p.A.",
-      "label": "Official starting source",
-      "url": "https://www.casaspa.org/"
-    }
-  ],
-  "map": {
-    "center": [
-      43.7696,
-      11.2558
-    ],
-    "zoom": 12,
-    "minZoom": 10
-  },
-  "geocoding": {
-    "suffix": ", Florence, Italy",
-    "countrycodes": "it",
-    "bbox": [
-      11.0958,
-      43.6496,
-      11.4158,
-      43.889599999999994
-    ]
-  }
+  "introHeading": "Documented social housing in Florence.",
+  "intro": "Explore eight publicly recorded Casa S.p.A. housing locations, placed with Florence’s official civic-address data.",
+  "mapLabel": "Interactive map of documented social housing in Florence",
+  "searchPlaceholder": "Search an address or neighbourhood",
+  "footnote": "<b>8 verified housing-address locations.</b> These are the distinct Florence addresses published as Casa S.p.A. ALLOGGIO properties in its public property register. The register is not a complete citywide census.",
+  "sources": [{"key":"Casa S.p.A. property register","label":"Casa S.p.A. published property register","url":"https://casaspa.portaletrasparenza.net/download/attachment/350/o_1g169al5f2ue1l4b11q95eg7fgg.pdf","pageAnchor":false},{"key":"Comune di Firenze civic dataset","label":"Official civic-address dataset","url":"https://opendata.comune.fi.it/page_dataset_show?id=11430710-56eb-4444-bd6f-c5433155afc5","pageAnchor":false}],
+  "map":{"center":[43.7696,11.2558],"zoom":12,"minZoom":10},
+  "geocoding":{"suffix":", Florence, Italy","countrycodes":"it","bbox":[11.0958,43.6496,11.4158,43.8896]}
 }

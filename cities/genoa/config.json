@@ -2,35 +2,33 @@
   "id": "genoa",
   "name": "Genoa",
   "country": "Italy",
-  "status": "research",
-  "introHeading": "Genoa social housing · research edition.",
-  "intro": "An address-level public source for Genoa has been identified. Locations will appear after the register has been collected and checked.",
-  "mapLabel": "Interactive map of Genoa",
-  "searchPlaceholder": "Address data is being prepared",
-  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "introHeading": "Documented ERP housing in Genoa.",
+  "intro": "Explore 31 publicly recorded Comune di Genova ERP locations managed through ARTE. Markers join the current ERP register to the Comune’s civic-address map.",
+  "mapLabel": "Interactive map of documented ERP housing locations in Genoa",
+  "searchPlaceholder": "Search an address or neighbourhood",
+  "footnote": "<b>31 verified ERP address locations.</b> These are the entries in the June 2026 Comune di Genova register that could be matched to a current official civic point. This is not a complete census of social housing.",
   "sources": [
     {
-      "key": "Comune di Genova · ARTE ERP register",
-      "label": "Official starting source",
-      "url": "https://smart.comune.genova.it/documenti/patrimonio-abitativo-di-edilizia-residenziale-pubblica-erp-gestito-da-arte"
+      "key": "Comune di Genova ERP register",
+      "label": "Comune ERP register managed by ARTE",
+      "url": "https://smart.comune.genova.it/documenti/patrimonio-abitativo-di-edilizia-residenziale-pubblica-erp-gestito-da-arte",
+      "pageAnchor": false
+    },
+    {
+      "key": "Comune di Genova civic coordinates",
+      "label": "Official civic-address map service",
+      "url": "https://dati.comune.genova.it/dataset/toponomastica-i-civici-e-le-strade-di-genova",
+      "pageAnchor": false
     }
   ],
   "map": {
-    "center": [
-      44.4056,
-      8.9463
-    ],
+    "center": [44.4056, 8.9463],
     "zoom": 12,
     "minZoom": 10
   },
   "geocoding": {
     "suffix": ", Genoa, Italy",
     "countrycodes": "it",
-    "bbox": [
-      8.7863,
-      44.2856,
-      9.106300000000001,
-      44.5256
-    ]
+    "bbox": [8.7863, 44.2856, 9.1063, 44.5256]
   }
 }
