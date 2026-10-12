@@ -35,7 +35,7 @@ assets/
   vendor/                  Leaflet and Leaflet.markercluster (unmodified, with licences)
 cities/
   milan/                   one folder per city
-    config.json            names, texts, sources, optional extras
+    config.json            names, texts, colours, sources, optional extras
     addresses.json         the data: one record per address
     ring.geojson           optional: the study-area outline
     about.html             optional: the "Sources & coverage" pop-up text
@@ -60,7 +60,7 @@ tools/city.py              helper: create a city, geocode a CSV, validate
   "title": "Social housing in Europe",
   "eyebrow": "Europe · A social housing atlas",
   "intro": "Documented social-housing addresses, city by city…",
-  "repo": "https://github.com/pechen987/social-housing-map",
+  "repo": "https://github.com/you/your-repo",
   "cartoKey": "…",
   "cities": [
     { "id": "milan", "name": "Milan", "country": "Italy", "center": [45.4639, 9.1844], "count": 129 }
@@ -108,7 +108,7 @@ Edit `cities/turin/source/addresses.csv`. The only required column is `address`.
 | column | meaning |
 |---|---|
 | `address` | **required.** Street and number, as you would type it, e.g. `Via Roma 12` |
-| `manager` | who runs the building (housing company, council…). Shown on the building card as “Managed by …” and searchable; no colours or filters |
+| `manager` | who runs it (housing company, council…). Becomes the colour and the filter chips |
 | `area` | neighbourhood, used for the area filter |
 | `district` | larger district / borough, shown in the popup |
 | `source` | which source document it comes from; must match a `key` under `sources` in `config.json` (this is what makes the popup link work) |
@@ -141,6 +141,7 @@ Already have coordinates, or exported from a GIS? Write `addresses.json` yoursel
 Edit `cities/turin/config.json`. The template gives you the minimum; every setting is explained in the [reference](#configuration-configjson). The ones that matter most:
 
 - `country` (shown in the header and on the overview),
+- `managers`: names and colours (`key` must match the `manager` values in your data),
 - `sources`: where the data comes from, with links,
 - `introHeading`, `intro`, `footnote`: what readers see.
 
@@ -153,7 +154,7 @@ python3 tools/city.py validate turin
 python3 tools/city.py index        # only needed if you edited addresses by hand: refreshes Turin's bubble on the overview
 ```
 
-`validate` checks the JSON, coordinates (swapped lat/lon, `0,0`, points far from the rest), duplicates, unknown source names, missing files, typos in `config.json` and leftover placeholder text. The same check runs automatically on every push and pull request, so a broken file is caught before it goes live.
+`validate` checks the JSON, coordinates (swapped lat/lon, `0,0`, points far from the rest), duplicates, unknown manager/source names, missing files, typos in `config.json` and leftover placeholder text. The same check runs automatically on every push and pull request, so a broken file is caught before it goes live.
 
 ### 6. Look at it
 
@@ -186,7 +187,7 @@ A JSON list with one object per address. Only the first three fields are require
 |---|---|---|
 | `address` | text | **required** |
 | `lat`, `lon` | number | **required.** WGS84 decimal degrees, latitude first. Rows without valid coordinates are skipped (and counted in a notice) |
-| `manager` | text | optional. Who runs the building; shown on the building card and searchable. Every address looks the same on the map regardless of manager |
+| `manager` | text | optional. Missing → one default colour called "Social housing" |
 | `area` | text | optional. Enables the area filter. ALL-CAPS names are shown in Title Case |
 | `district` | text or number | optional. Shown as "*District* N" (the word comes from `terms.district`) |
 | `source` | text | matches a `sources[].key` in `config.json` to build the link |
@@ -216,12 +217,13 @@ Everything is optional except `id` and `name`. The site title and the small line
 | `searchPlaceholder` | built from your areas | hint in the search box |
 | `mapLabel` | "Interactive map of Name" | screen-reader label |
 | `credits` | – | extra text appended to the credits line |
-| `terms` | `{area, allAreas, district, manager}` | words for your local terms, e.g. `{"area":"Neighbourhood / NIL","allAreas":"All neighbourhoods","district":"Municipio","manager":"Managed by"}`. `manager` is the phrase put before the manager's name on each building card ("Operator:", "Landlord:"…) |
+| `terms` | `{area, allAreas, district}` | words for your local terms, e.g. `{"area":"Neighbourhood / NIL","allAreas":"All neighbourhoods","district":"Municipio"}` |
 
 **Data and look**
 
 | key | default | meaning |
 |---|---|---|
+| `managers` | inferred from the data | `[{"key","label","color","caption"}]`. `key` matches the data; `label` is shown on chips and the legend; `caption` replaces "*label* managed" in the stats; `color` is a `#hex` (nice defaults otherwise). Managers present in the data but not listed get automatic colours |
 | `sources` | – | `[{"key","label","url","pageAnchor"}]`; `pageAnchor: true` appends `#page=N` for PDFs |
 | `map` | – | `{"center":[lat,lon],"zoom":13,"minZoom":9}`. By default the map fits the study area, or all the data |
 | `labels` | – | `[{"name","lat","lon"}]`: neighbourhood names printed on the map |
@@ -290,7 +292,6 @@ python3 tools/city.py geocode <csv> --city <id> [--email E] [--delay S] [--count
                                     [--out file] [--no-cache] [--retry-missing] [--dry-run]
 python3 tools/city.py validate [<id> ...] [--all] [--strict]
 python3 tools/city.py index                       # refresh country / position / count in site.json
-python3 tools/city.py stamp                       # after editing assets/app.js or app.css: refresh the cache-busting version in index.html
 python3 tools/city.py list
 ```
 
@@ -316,7 +317,7 @@ Reviewers: `about.html`, `footnote` and link URLs come from contributors. The ap
 
 1. `index.html` loads Leaflet, the clustering plugin and `assets/app.js`.
 2. `app.js` reads `site.json`. With no `?city=` and two or more cities it draws the Europe overview; otherwise it picks the city and loads that city's `config.json`, `addresses.json` and optional study-area file in parallel.
-3. It validates and normalises the records (bad rows are skipped and counted), builds the sidebar, legend and filters from the config, and draws the map.
+3. It validates and normalises the records (bad rows are skipped and counted), works out colours and counts, builds the sidebar, legend and filters from the config, and draws the map.
 4. Everything the reader changes (view, filters, selected address, pin, layers) is written to the URL hash, which is what the **Share** button copies. The city is in the query string (`?city=`).
 
 Basemaps are tried in order (CARTO → OpenStreetMap → the city's local image), moving on after three failed tiles. Satellite imagery is Esri World Imagery, loaded on demand.
@@ -340,7 +341,6 @@ Basemaps are tried in order (CARTO → OpenStreetMap → the city's local image)
 | Dots in the wrong place | swapped lat/lon, or a wrong geocoding match: `validate` flags points far from the rest |
 | Old share links open the wrong address | record `id`s changed; keep row order stable or set explicit `id`s |
 | `validate`: unknown or "no longer used" key | a typo, or a setting from an older version; it is ignored until fixed |
-| Page stuck on "Loading…", dots missing, until a hard refresh | the browser mixed old and new files (GitHub Pages lets browsers cache files for ~10 minutes). Data files are now always revalidated and `app.js`/`app.css` are versioned in `index.html`. Hard-refresh once (Cmd/Ctrl+Shift+R). If you change `assets/app.js` or `app.css`, run `python3 tools/city.py stamp` and commit `index.html` too (the validator fails otherwise) |
 | A city is missing from the overview map | its entry in `site.json` has no `center`: run `python3 tools/city.py index` |
 | Geocoding says "server busy" | OSM rate limit; the script waits and retries. Do not lower `--delay` below 1 |
 

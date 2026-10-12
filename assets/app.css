@@ -30,7 +30,11 @@ aside{display:flex;flex-direction:column;min-height:0;border-right:1px solid var
 .filters{padding:0 23px 16px;border-bottom:1px solid var(--line)}
 .filters>label{display:block;margin-bottom:8px}
 input[type=search]{width:100%;background:white;border:1px solid #d3dcd4;border-radius:8px;padding:12px;font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}
+.chips button{flex:1;padding:8px 5px;background:transparent;white-space:nowrap}
+.chips button.active{color:#fff;background:var(--ink);border-color:var(--ink)}
 .filters #areawrap{margin-top:10px}
+.chips:not([hidden])+#areawrap{margin-top:0}
 select{width:100%;border:1px solid #d3dcd4;border-radius:7px;padding:9px;background:white;font-size:12px;color:var(--ink)}
 .resultbar{padding:14px 23px 8px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted)}
 .linkbtn{padding:0;border:0;border-radius:0;background:transparent;text-decoration:underline;font-size:11px;color:var(--teal)}
@@ -93,7 +97,7 @@ select{width:100%;border:1px solid #d3dcd4;border-radius:7px;padding:9px;backgro
 .placelabel{font-size:11px;letter-spacing:1.3px;white-space:nowrap;text-align:center;color:#63796e;font-weight:600;text-shadow:0 1px 2px #fff,1px 0 2px #fff}
 .pinwrap,.mcl{background:none;border:0}
 .pinicon{width:22px;height:22px;margin:3px;background:#203a37;border:3px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px #0005}
-.mclin{position:absolute;inset:0;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 6px #0004;background:var(--teal)}
+.mclin{position:absolute;inset:0;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 6px #0004}
 .mclin span{position:absolute;inset:4px;border-radius:50%;background:#fffdf7;display:flex;align-items:center;justify-content:center;font:700 12px Arial,sans-serif;color:var(--ink)}
 .leaflet-cluster-anim .leaflet-marker-icon,.leaflet-cluster-anim .leaflet-marker-shadow{transition:transform .3s ease-out,opacity .3s ease-in}
 .map-picking .leaflet-container,.map-picking .leaflet-interactive{cursor:crosshair!important}
@@ -158,3 +162,9 @@ main{height:850px;grid-template-columns:280px 1fr}
 #list{overflow:visible}
 .card{font-size:10px}
 }
+
+/* Keep the shared title Europe-wide; city selection is shown in the picker and sidebar. */
+header h1 span{display:none}
+
+/* zoom-dependent administrative areas */
+.arealabel{font:600 11px Arial,sans-serif;letter-spacing:.5px;white-space:nowrap;text-align:center;color:#3b675f;text-shadow:0 1px 2px #fff,1px 0 2px #fff,-1px 0 2px #fff;pointer-events:none}

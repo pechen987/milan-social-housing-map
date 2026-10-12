@@ -2,39 +2,43 @@
   "id": "milan",
   "name": "Milan",
   "country": "Italy",
-  "introHeading": "Case popolari, inside the boulevard ring.",
-  "intro": "Explore documented public housing addresses (case popolari, ERP) within the road ring in your reference image.",
+  "introHeading": "A social housing atlas for Europe.",
+  "intro": "Explore documented public and social-housing addresses, city by city. Milan is the first mapped city, with coverage across all nine Municipi.",
   "mapLabel": "Interactive map of Milan public housing",
-  "searchPlaceholder": "Try Isola, Gola, Garibaldi…",
-  "footnote": "<b>Documented locations, not a live census.</b> Based mainly on the Comune’s 2022 ERP list. Counts are addresses, not apartments or unique buildings.",
+  "searchPlaceholder": "Try Gratosoglio, Quarto Oggiaro, Giambellino…",
+  "footnote": "<b>Documented addresses, not a live census.</b> This citywide release is based on the Comune di Milano’s 2022 ERP register and mapped to the Comune’s 2026 civic-coordinate register. Counts are addresses, not apartments or unique buildings.",
   "terms": {
     "area": "Neighbourhood / NIL",
     "allAreas": "All neighbourhoods",
     "district": "Municipio"
   },
+  "managers": [
+    {
+      "key": "MM",
+      "label": "MM",
+      "color": "#167869"
+    },
+    {
+      "key": "ALER",
+      "label": "ALER",
+      "color": "#bb593e"
+    }
+  ],
   "sources": [
     {
       "key": "ERP 2022",
-      "label": "Official source",
+      "label": "Comune di Milano ERP register (2022)",
       "url": "https://servizi.comune.milano.it/documents/20121/25281772/ALLEGATO%2B5%2B-%2BELENCO%2BSTABILI%2BERP%2BRettificato.pdf/d1976b00-f442-5c7a-75ca-14f7a9774e2e?t=1664263551460",
-      "pageAnchor": true
-    },
-    {
-      "key": "MM residential list (undated)",
-      "label": "Official source",
-      "url": "https://portalqa.mmspa.eu/wps/wcm/connect/pon/3d61345f-7863-46ef-a49f-8015cbb3497f/elenco%2Balloggi.pdf?CVID=puHhwLJ&MOD=AJPERES",
       "pageAnchor": true
     }
   ],
   "map": {
-    "minZoom": 11
-  },
-  "studyArea": {
-    "file": "ring.geojson",
-    "name": "the boulevard ring",
-    "edgeMeters": 100,
-    "edgeLabel": "Near boundary",
-    "edgeWarning": "Within 100 m of the approximate ring. Check the street and boundary before treating this as definitively inside."
+    "center": [
+      45.4642,
+      9.19
+    ],
+    "zoom": 11,
+    "minZoom": 10
   },
   "labels": [
     {
@@ -68,20 +72,6 @@
       "lon": 9.167
     }
   ],
-  "fallbackBasemap": {
-    "image": "milan-municipal-basemap.png",
-    "bounds": [
-      [
-        45.438,
-        9.14
-      ],
-      [
-        45.502,
-        9.224
-      ]
-    ],
-    "attribution": "Basemap: Comune di Milano, CTC 2012 (CC BY 4.0)"
-  },
   "geocoding": {
     "suffix": ", Milano",
     "countrycodes": "it",
@@ -91,13 +81,57 @@
       9.33,
       45.56
     ],
-    "example": "Via Tortona 20"
+    "example": "Via Giambellino 141"
   },
   "export": {
     "metadata": {
-      "compiled": "2026-10-10",
-      "coverage": "Documented addresses, mainly ERP 2022; not a complete current census.",
-      "coordinates": "Comune di Milano civic dataset 2026-10-01, CC BY 4.0"
+      "compiled": "2026-10-11",
+      "coverage": "Documented ERP addresses citywide, based on the Comune di Milano’s 2022 register; not a complete current census.",
+      "coordinates": "Comune di Milano civic-coordinate dataset, October 2026, CC BY 4.0"
     }
-  }
+  },
+  "areaLayers": [
+    {
+      "id": "municipi",
+      "name": "Municipi",
+      "url": "https://dati.comune.milano.it/dataset/36ba21c2-8b48-43ce-bbe1-e236a8a49ff6/resource/99ecd085-0b04-4fb2-a66e-9795694d4fc4/download/ds379_municipi_label.geojson",
+      "minZoom": 10,
+      "maxZoom": 12.25,
+      "labelZoom": 10.75,
+      "labelField": [
+        "MUNICIPIO",
+        "NOME",
+        "nome"
+      ],
+      "labelPrefix": "Municipio ",
+      "style": {
+        "color": "#37645d",
+        "weight": 1.25,
+        "opacity": 0.68,
+        "fillColor": "#86a89a",
+        "fillOpacity": 0.045
+      }
+    },
+    {
+      "id": "nil",
+      "name": "Nuclei di Identità Locale",
+      "url": "https://dati.comune.milano.it/dataset/e8e765fc-d882-40b8-95d8-16ff3d39eb7c/resource/9c4e0776-56fc-4f3d-8a90-f4992a3be426/download/ds964_nil_wm.geojson",
+      "minZoom": 12.25,
+      "labelZoom": 13.25,
+      "labelField": [
+        "NIL",
+        "NOME_NIL",
+        "NOME",
+        "nome"
+      ],
+      "style": {
+        "color": "#356f66",
+        "weight": 1,
+        "opacity": 0.6,
+        "fillColor": "#a9c4b4",
+        "fillOpacity": 0.025
+      }
+    }
+  ],
+  "credits": "Addresses: Comune di Milano ERP register (2022); civic coordinates and area boundaries: Comune di Milano open data (CC BY 4.0)"
 }

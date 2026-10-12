@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Loading…</title>
 <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="assets/app.css?v=c6f1aef898">
+<link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
-<!-- Everything city-specific is filled in by assets/app.js?v=c6f1aef898 from cities/<id>/config.json -->
+<!-- Everything city-specific is filled in by assets/app.js from cities/<id>/config.json -->
 <header>
   <div>
     <div class="eyebrow" id="eyebrow">&nbsp;</div>
@@ -29,6 +29,7 @@
     <div class="filters">
       <label for="search" class="eyebrow" id="searchLabel">Find an address</label>
       <input type="search" id="search" placeholder="Search…" autocomplete="off">
+      <div class="chips" id="chips" aria-label="Filter by manager" hidden></div>
       <div id="areawrap" hidden>
         <label for="area" class="visually-hidden" id="areaLabel">Area</label>
         <select id="area"></select>
@@ -90,6 +91,6 @@
 
 <script src="assets/vendor/leaflet/leaflet.js"></script>
 <script src="assets/vendor/markercluster/leaflet.markercluster.js"></script>
-<script src="assets/app.js?v=c6f1aef898"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
