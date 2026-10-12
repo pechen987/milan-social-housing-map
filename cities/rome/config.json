@@ -1,0 +1,36 @@
+{
+  "id": "rome",
+  "name": "Rome",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Rome social housing · research edition.",
+  "intro": "An address-level public source for Rome has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Rome",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "ATER Roma",
+      "label": "Official starting source",
+      "url": "https://www.aterroma.it/"
+    }
+  ],
+  "map": {
+    "center": [
+      41.9028,
+      12.4964
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Rome, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      12.3364,
+      41.7828,
+      12.6564,
+      42.0228
+    ]
+  }
+}

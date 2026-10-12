@@ -1,7 +1,7 @@
 {
   "id": "bolzano",
   "name": "Bolzano",
-  "intro": "Explore 35 documented municipal residential locations in Bolzano, drawn from the city’s public 2023 property register.",
+  "intro": "Explore 44 documented municipal residential locations in Bolzano, drawn from the city’s public 2023 property register.",
   "managers": [
     {
       "key": "Comune di Bolzano",
@@ -31,7 +31,7 @@
   "introHeading": "Documented municipal housing in Bolzano.",
   "mapLabel": "Interactive map of documented municipal housing in Bolzano",
   "searchPlaceholder": "Try Aslago, Resia, Ortles…",
-  "footnote": "<b>35 documented municipal housing locations, not a complete social-housing census.</b> The public register lists 64 civic addresses under <i>Edilizia abitativa</i>; this first map release plots the 35 with confirmed coordinates.",
+  "footnote": "<b>44 documented municipal housing locations, not a complete social-housing census.</b> The public register lists 64 civic addresses under <i>Edilizia abitativa</i>; this first map release plots the 44 with confirmed coordinates.",
   "map": {
     "center": [
       46.4965,

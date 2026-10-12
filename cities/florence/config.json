@@ -1,0 +1,36 @@
+{
+  "id": "florence",
+  "name": "Florence",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Florence social housing · research edition.",
+  "intro": "An address-level public source for Florence has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Florence",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "Casa S.p.A.",
+      "label": "Official starting source",
+      "url": "https://www.casaspa.org/"
+    }
+  ],
+  "map": {
+    "center": [
+      43.7696,
+      11.2558
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Florence, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      11.0958,
+      43.6496,
+      11.4158,
+      43.889599999999994
+    ]
+  }
+}

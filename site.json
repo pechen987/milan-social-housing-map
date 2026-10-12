@@ -40,10 +40,110 @@
       "name": "Bolzano",
       "country": "Italy",
       "center": [
-        46.4848,
-        11.3434
+        46.4867,
+        11.3439
       ],
-      "count": 35
+      "count": 44
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "country": "Italy",
+      "center": [
+        41.9028,
+        12.4964
+      ],
+      "status": "research"
+    },
+    {
+      "id": "naples",
+      "name": "Naples",
+      "country": "Italy",
+      "center": [
+        40.8518,
+        14.2681
+      ],
+      "status": "research"
+    },
+    {
+      "id": "turin",
+      "name": "Turin",
+      "country": "Italy",
+      "center": [
+        45.0703,
+        7.6869
+      ],
+      "status": "research"
+    },
+    {
+      "id": "palermo",
+      "name": "Palermo",
+      "country": "Italy",
+      "center": [
+        38.1157,
+        13.3615
+      ],
+      "status": "research"
+    },
+    {
+      "id": "genoa",
+      "name": "Genoa",
+      "country": "Italy",
+      "center": [
+        44.4056,
+        8.9463
+      ],
+      "status": "research"
+    },
+    {
+      "id": "bologna",
+      "name": "Bologna",
+      "country": "Italy",
+      "center": [
+        44.4949,
+        11.3426
+      ],
+      "status": "research"
+    },
+    {
+      "id": "florence",
+      "name": "Florence",
+      "country": "Italy",
+      "center": [
+        43.7696,
+        11.2558
+      ],
+      "status": "research"
+    },
+    {
+      "id": "bari",
+      "name": "Bari",
+      "country": "Italy",
+      "center": [
+        41.1171,
+        16.8719
+      ],
+      "status": "research"
+    },
+    {
+      "id": "catania",
+      "name": "Catania",
+      "country": "Italy",
+      "center": [
+        37.5079,
+        15.083
+      ],
+      "status": "research"
+    },
+    {
+      "id": "livorno",
+      "name": "Livorno",
+      "country": "Italy",
+      "center": [
+        43.5485,
+        10.3106
+      ],
+      "status": "research"
     }
   ]
 }

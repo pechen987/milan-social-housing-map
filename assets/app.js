@@ -91,6 +91,7 @@ async function boot() {
   }
 
   const skipped = loadRecords(rawData);
+  if (!DATA.length && raw.status === 'research') { CFG = buildConfig(raw); return bootResearch(); }
   if (!DATA.length) return fatal('No addresses to show', '<p><code>' + esc(BASE) + 'addresses.json</code> has no usable rows (each needs an <code>address</code>, <code>lat</code> and <code>lon</code>).</p>');
   DATA_BOUNDS = L.latLngBounds(DATA.map(d => [d.lat, d.lon]));
   CFG = buildConfig(raw);
@@ -123,7 +124,7 @@ function bootOverview(cities) {
   $('introP').textContent = SITE.intro;
   $('stats').innerHTML = '<div class="stat"><strong>' + cities.length + '</strong><span>cities</span></div>' + (total ? '<div class="stat"><strong>' + total + '</strong><span>address locations</span></div>' : '');
   const sorted = cities.slice().sort((a, b) => (a.name || a.id).localeCompare(b.name || b.id));
-  $('list').innerHTML = sorted.map(c => '<a class="card" href="?city=' + encodeURIComponent(c.id) + '"><span class="cardtop">' + esc(c.country || 'City') + '</span><span class="addr">' + esc(c.name || c.id) + '</span><span class="neighbourhood">' + (c.count ? c.count + ' documented addresses' : 'open the map') + '</span></a>').join('');
+  $('list').innerHTML = sorted.map(c => '<a class="card" href="?city=' + encodeURIComponent(c.id) + '"><span class="cardtop">' + esc(c.country || 'City') + '</span><span class="addr">' + esc(c.name || c.id) + '</span><span class="neighbourhood">' + (c.count ? c.count + ' documented addresses' : c.status === 'research' ? 'research edition' : 'open the map') + '</span></a>').join('');
   $('footnote').innerHTML = sanitizeHTML(SITE.footnote || '<b>Documented locations, not a live census.</b> Each city lists the addresses found in its public registers; absence from a map never proves absence of social housing.') +
     (isHttp(SITE.repo) ? ' <a href="' + esc(SITE.repo) + '" target="_blank" rel="noopener">Add your city ↗</a>' : '');
   map = L.map('map', { zoomControl: false, minZoom: 3, maxZoom: 12, zoomSnap: 0.25 });
@@ -141,6 +142,35 @@ function bootOverview(cities) {
   if (pts.length > 1) map.fitBounds(L.latLngBounds(pts), { paddingTopLeft: [70, 70], paddingBottomRight: [90, 120], maxZoom: 7 });
   else if (pts.length === 1) map.setView(pts[0], 9);
   else map.setView([50, 10], 4);
+}
+
+/* ---------- research edition ---------- */
+function bootResearch() {
+  document.body.classList.add('research');
+  document.title = CFG.name + ' · ' + SITE.title;
+  $('eyebrow').textContent = SITE.eyebrow;
+  $('title').innerHTML = esc(SITE.title) + '<span>' + esc(CFG.name + (CFG.country ? ', ' + CFG.country : '')) + '</span>';
+  fillPicker(CITY_ID);
+  $('introH').textContent = CFG.introHeading;
+  $('introP').textContent = CFG.intro;
+  $('stats').innerHTML = '<div class="stat"><strong>Research</strong><span>address data in progress</span></div>';
+  $('filters').hidden = true;
+  $('check').hidden = true;
+  $('resultbar').hidden = true;
+  $('list').innerHTML = '<div class="empty"><b>Not mapped yet.</b><br>We have identified the public agency and source route for this city, but have not published address markers until they can be verified.</div>';
+  $('footnote').innerHTML = sanitizeHTML(CFG.footnote) + ' <button class="linkbtn" id="coverage">Read coverage notes</button>';
+  $('legend').hidden = true;
+  $('export').hidden = true;
+  $('cluster').hidden = true;
+  $('fit').hidden = true;
+  $('sources').onclick = $('coverage').onclick = openAbout;
+  $('closeAbout').onclick = () => $('about').close();
+  $('paneltoggle').onclick = () => { document.querySelector('main').classList.toggle('panel-collapsed'); const closed = document.querySelector('main').classList.contains('panel-collapsed'); $('paneltoggle').textContent = closed ? 'Show panel' : 'Hide panel'; setTimeout(() => map.invalidateSize(), 220); };
+  map = L.map('map', { zoomControl: false, minZoom: CFG.map.minZoom, maxZoom: 19, zoomSnap: 0.25, preferCanvas: true });
+  L.control.zoom({ position: 'topleft' }).addTo(map);
+  L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
+  addBasemaps(map, CFG.fallbackBasemap);
+  map.setView(CFG.map.center || [45, 10], CFG.map.zoom || 12);
 }
 
 /* ---------- data ---------- */
@@ -187,7 +217,7 @@ function buildManagers(cfgManagers) {
 
 function buildConfig(raw) {
   const name = raw.name || raw.id || CITY_ID;
-  const pad = 0.12, b = DATA_BOUNDS;
+  const pad = 0.12, b = DATA_BOUNDS, c = (raw.map || {}).center || [50, 10];
   return Object.assign({}, raw, {
     name,
     introHeading: raw.introHeading || 'Social housing in ' + name + '.',
@@ -201,7 +231,7 @@ function buildConfig(raw) {
     fallbackBasemap: raw.fallbackBasemap || null,
     geocoding: Object.assign({
       suffix: ', ' + name, countrycodes: '',
-      bbox: [b.getWest() - pad, b.getSouth() - pad, b.getEast() + pad, b.getNorth() + pad]
+      bbox: b ? [b.getWest() - pad, b.getSouth() - pad, b.getEast() + pad, b.getNorth() + pad] : [c[1] - pad, c[0] - pad, c[1] + pad, c[0] + pad]
     }, raw.geocoding),
     export: Object.assign({ metadata: {} }, raw.export),
     checkRadii: raw.checkRadii || [100, 250, 500],

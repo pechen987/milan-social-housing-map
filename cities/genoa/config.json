@@ -1,0 +1,36 @@
+{
+  "id": "genoa",
+  "name": "Genoa",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Genoa social housing · research edition.",
+  "intro": "An address-level public source for Genoa has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Genoa",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "Comune di Genova · ARTE ERP register",
+      "label": "Official starting source",
+      "url": "https://smart.comune.genova.it/documenti/patrimonio-abitativo-di-edilizia-residenziale-pubblica-erp-gestito-da-arte"
+    }
+  ],
+  "map": {
+    "center": [
+      44.4056,
+      8.9463
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Genoa, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      8.7863,
+      44.2856,
+      9.106300000000001,
+      44.5256
+    ]
+  }
+}

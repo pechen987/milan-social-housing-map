@@ -1,0 +1,36 @@
+{
+  "id": "bologna",
+  "name": "Bologna",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Bologna social housing · research edition.",
+  "intro": "An address-level public source for Bologna has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Bologna",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "Comune di Bologna · ACER building map",
+      "label": "Official starting source",
+      "url": "https://sit-test-mappe.comune.bologna.it/arcgis/rest/services/ACER/EDIFICI_PATRIMONIO_ALLOGGI_ACER/MapServer"
+    }
+  ],
+  "map": {
+    "center": [
+      44.4949,
+      11.3426
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Bologna, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      11.182599999999999,
+      44.374900000000004,
+      11.5026,
+      44.6149
+    ]
+  }
+}

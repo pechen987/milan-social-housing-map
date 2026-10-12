@@ -1,0 +1,36 @@
+{
+  "id": "naples",
+  "name": "Naples",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Naples social housing · research edition.",
+  "intro": "An address-level public source for Naples has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Naples",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "ACER Campania",
+      "label": "Official starting source",
+      "url": "https://www.acernapoli.it/"
+    }
+  ],
+  "map": {
+    "center": [
+      40.8518,
+      14.2681
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Naples, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      14.1081,
+      40.7318,
+      14.4281,
+      40.971799999999995
+    ]
+  }
+}

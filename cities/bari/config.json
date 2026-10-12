@@ -1,0 +1,36 @@
+{
+  "id": "bari",
+  "name": "Bari",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Bari social housing · research edition.",
+  "intro": "An address-level public source for Bari has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Bari",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "ARCA Puglia Centrale",
+      "label": "Official starting source",
+      "url": "https://www.arcapugliacentrale.it/patrimonio/descrizione-e-gestione/"
+    }
+  ],
+  "map": {
+    "center": [
+      41.1171,
+      16.8719
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Bari, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      16.7119,
+      40.9971,
+      17.0319,
+      41.2371
+    ]
+  }
+}
