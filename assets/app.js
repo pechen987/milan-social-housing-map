@@ -14,11 +14,11 @@ const isHttp = u => /^https?:\/\//i.test(u || '');
 const safeUrl = u => isHttp(u) ? u : '';
 const isAbsolute = p => /^([a-z][a-z0-9+.-]*:)?\/\//i.test(p) || p.startsWith('/');
 const rel = (base, p) => isAbsolute(p) ? p : base + p;
-const PALETTE = ['#167869', '#bb593e', '#4a6fa5', '#b08a2e', '#7a5a99', '#3a8f9b', '#8a6d4b', '#6b8e3d'];
-const DEFAULT_MANAGER = 'Social housing';
+const DOT_COLOR = '#167869';
 
-async function getJSON(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ' → HTTP ' + r.status); return r.json(); }
-async function getText(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ' → HTTP ' + r.status); return r.text(); }
+/* 'no-cache' = always ask the server whether the file changed (cheap 304 if not), so data and code can never be a stale mix. */
+async function getJSON(url) { const r = await fetch(url, { cache: 'no-cache' }); if (!r.ok) throw new Error(url + ' → HTTP ' + r.status); return r.json(); }
+async function getText(url) { const r = await fetch(url, { cache: 'no-cache' }); if (!r.ok) throw new Error(url + ' → HTTP ' + r.status); return r.text(); }
 
 /* Config/about HTML comes from files that contributors can edit, so strip anything executable. */
 function sanitizeHTML(html) {
@@ -38,13 +38,11 @@ function sanitizeHTML(html) {
 let SITE, CFG, CITY_ID, BASE;
 let DATA = [], BY_ID = new Map(), DATA_BOUNDS = null;
 let STUDY = null;                       // { rings, features, bounds } when the city has a study area
-let MGR = {}, MGR_LIST = [], SRC = {};
+let SRC = {};
 let map, layer, pinLayer, satLayer;
-let areaLayers = [];
-let manager = 'all', visible = [], selected = null, markers = new Map();
+let visible = [], selected = null, markers = new Map();
 let pin = null, satOn = false, clustering = false, picking = false, hashReady = false;
 let hasCluster = false, geoBusy = false, aboutLoaded = false, H;
-const statEls = new Map();
 
 /* ==========================================================================
    Boot
@@ -54,7 +52,7 @@ function fatal(title, html) {
   document.body.innerHTML = '<div class="fatal"><h2>' + esc(title) + '</h2>' + html + '</div>';
 }
 
-async function boot() {
+async function bootMain() {
   H = new URLSearchParams(location.hash.slice(1));
   try {
     SITE = await getJSON('site.json');
@@ -96,7 +94,6 @@ async function boot() {
   DATA_BOUNDS = L.latLngBounds(DATA.map(d => [d.lat, d.lon]));
   CFG = buildConfig(raw);
   if (studyGJ) { try { STUDY = loadStudy(studyGJ); } catch (e) { console.warn('Study area ignored:', e.message); } }
-  buildManagers(raw.managers);
   SRC = Object.fromEntries((CFG.sources || []).map(s => [String(s.key), s]));
   DATA.forEach(d => {
     d.edge = typeof d._edge === 'boolean' ? d._edge : !!(STUDY && STUDY.edgeMeters > 0 && studyDistM(d.lat, d.lon) <= STUDY.edgeMeters);
@@ -158,7 +155,7 @@ function loadRecords(raw) {
     if (!r.address || !isFinite(lat) || !isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180 || (lat === 0 && lon === 0)) { skipped++; return; }
     const d = Object.assign({}, r, { lat, lon, address: String(r.address).trim() });
     delete d.lng;
-    d.manager = String(r.manager ?? '').trim() || DEFAULT_MANAGER;
+    d.manager = String(r.manager ?? '').trim();
     d.area = r.area != null && r.area !== '' ? String(r.area).trim() : '';
     if (typeof r.edge === 'boolean') d._edge = r.edge;
     delete d.edge;
@@ -171,20 +168,6 @@ function loadRecords(raw) {
   return skipped;
 }
 
-function buildManagers(cfgManagers) {
-  MGR_LIST = (cfgManagers || []).map((m, i) => ({
-    key: String(m.key), label: m.label || String(m.key), color: m.color || PALETTE[i % PALETTE.length],
-    caption: m.caption || (m.label || m.key) + ' managed'
-  }));
-  const seen = new Set(MGR_LIST.map(m => m.key));
-  DATA.forEach(d => {
-    if (seen.has(d.manager)) return;
-    seen.add(d.manager);
-    MGR_LIST.push({ key: d.manager, label: d.manager, color: PALETTE[MGR_LIST.length % PALETTE.length], caption: d.manager === DEFAULT_MANAGER ? 'address locations' : d.manager + ' managed' });
-  });
-  MGR = Object.fromEntries(MGR_LIST.map(m => [m.key, m]));
-}
-
 function buildConfig(raw) {
   const name = raw.name || raw.id || CITY_ID;
   const pad = 0.12, b = DATA_BOUNDS;
@@ -194,7 +177,7 @@ function buildConfig(raw) {
     intro: raw.intro || 'Explore documented social-housing addresses in ' + name + '.',
     mapLabel: raw.mapLabel || 'Interactive map of ' + name,
     footnote: raw.footnote || '<b>Documented locations, not a live census.</b> Counts are addresses, not apartments or unique buildings.',
-    terms: Object.assign({ area: 'Neighbourhood', allAreas: 'All areas', district: 'District' }, raw.terms),
+    terms: Object.assign({ area: 'Neighbourhood', allAreas: 'All areas', district: 'District', manager: 'Managed by' }, raw.terms),
     map: Object.assign({ minZoom: 9 }, raw.map),
     sources: raw.sources || [],
     labels: raw.labels || [],
@@ -276,22 +259,7 @@ function buildUI() {
   fillPicker(CITY_ID);
 
   // stats
-  $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>address locations</span></div>' +
-    (MGR_LIST.length > 1 ? MGR_LIST.map(m => '<div class="stat"><strong data-mgr="' + esc(m.key) + '" style="color:' + esc(m.color) + '">—</strong><span>' + esc(m.caption) + '</span></div>').join('') : '');
-  document.querySelectorAll('[data-mgr]').forEach(el => statEls.set(el.dataset.mgr, el));
-
-  // manager chips
-  if (MGR_LIST.length > 1) {
-    $('chips').hidden = false;
-    $('chips').innerHTML = '<button class="active" data-manager="all" aria-pressed="true">All managers</button>' +
-      MGR_LIST.map(m => '<button data-manager="' + esc(m.key) + '" aria-pressed="false"><span style="color:' + esc(m.color) + '">●</span> ' + esc(m.label) + '</button>').join('');
-    $('chips').onclick = e => {
-      const b = e.target.closest('[data-manager]'); if (!b) return;
-      manager = b.dataset.manager;
-      document.querySelectorAll('#chips [data-manager]').forEach(c => { c.classList.toggle('active', c === b); c.setAttribute('aria-pressed', String(c === b)); });
-      render();
-    };
-  }
+  $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>address locations</span></div>';
 
   // area select (only if the data has areas)
   const areas = [...new Set(DATA.map(d => d.area).filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -306,7 +274,7 @@ function buildUI() {
   $('addr').placeholder = 'e.g. ' + (CFG.geocoding.example || DATA[0].address);
 
   // legend
-  $('legend').innerHTML = MGR_LIST.map(m => '<span><i class="dot" style="background:' + esc(m.color) + '"></i>' + esc(m.label) + '</span>').join('') +
+  $('legend').innerHTML = '<span><i class="dot"></i>Social housing address</span>' +
     (STUDY && STUDY.edgeMeters > 0 ? '<span><i style="width:10px;height:10px;border:2px solid #be8e32;border-radius:50%"></i>' + esc(STUDY.edgeLabel) + '</span>' : '');
 
   // download dialog
@@ -320,7 +288,7 @@ function buildUI() {
   $('credits').textContent = credits.join('; ') + '. The address check uses OpenStreetMap Nominatim, so the text you type is sent to OpenStreetMap. Libraries: Leaflet 1.9.4 (BSD-2-Clause) and Leaflet.markercluster 1.5.3 (MIT).';
 
   // buttons
-  $('reset').onclick = () => { $('search').value = ''; $('area').value = ''; document.querySelector('#chips [data-manager="all"]')?.click(); manager = 'all'; render(); home(); };
+  $('reset').onclick = () => { $('search').value = ''; $('area').value = ''; render(); home(); };
   $('fit').onclick = () => { if (visible.length) map.fitBounds(L.latLngBounds(visible.map(d => [d.lat, d.lon])), { padding: [60, 70], maxZoom: 16 }); };
   $('sources').onclick = $('coverage').onclick = openAbout;
   $('closeAbout').onclick = () => $('about').close();
@@ -387,56 +355,12 @@ function addBasemaps(map, fb) {
   next();
 }
 
-
-/* ---------- administrative / neighbourhood areas ---------- */
-function initAreaLayers() {
-  const specs = CFG.areaLayers || [];
-  if (!specs.length) return;
-  map.on('zoomend', syncAreaLayers);
-  specs.forEach((spec, i) => {
-    const url = spec.url || (spec.file ? rel(BASE, spec.file) : '');
-    if (!url) return;
-    getJSON(url).then(gj => {
-      const pane = 'areas-' + i;
-      map.createPane(pane);
-      map.getPane(pane).style.zIndex = String(spec.zIndex || 370);
-      map.getPane(pane).style.pointerEvents = 'none';
-      const style = Object.assign({ color: '#38645e', weight: 1.15, opacity: .62, fillColor: '#86a89a', fillOpacity: .035 }, spec.style || {}, { pane });
-      const shapes = L.geoJSON(gj, { pane, interactive: false, style });
-      const labels = L.layerGroup();
-      if (spec.labels !== false) shapes.eachLayer(shape => {
-        const p = shape.feature && shape.feature.properties || {};
-        const keys = Array.isArray(spec.labelField) ? spec.labelField : [spec.labelField];
-        const value = keys.filter(Boolean).map(k => p[k]).find(v => v !== undefined && v !== null && String(v).trim());
-        if (value === undefined) return;
-        const text = (spec.labelPrefix || '') + value;
-        const center = shape.getBounds && shape.getBounds().getCenter();
-        if (center) L.marker(center, { pane, interactive: false, icon: L.divIcon({ className: 'arealabel', html: esc(text), iconSize: [150, 18], iconAnchor: [75, 9] }) }).addTo(labels);
-      });
-      areaLayers.push({ spec, shapes, labels });
-      syncAreaLayers();
-    }).catch(e => console.warn('Area layer unavailable:', spec.id || url, e.message));
-  });
-}
-function syncAreaLayers() {
-  const z = map.getZoom();
-  areaLayers.forEach(({ spec, shapes, labels }) => {
-    const visible = z >= (spec.minZoom ?? 0) && (spec.maxZoom == null || z <= spec.maxZoom);
-    const showLabels = visible && z >= (spec.labelZoom ?? spec.minZoom ?? 0);
-    if (visible && !map.hasLayer(shapes)) shapes.addTo(map);
-    if (!visible && map.hasLayer(shapes)) map.removeLayer(shapes);
-    if (showLabels && !map.hasLayer(labels)) labels.addTo(map);
-    if (!showLabels && map.hasLayer(labels)) map.removeLayer(labels);
-  });
-}
-
 function startMap() {
   map = L.map('map', { zoomControl: false, minZoom: CFG.map.minZoom, maxZoom: 19, zoomSnap: 0.25, preferCanvas: true });
   L.control.zoom({ position: 'topleft' }).addTo(map);
   L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
 
   addBasemaps(map, CFG.fallbackBasemap);
-  initAreaLayers();
 
   // --- study area outline ---
   if (STUDY) L.geoJSON(STUDY.geojson, { style: { color: '#9d894e', weight: 2, dashArray: '6 6', fillColor: '#759e7b', fillOpacity: .035 }, interactive: false }).addTo(map);
@@ -454,12 +378,8 @@ function startMap() {
 }
 
 function clusterIcon(c) {
-  const ms = c.getAllChildMarkers(), n = ms.length, counts = {};
-  ms.forEach(m => counts[m.options.mgr] = (counts[m.options.mgr] || 0) + 1);
-  let acc = 0;
-  const stops = MGR_LIST.filter(m => counts[m.key]).map(m => { const from = acc; acc += counts[m.key] / n * 100; return m.color + ' ' + from.toFixed(2) + '% ' + acc.toFixed(2) + '%'; });
-  const sz = n < 10 ? 34 : n < 40 ? 40 : 48;
-  return L.divIcon({ className: 'mcl', iconSize: [sz, sz], html: '<div class="mclin" style="background:conic-gradient(' + stops.join(',') + ')"><span>' + n + '</span></div>' });
+  const n = c.getChildCount(), sz = n < 10 ? 34 : n < 40 ? 40 : 48;
+  return L.divIcon({ className: 'mcl', iconSize: [sz, sz], html: '<div class="mclin"><span>' + n + '</span></div>' });
 }
 function makeLayer() {
   return (clustering
@@ -472,7 +392,8 @@ function setClustering(on) { clustering = !!on && hasCluster; map.removeLayer(la
 function popup(d) {
   const src = SRC[d.source], url = sourceURL(d);
   const where = [d.area, d.district != null && d.district !== '' ? CFG.terms.district + ' ' + d.district : ''].filter(Boolean).join(' · ');
-  return '<span class="badge">' + esc(d.manager) + (d.source ? ' · ' + esc(d.source) : '') + '</span><h3>' + esc(d.address) + '</h3>' +
+  return '<span class="badge">' + esc(d.source || 'Social housing address') + '</span><h3>' + esc(d.address) + '</h3>' +
+    (d.manager ? '<div class="detail-row"><small>' + esc(CFG.terms.manager) + '</small>' + esc(d.manager) + '</div>' : '') +
     (where ? '<div class="detail-row"><small>' + esc(CFG.terms.area) + '</small>' + esc(where) + '</div>' : '') +
     '<div class="detail-row"><small>Mapped position</small>' + (d.precision ? esc(d.precision) + '<br>' : '') + '<small>' + d.lat.toFixed(6) + ', ' + d.lon.toFixed(6) + '</small></div>' +
     (d.note ? '<p>' + esc(d.note) + '</p>' : '') +
@@ -500,26 +421,25 @@ function select(id, pan = true) {
 
 function render() {
   const q = $('search').value.toLowerCase().trim(), area = $('area').value;
-  visible = DATA.filter(d => (manager === 'all' || d.manager === manager) && (!area || d.area === area) && (!q || d._hay.includes(q)));
+  visible = DATA.filter(d => (!area || d.area === area) && (!q || d._hay.includes(q)));
   layer.clearLayers(); markers.clear(); map.closePopup();
 
   $('resultcount').textContent = visible.length + ' of ' + DATA.length + ' addresses';
   $('total').textContent = visible.length;
-  statEls.forEach((el, key) => el.textContent = visible.filter(d => d.manager === key).length);
 
   const shown = visible.slice(0, CFG.listLimit);
   $('list').innerHTML = visible.length
     ? shown.map(d => {
-        const m = MGR[d.manager], where = [d.area.toLowerCase(), d.district != null && d.district !== '' ? CFG.terms.district + ' ' + d.district : ''].filter(Boolean).join(' · ');
-        return '<button class="card' + (selected === d.id ? ' selected' : '') + '" data-id="' + d.id + '"><span class="cardtop"><i class="dot" style="background:' + esc(m.color) + '"></i>' + esc(m.caption) +
+        const where = [d.area.toLowerCase(), d.district != null && d.district !== '' ? CFG.terms.district + ' ' + d.district : ''].filter(Boolean).join(' · ');
+        return '<button class="card' + (selected === d.id ? ' selected' : '') + '" data-id="' + d.id + '"><span class="cardtop"><i class="dot"></i>' + esc(d.manager ? CFG.terms.manager + ' ' + d.manager : 'Social housing address') +
           (d.edge && STUDY ? '<span class="tag">NEAR EDGE</span>' : '') + '</span><span class="addr">' + esc(d.address) + '</span>' + (where ? '<span class="neighbourhood">' + esc(where) + '</span>' : '') + '</button>';
       }).join('') + (visible.length > shown.length ? '<div class="more">Showing the first ' + shown.length + ' of ' + visible.length + '. Search or filter to narrow the list; all of them are on the map.</div>' : '')
     : '<div class="empty">No matching addresses.<br>Try a street name or reset the filters.</div>';
 
   visible.forEach(d => {
     const m = L.circleMarker([d.lat, d.lon], {
-      radius: selected === d.id ? 10 : 6, fillColor: MGR[d.manager].color, color: d.edge ? '#bd8e36' : '#fffdf6',
-      weight: d.edge ? 2.5 : 1.5, fillOpacity: .94, mgr: d.manager
+      radius: selected === d.id ? 10 : 6, fillColor: DOT_COLOR, color: d.edge ? '#bd8e36' : '#fffdf6',
+      weight: d.edge ? 2.5 : 1.5, fillOpacity: .94
     }).bindPopup(() => popup(d), { maxWidth: 290 }).bindTooltip(esc(d.address), { direction: 'top', offset: [0, -5] }).addTo(layer);
     m.on('click', () => select(d.id, false));
     markers.set(d.id, m);
@@ -556,7 +476,6 @@ function pushHash() {
   if (!hashReady) return;
   const c = map.getCenter(), p = new URLSearchParams();
   p.set('ll', c.lat.toFixed(5) + ',' + c.lng.toFixed(5)); p.set('z', String(+map.getZoom().toFixed(2)));
-  if (manager !== 'all') p.set('m', manager);
   const a = $('area').value; if (a) p.set('a', a);
   const q = $('search').value.trim(); if (q) p.set('q', q);
   if (selected != null) p.set('s', selected);
@@ -578,17 +497,16 @@ function setPin(lat, lon, label, o = {}) {
   }
   CFG.checkRadii.forEach(r => L.circle(ll, { radius: r, color: '#203a37', weight: 1, opacity: .55, dashArray: '4 4', fill: false, interactive: false }).addTo(pinLayer));
   const list = DATA.map(d => ({ d, m: map.distance(ll, [d.lat, d.lon]) })).sort((a, b) => a.m - b.m), n = list[0];
-  L.polyline([ll, [n.d.lat, n.d.lon]], { color: MGR[n.d.manager].color, weight: 2, dashArray: '2 5', interactive: false }).addTo(pinLayer);
+  L.polyline([ll, [n.d.lat, n.d.lon]], { color: DOT_COLOR, weight: 2, dashArray: '2 5', interactive: false }).addTo(pinLayer);
   const row = r => {
     const w = list.filter(x => x.m <= r);
-    const split = MGR_LIST.length > 1 && w.length ? ' · ' + MGR_LIST.map(m => esc(m.label) + ' ' + w.filter(x => x.d.manager === m.key).length).join(' / ') : '';
-    return '<tr><td>Within ' + r + ' m</td><td><b>' + w.length + '</b>' + split + '</td></tr>';
+    return '<tr><td>Within ' + r + ' m</td><td><b>' + w.length + '</b></td></tr>';
   };
   const notes = ['Counts are documented addresses, not apartments.'];
   if (STUDY && studyDistM(lat, lon) < 500) notes.push('<b>Close to the edge of the study area:</b> addresses outside it are not included.');
   if (!STUDY && n.m > CFG.coverageWarnMeters) notes.push('<b>The nearest address is ' + (n.m / 1000).toFixed(1) + ' km away:</b> this spot may be outside the area this map covers.');
   notes.push('The map is not a complete census, so “none nearby” does not prove there is none.');
-  res.innerHTML = '<div class="res"><b>' + esc(label) + '</b><div class="near">' + Math.round(n.m) + ' m</div><div>to the nearest documented address: <a href="#" id="nearlink">' + esc(n.d.address) + '</a> (' + esc(n.d.manager) + ')</div><table>' + CFG.checkRadii.map(row).join('') + '</table><div class="note">' + notes.join(' ') + '</div></div>';
+  res.innerHTML = '<div class="res"><b>' + esc(label) + '</b><div class="near">' + Math.round(n.m) + ' m</div><div>to the nearest documented address: <a href="#" id="nearlink">' + esc(n.d.address) + '</a>' + (n.d.manager ? ' <span class="offline">(' + esc(CFG.terms.manager + ' ' + n.d.manager) + ')</span>' : '') + '</div><table>' + CFG.checkRadii.map(row).join('') + '</table><div class="note">' + notes.join(' ') + '</div></div>';
   $('nearlink').onclick = e => { e.preventDefault(); select(n.d.id); };
   if (o.fit !== false) map.fitBounds(ll.toBounds(Math.max(...CFG.checkRadii) * 2.2), { maxZoom: 17, padding: [20, 20] });
   pushHash();
@@ -648,7 +566,6 @@ function startFeatures() {
   $('clearpin').onclick = () => { pin = null; pinLayer.clearLayers(); $('checkresult').innerHTML = ''; $('clearpin').hidden = true; $('addr').value = ''; stopPicking(); pushHash(); };
 
   // restore state from the link, then start recording it
-  const m = H.get('m'); if (m && MGR[m]) document.querySelector('#chips [data-manager="' + CSS.escape(m) + '"]')?.click();
   const a = H.get('a'); if (a && [...$('area').options].some(o => o.value === a)) $('area').value = a;
   const q = H.get('q'); if (q) $('search').value = q;
   render(); setBtn('cluster', clustering);
@@ -661,4 +578,13 @@ function startFeatures() {
   hashReady = true; map.on('moveend', pushHash); pushHash();
 }
 
+/* Never leave the visitor staring at "Loading…": show what went wrong. */
+function showStartupError(e) {
+  console.error(e);
+  const msg = '<div class="empty"><b>The map hit an error while starting.</b><br>' + esc((e && e.message) || e) +
+    '<br><br>If the site was just updated, do a hard refresh (Cmd/Ctrl + Shift + R). If it keeps happening, please report it with this message.</div>';
+  const l = $('list');
+  if (l) l.innerHTML = msg; else document.body.insertAdjacentHTML('afterbegin', msg);
+}
+async function boot() { try { await bootMain(); } catch (e) { showStartupError(e); } }
 boot();

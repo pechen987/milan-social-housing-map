@@ -2,7 +2,7 @@
   "title": "Social housing in Europe",
   "eyebrow": "Europe · A social housing atlas",
   "intro": "Documented social-housing addresses, city by city. Pick a city to explore it, or add your own.",
-  "repo": "https://github.com/pechen987/milan-social-housing-map",
+  "repo": "https://github.com/pechen987/social-housing-map",
   "cartoKey": "cb1_4glx_1_5b335e4039dcabf8d77cca07",
   "cities": [
     {
@@ -10,10 +10,10 @@
       "name": "Milan",
       "country": "Italy",
       "center": [
-        45.4705,
-        9.1582
+        45.4639,
+        9.1844
       ],
-      "count": 1306
+      "count": 129
     }
   ]
 }
