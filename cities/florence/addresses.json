@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "address": "Via Erbosa 41/A",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/A",
+    "lat": 43.761713,
+    "lon": 11.292131,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Via Erbosa 41/B",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/B",
+    "lat": 43.761776,
+    "lon": 11.292148,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Via Erbosa 41/C",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/C",
+    "lat": 43.76177,
+    "lon": 11.292301,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Via Erbosa 41/D",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/D",
+    "lat": 43.761709,
+    "lon": 11.292305,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Via Bronzino 55",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA BRONZINO 55",
+    "lat": 43.773134,
+    "lon": 11.231926,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Via Bronzino 55/1",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA BRONZINO 55/1",
+    "lat": 43.773077,
+    "lon": 11.232119,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Via Bronzino 55/2",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA BRONZINO 55/2",
+    "lat": 43.77299,
+    "lon": 11.231945,
+    "precision": "Official Comune di Firenze civic-address point"
+  },
+  {
+    "address": "Viale Giovan Battista Morgagni 45",
+    "manager": "Casa S.p.A.",
+    "area": "Florence",
+    "source": "Casa S.p.A. property register",
+    "original": "Published as a Casa S.p.A. ALLOGGIO property at VIALE GIOVAN BATTISTA MORGAGNI 45",
+    "lat": 43.799791,
+    "lon": 11.243788,
+    "precision": "Official Comune di Firenze civic-address point"
+  }
+]
