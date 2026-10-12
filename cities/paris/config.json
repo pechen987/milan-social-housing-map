@@ -1,0 +1,88 @@
+{
+  "id": "paris",
+  "name": "Paris",
+  "country": "France",
+  "introHeading": "Public and social housing in Paris.",
+  "intro": "Explore documented City of Paris social-housing programmes, with arrondissement and administrative-quarter boundaries for context.",
+  "mapLabel": "Interactive map of Paris social-housing programmes",
+  "searchPlaceholder": "Try Belleville, Batignolles, Tolbiac…",
+  "footnote": "<b>Documented programmes, not a live housing-stock census.</b> This city map uses the City of Paris register of social-housing programmes financed since 2001. One point can represent a programme with multiple homes.",
+  "terms": {
+    "area": "Arrondissement",
+    "allAreas": "All arrondissements",
+    "district": "Arrondissement"
+  },
+  "sources": [
+    {
+      "key": "Paris social housing programmes",
+      "label": "City of Paris — financed social-housing programmes since 2001",
+      "url": "https://opendata.paris.fr/explore/dataset/logements-sociaux-finances-a-paris/",
+      "pageAnchor": false
+    }
+  ],
+  "map": {
+    "center": [
+      48.8566,
+      2.3522
+    ],
+    "zoom": 12,
+    "minZoom": 11
+  },
+  "geocoding": {
+    "suffix": ", Paris, France",
+    "countrycodes": "fr",
+    "bbox": [
+      2.224,
+      48.815,
+      2.47,
+      48.903
+    ],
+    "example": "18 Rue des Meuniers"
+  },
+  "export": {
+    "metadata": {
+      "compiled": "2026-10-12",
+      "coverage": "City of Paris social-housing programmes financed since 2001; programme locations, not a complete stock census.",
+      "source": "City of Paris Open Data, ODbL"
+    }
+  },
+  "areaLayers": [
+    {
+      "id": "arrondissements",
+      "name": "Arrondissements",
+      "file": "arrondissements.geojson",
+      "minZoom": 11,
+      "maxZoom": 13.75,
+      "labelZoom": 11.4,
+      "labelField": [
+        "c_ar"
+      ],
+      "labelPrefix": "",
+      "style": {
+        "color": "#37645d",
+        "weight": 1.35,
+        "opacity": 0.72,
+        "fillColor": "#86a89a",
+        "fillOpacity": 0.035
+      }
+    },
+    {
+      "id": "quartiers",
+      "name": "Administrative quarters",
+      "file": "quartiers.geojson",
+      "minZoom": 13.75,
+      "labelZoom": 14.5,
+      "labelField": [
+        "l_qu"
+      ],
+      "style": {
+        "color": "#356f66",
+        "weight": 1,
+        "opacity": 0.6,
+        "fillColor": "#a9c4b4",
+        "fillOpacity": 0.018
+      }
+    }
+  ],
+  "credits": "Social-housing programme locations and arrondissement / quarter boundaries: Ville de Paris Open Data (ODbL)"
+}

@@ -41,10 +41,9 @@ let STUDY = null;                       // { rings, features, bounds } when the 
 let MGR = {}, MGR_LIST = [], SRC = {};
 let map, layer, pinLayer, satLayer;
 let areaLayers = [];
-let manager = 'all', visible = [], selected = null, markers = new Map();
+let visible = [], selected = null, markers = new Map();
 let pin = null, satOn = false, clustering = false, picking = false, hashReady = false;
 let hasCluster = false, geoBusy = false, aboutLoaded = false, H;
-const statEls = new Map();
 
 /* ==========================================================================
    Boot
@@ -275,23 +274,8 @@ function buildUI() {
   // city picker (only when there is more than one city)
   fillPicker(CITY_ID);
 
-  // stats
-  $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>address locations</span></div>' +
-    (MGR_LIST.length > 1 ? MGR_LIST.map(m => '<div class="stat"><strong data-mgr="' + esc(m.key) + '" style="color:' + esc(m.color) + '">—</strong><span>' + esc(m.caption) + '</span></div>').join('') : '');
-  document.querySelectorAll('[data-mgr]').forEach(el => statEls.set(el.dataset.mgr, el));
-
-  // manager chips
-  if (MGR_LIST.length > 1) {
-    $('chips').hidden = false;
-    $('chips').innerHTML = '<button class="active" data-manager="all" aria-pressed="true">All managers</button>' +
-      MGR_LIST.map(m => '<button data-manager="' + esc(m.key) + '" aria-pressed="false"><span style="color:' + esc(m.color) + '">●</span> ' + esc(m.label) + '</button>').join('');
-    $('chips').onclick = e => {
-      const b = e.target.closest('[data-manager]'); if (!b) return;
-      manager = b.dataset.manager;
-      document.querySelectorAll('#chips [data-manager]').forEach(c => { c.classList.toggle('active', c === b); c.setAttribute('aria-pressed', String(c === b)); });
-      render();
-    };
-  }
+  // Provider is retained on individual location cards, while all cities use one neutral map symbol and citywide total.
+  $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>documented locations</span></div>';
 
   // area select (only if the data has areas)
   const areas = [...new Set(DATA.map(d => d.area).filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -305,9 +289,9 @@ function buildUI() {
   $('search').placeholder = CFG.searchPlaceholder || (areas.length ? 'Try ' + areas.slice(0, 3).map(prettyArea).join(', ') + '…' : 'Search an address…');
   $('addr').placeholder = 'e.g. ' + (CFG.geocoding.example || DATA[0].address);
 
-  // legend
-  $('legend').innerHTML = MGR_LIST.map(m => '<span><i class="dot" style="background:' + esc(m.color) + '"></i>' + esc(m.label) + '</span>').join('') +
-    (STUDY && STUDY.edgeMeters > 0 ? '<span><i style="width:10px;height:10px;border:2px solid #be8e32;border-radius:50%"></i>' + esc(STUDY.edgeLabel) + '</span>' : '');
+  // The legend only explains study-area warnings; providers appear on individual cards.
+  $('legend').innerHTML = STUDY && STUDY.edgeMeters > 0 ? '<span><i style="width:10px;height:10px;border:2px solid #be8e32;border-radius:50%"></i>' + esc(STUDY.edgeLabel) + '</span>' : '';
+  $('legend').hidden = !$('legend').innerHTML;
 
   // download dialog
   $('downloadText').textContent = 'Export the currently filtered addresses, including source pages and coordinate precision' + (STUDY ? ', and boundary flags. GeoJSON also includes the study area.' : '.');
@@ -320,7 +304,7 @@ function buildUI() {
   $('credits').textContent = credits.join('; ') + '. The address check uses OpenStreetMap Nominatim, so the text you type is sent to OpenStreetMap. Libraries: Leaflet 1.9.4 (BSD-2-Clause) and Leaflet.markercluster 1.5.3 (MIT).';
 
   // buttons
-  $('reset').onclick = () => { $('search').value = ''; $('area').value = ''; document.querySelector('#chips [data-manager="all"]')?.click(); manager = 'all'; render(); home(); };
+  $('reset').onclick = () => { $('search').value = ''; $('area').value = ''; render(); home(); };
   $('fit').onclick = () => { if (visible.length) map.fitBounds(L.latLngBounds(visible.map(d => [d.lat, d.lon])), { padding: [60, 70], maxZoom: 16 }); };
   $('sources').onclick = $('coverage').onclick = openAbout;
   $('closeAbout').onclick = () => $('about').close();
@@ -454,12 +438,8 @@ function startMap() {
 }
 
 function clusterIcon(c) {
-  const ms = c.getAllChildMarkers(), n = ms.length, counts = {};
-  ms.forEach(m => counts[m.options.mgr] = (counts[m.options.mgr] || 0) + 1);
-  let acc = 0;
-  const stops = MGR_LIST.filter(m => counts[m.key]).map(m => { const from = acc; acc += counts[m.key] / n * 100; return m.color + ' ' + from.toFixed(2) + '% ' + acc.toFixed(2) + '%'; });
-  const sz = n < 10 ? 34 : n < 40 ? 40 : 48;
-  return L.divIcon({ className: 'mcl', iconSize: [sz, sz], html: '<div class="mclin" style="background:conic-gradient(' + stops.join(',') + ')"><span>' + n + '</span></div>' });
+  const n = c.getChildCount(), sz = n < 10 ? 34 : n < 40 ? 40 : 48;
+  return L.divIcon({ className: 'mcl', iconSize: [sz, sz], html: '<div class="mclin neutral"><span>' + n + '</span></div>' });
 }
 function makeLayer() {
   return (clustering
@@ -500,26 +480,25 @@ function select(id, pan = true) {
 
 function render() {
   const q = $('search').value.toLowerCase().trim(), area = $('area').value;
-  visible = DATA.filter(d => (manager === 'all' || d.manager === manager) && (!area || d.area === area) && (!q || d._hay.includes(q)));
+  visible = DATA.filter(d => (!area || d.area === area) && (!q || d._hay.includes(q)));
   layer.clearLayers(); markers.clear(); map.closePopup();
 
   $('resultcount').textContent = visible.length + ' of ' + DATA.length + ' addresses';
   $('total').textContent = visible.length;
-  statEls.forEach((el, key) => el.textContent = visible.filter(d => d.manager === key).length);
 
   const shown = visible.slice(0, CFG.listLimit);
   $('list').innerHTML = visible.length
     ? shown.map(d => {
-        const m = MGR[d.manager], where = [d.area.toLowerCase(), d.district != null && d.district !== '' ? CFG.terms.district + ' ' + d.district : ''].filter(Boolean).join(' · ');
-        return '<button class="card' + (selected === d.id ? ' selected' : '') + '" data-id="' + d.id + '"><span class="cardtop"><i class="dot" style="background:' + esc(m.color) + '"></i>' + esc(m.caption) +
+        const where = [d.area.toLowerCase(), d.district != null && d.district !== '' ? CFG.terms.district + ' ' + d.district : ''].filter(Boolean).join(' · ');
+        return '<button class="card' + (selected === d.id ? ' selected' : '') + '" data-id="' + d.id + '"><span class="cardtop">' + esc(d.manager || 'Social housing') +
           (d.edge && STUDY ? '<span class="tag">NEAR EDGE</span>' : '') + '</span><span class="addr">' + esc(d.address) + '</span>' + (where ? '<span class="neighbourhood">' + esc(where) + '</span>' : '') + '</button>';
       }).join('') + (visible.length > shown.length ? '<div class="more">Showing the first ' + shown.length + ' of ' + visible.length + '. Search or filter to narrow the list; all of them are on the map.</div>' : '')
     : '<div class="empty">No matching addresses.<br>Try a street name or reset the filters.</div>';
 
   visible.forEach(d => {
     const m = L.circleMarker([d.lat, d.lon], {
-      radius: selected === d.id ? 10 : 6, fillColor: MGR[d.manager].color, color: d.edge ? '#bd8e36' : '#fffdf6',
-      weight: d.edge ? 2.5 : 1.5, fillOpacity: .94, mgr: d.manager
+      radius: selected === d.id ? 10 : 6, fillColor: '#167869', color: d.edge ? '#bd8e36' : '#fffdf6',
+      weight: d.edge ? 2.5 : 1.5, fillOpacity: .94
     }).bindPopup(() => popup(d), { maxWidth: 290 }).bindTooltip(esc(d.address), { direction: 'top', offset: [0, -5] }).addTo(layer);
     m.on('click', () => select(d.id, false));
     markers.set(d.id, m);
@@ -556,7 +535,6 @@ function pushHash() {
   if (!hashReady) return;
   const c = map.getCenter(), p = new URLSearchParams();
   p.set('ll', c.lat.toFixed(5) + ',' + c.lng.toFixed(5)); p.set('z', String(+map.getZoom().toFixed(2)));
-  if (manager !== 'all') p.set('m', manager);
   const a = $('area').value; if (a) p.set('a', a);
   const q = $('search').value.trim(); if (q) p.set('q', q);
   if (selected != null) p.set('s', selected);
@@ -578,11 +556,10 @@ function setPin(lat, lon, label, o = {}) {
   }
   CFG.checkRadii.forEach(r => L.circle(ll, { radius: r, color: '#203a37', weight: 1, opacity: .55, dashArray: '4 4', fill: false, interactive: false }).addTo(pinLayer));
   const list = DATA.map(d => ({ d, m: map.distance(ll, [d.lat, d.lon]) })).sort((a, b) => a.m - b.m), n = list[0];
-  L.polyline([ll, [n.d.lat, n.d.lon]], { color: MGR[n.d.manager].color, weight: 2, dashArray: '2 5', interactive: false }).addTo(pinLayer);
+  L.polyline([ll, [n.d.lat, n.d.lon]], { color: '#167869', weight: 2, dashArray: '2 5', interactive: false }).addTo(pinLayer);
   const row = r => {
     const w = list.filter(x => x.m <= r);
-    const split = MGR_LIST.length > 1 && w.length ? ' · ' + MGR_LIST.map(m => esc(m.label) + ' ' + w.filter(x => x.d.manager === m.key).length).join(' / ') : '';
-    return '<tr><td>Within ' + r + ' m</td><td><b>' + w.length + '</b>' + split + '</td></tr>';
+    return '<tr><td>Within ' + r + ' m</td><td><b>' + w.length + '</b></td></tr>';
   };
   const notes = ['Counts are documented addresses, not apartments.'];
   if (STUDY && studyDistM(lat, lon) < 500) notes.push('<b>Close to the edge of the study area:</b> addresses outside it are not included.');
@@ -648,7 +625,6 @@ function startFeatures() {
   $('clearpin').onclick = () => { pin = null; pinLayer.clearLayers(); $('checkresult').innerHTML = ''; $('clearpin').hidden = true; $('addr').value = ''; stopPicking(); pushHash(); };
 
   // restore state from the link, then start recording it
-  const m = H.get('m'); if (m && MGR[m]) document.querySelector('#chips [data-manager="' + CSS.escape(m) + '"]')?.click();
   const a = H.get('a'); if (a && [...$('area').options].some(o => o.value === a)) $('area').value = a;
   const q = H.get('q'); if (q) $('search').value = q;
   render(); setBtn('cluster', clustering);

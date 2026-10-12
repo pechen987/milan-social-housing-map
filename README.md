@@ -35,7 +35,7 @@ assets/
   vendor/                  Leaflet and Leaflet.markercluster (unmodified, with licences)
 cities/
   milan/                   one folder per city
-    config.json            names, texts, colours, sources, optional extras
+    config.json            names, texts, sources, optional extras
     addresses.json         the data: one record per address
     ring.geojson           optional: the study-area outline
     about.html             optional: the "Sources & coverage" pop-up text
@@ -108,7 +108,7 @@ Edit `cities/turin/source/addresses.csv`. The only required column is `address`.
 | column | meaning |
 |---|---|
 | `address` | **required.** Street and number, as you would type it, e.g. `Via Roma 12` |
-| `manager` | who runs it (housing company, council…). Becomes the colour and the filter chips |
+| `manager` | who runs it (housing company, council…). Shown on each location card and retained in exports |
 | `area` | neighbourhood, used for the area filter |
 | `district` | larger district / borough, shown in the popup |
 | `source` | which source document it comes from; must match a `key` under `sources` in `config.json` (this is what makes the popup link work) |
@@ -141,7 +141,6 @@ Already have coordinates, or exported from a GIS? Write `addresses.json` yoursel
 Edit `cities/turin/config.json`. The template gives you the minimum; every setting is explained in the [reference](#configuration-configjson). The ones that matter most:
 
 - `country` (shown in the header and on the overview),
-- `managers`: names and colours (`key` must match the `manager` values in your data),
 - `sources`: where the data comes from, with links,
 - `introHeading`, `intro`, `footnote`: what readers see.
 
@@ -187,7 +186,7 @@ A JSON list with one object per address. Only the first three fields are require
 |---|---|---|
 | `address` | text | **required** |
 | `lat`, `lon` | number | **required.** WGS84 decimal degrees, latitude first. Rows without valid coordinates are skipped (and counted in a notice) |
-| `manager` | text | optional. Missing → one default colour called "Social housing" |
+| `manager` | text | optional. Missing → `Social housing`; shown on location cards and retained in exports |
 | `area` | text | optional. Enables the area filter. ALL-CAPS names are shown in Title Case |
 | `district` | text or number | optional. Shown as "*District* N" (the word comes from `terms.district`) |
 | `source` | text | matches a `sources[].key` in `config.json` to build the link |
@@ -223,7 +222,6 @@ Everything is optional except `id` and `name`. The site title and the small line
 
 | key | default | meaning |
 |---|---|---|
-| `managers` | inferred from the data | `[{"key","label","color","caption"}]`. `key` matches the data; `label` is shown on chips and the legend; `caption` replaces "*label* managed" in the stats; `color` is a `#hex` (nice defaults otherwise). Managers present in the data but not listed get automatic colours |
 | `sources` | – | `[{"key","label","url","pageAnchor"}]`; `pageAnchor: true` appends `#page=N` for PDFs |
 | `map` | – | `{"center":[lat,lon],"zoom":13,"minZoom":9}`. By default the map fits the study area, or all the data |
 | `labels` | – | `[{"name","lat","lon"}]`: neighbourhood names printed on the map |
@@ -317,7 +315,7 @@ Reviewers: `about.html`, `footnote` and link URLs come from contributors. The ap
 
 1. `index.html` loads Leaflet, the clustering plugin and `assets/app.js`.
 2. `app.js` reads `site.json`. With no `?city=` and two or more cities it draws the Europe overview; otherwise it picks the city and loads that city's `config.json`, `addresses.json` and optional study-area file in parallel.
-3. It validates and normalises the records (bad rows are skipped and counted), works out colours and counts, builds the sidebar, legend and filters from the config, and draws the map.
+3. It validates and normalises the records (bad rows are skipped and counted), works out the citywide count, builds the sidebar and area filter from the config, and draws the map. Provider information remains on individual location cards.
 4. Everything the reader changes (view, filters, selected address, pin, layers) is written to the URL hash, which is what the **Share** button copies. The city is in the query string (`?city=`).
 
 Basemaps are tried in order (CARTO → OpenStreetMap → the city's local image), moving on after three failed tiles. Satellite imagery is Esri World Imagery, loaded on demand.
