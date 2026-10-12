@@ -1,0 +1,36 @@
+{
+  "id": "catania",
+  "name": "Catania",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Catania social housing · research edition.",
+  "intro": "An address-level public source for Catania has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Catania",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "IACP Catania",
+      "label": "Official starting source",
+      "url": "https://www.iacpcatania.it/"
+    }
+  ],
+  "map": {
+    "center": [
+      37.5079,
+      15.083
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Catania, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      14.923,
+      37.3879,
+      15.243,
+      37.6279
+    ]
+  }
+}

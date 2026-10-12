@@ -1,0 +1,36 @@
+{
+  "id": "livorno",
+  "name": "Livorno",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Livorno social housing · research edition.",
+  "intro": "An address-level public source for Livorno has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Livorno",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "CASALP",
+      "label": "Official starting source",
+      "url": "https://www.casalp.it/"
+    }
+  ],
+  "map": {
+    "center": [
+      43.5485,
+      10.3106
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Livorno, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      10.1506,
+      43.4285,
+      10.470600000000001,
+      43.668499999999995
+    ]
+  }
+}

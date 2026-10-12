@@ -27,7 +27,7 @@
     <div class="intro"><h2 id="introH"></h2><p id="introP"></p></div>
     <div class="stats" id="stats"></div>
 
-    <div class="filters">
+    <div class="filters" id="filters">
       <label for="search" class="eyebrow" id="searchLabel">Find an address</label>
       <input type="search" id="search" placeholder="Search…" autocomplete="off">
       <div id="areawrap" hidden>
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="check">
+    <div class="check" id="check">
       <label for="addr" class="eyebrow">Check a rental address</label>
       <div class="checkrow">
         <input type="search" id="addr" placeholder="e.g. Main Street 1" autocomplete="street-address">
@@ -50,7 +50,7 @@
       <div class="offline">Address lookup sends what you type to OpenStreetMap’s Nominatim service.</div>
     </div>
 
-    <div class="resultbar">
+    <div class="resultbar" id="resultbar">
       <span id="resultcount" aria-live="polite"></span>
       <button id="reset" class="linkbtn">Reset filters</button>
     </div>

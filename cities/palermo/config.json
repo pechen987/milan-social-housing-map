@@ -1,0 +1,36 @@
+{
+  "id": "palermo",
+  "name": "Palermo",
+  "country": "Italy",
+  "status": "research",
+  "introHeading": "Palermo social housing · research edition.",
+  "intro": "An address-level public source for Palermo has been identified. Locations will appear after the register has been collected and checked.",
+  "mapLabel": "Interactive map of Palermo",
+  "searchPlaceholder": "Address data is being prepared",
+  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "sources": [
+    {
+      "key": "IACP Palermo",
+      "label": "Official starting source",
+      "url": "https://iacp.pa.it/"
+    }
+  ],
+  "map": {
+    "center": [
+      38.1157,
+      13.3615
+    ],
+    "zoom": 12,
+    "minZoom": 10
+  },
+  "geocoding": {
+    "suffix": ", Palermo, Italy",
+    "countrycodes": "it",
+    "bbox": [
+      13.2015,
+      37.9957,
+      13.5215,
+      38.235699999999994
+    ]
+  }
+}

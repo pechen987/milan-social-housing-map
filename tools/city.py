@@ -37,7 +37,7 @@ KNOWN_CONFIG_KEYS = {
     "id", "name", "country", "data", "about", "credits",
     "introHeading", "intro", "mapLabel", "searchPlaceholder", "footnote",
     "terms", "managers", "sources", "map", "studyArea", "labels", "fallbackBasemap", "geocoding", "export", "areaLayers",
-    "checkRadii", "listLimit", "coverageWarnMeters",
+    "checkRadii", "listLimit", "coverageWarnMeters", "status",
 }
 
 # settings that existed in earlier versions: tell people what to do instead of just "unknown key"
@@ -550,7 +550,8 @@ def check_city(cid, site):
         rep.err("%s must be a list of records (or a GeoJSON FeatureCollection of points)" % df.name)
         return rep
     if not rows:
-        rep.warn("%s has no records yet" % df.name)
+        if cfg.get("status") != "research":
+            rep.warn("%s has no records yet" % df.name)
         return rep
 
     good, seen, ids = [], {}, {}

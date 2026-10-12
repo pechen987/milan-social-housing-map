@@ -174,3 +174,6 @@ header h1 span{display:none}
 
 /* zoom-dependent administrative areas */
 .arealabel{font:600 11px Arial,sans-serif;letter-spacing:.5px;white-space:nowrap;text-align:center;color:#3b675f;text-shadow:0 1px 2px #fff,1px 0 2px #fff,-1px 0 2px #fff;pointer-events:none}
+
+/* Utility state must override component display rules (including research-only city pages). */
+[hidden] { display: none !important; }
