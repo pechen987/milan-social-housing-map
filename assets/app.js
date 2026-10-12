@@ -116,6 +116,7 @@ function bootOverview(cities) {
   document.title = SITE.title;
   $('eyebrow').textContent = SITE.eyebrow;
   $('title').innerHTML = esc(SITE.title) + '<span>All cities</span>';
+  $('paneltoggle').hidden = true;
   fillPicker(null);
   const total = cities.reduce((n, c) => n + (c.count || 0), 0);
   $('introH').textContent = 'Social housing, city by city.';
@@ -273,6 +274,17 @@ function buildUI() {
 
   // city picker (only when there is more than one city)
   fillPicker(CITY_ID);
+  const setPanel = open => {
+    document.querySelector('main').classList.toggle('panel-collapsed', !open);
+    $('paneltoggle').textContent = open ? 'Hide panel' : 'Show panel';
+    $('paneltoggle').setAttribute('aria-expanded', String(open));
+    try { localStorage.setItem('housing-atlas-panel-open', open ? '1' : '0'); } catch (e) { /* optional preference */ }
+    setTimeout(() => map && map.invalidateSize(), 220);
+  };
+  let panelOpen = true;
+  try { panelOpen = localStorage.getItem('housing-atlas-panel-open') !== '0'; } catch (e) { /* default open */ }
+  setPanel(panelOpen);
+  $('paneltoggle').onclick = () => setPanel(document.querySelector('main').classList.contains('panel-collapsed'));
 
   // Provider is retained on individual location cards, while all cities use one neutral map symbol and citywide total.
   $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>documented locations</span></div>';
