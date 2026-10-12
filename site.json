@@ -34,6 +34,16 @@
         12.2481
       ],
       "count": 123
+    },
+    {
+      "id": "bolzano",
+      "name": "Bolzano",
+      "country": "Italy",
+      "center": [
+        46.4848,
+        11.3434
+      ],
+      "count": 35
     }
   ]
 }
