@@ -2,35 +2,27 @@
   "id": "rome",
   "name": "Rome",
   "country": "Italy",
-  "status": "research",
-  "introHeading": "Rome social housing · research edition.",
-  "intro": "An address-level public source for Rome has been identified. Locations will appear after the register has been collected and checked.",
-  "mapLabel": "Interactive map of Rome",
-  "searchPlaceholder": "Address data is being prepared",
-  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "introHeading": "Published public-housing properties in Rome.",
+  "intro": "Explore 782 mapped Edilizia Residenziale Pubblica (ERP) property records from Roma Capitale’s public property atlas. Each marker is an official property point, not a vacancy or apartment-level census.",
+  "mapLabel": "Interactive map of public-housing properties in Rome",
+  "searchPlaceholder": "Search an address or Municipio",
+  "footnote": "<b>782 official property locations.</b> Roma Capitale’s public atlas returns 790 ERP records; two lack published coordinates and six repeat an identical published point, so 782 distinct locations are shown. This is the currently published municipal layer, not a census of every social home in Rome.",
   "sources": [
     {
-      "key": "ATER Roma",
-      "label": "Official starting source",
-      "url": "https://www.aterroma.it/"
+      "key": "Roma Capitale Atlante del Patrimonio",
+      "label": "Roma Capitale · Atlante del Patrimonio",
+      "url": "https://geoportale.comune.roma.it/atlante3d/index.html?config=atlante",
+      "pageAnchor": false
     }
   ],
   "map": {
-    "center": [
-      41.9028,
-      12.4964
-    ],
+    "center": [41.9028, 12.4964],
     "zoom": 12,
     "minZoom": 10
   },
   "geocoding": {
     "suffix": ", Rome, Italy",
     "countrycodes": "it",
-    "bbox": [
-      12.3364,
-      41.7828,
-      12.6564,
-      42.0228
-    ]
+    "bbox": [12.3364, 41.7828, 12.6564, 42.0228]
   }
 }

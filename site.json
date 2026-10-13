@@ -50,9 +50,10 @@
       "name": "Rome",
       "country": "Italy",
       "center": [
-        41.9028,
-        12.4964
+        41.8659,
+        12.4839
       ],
+      "count": 782,
       "status": "research"
     },
     {
