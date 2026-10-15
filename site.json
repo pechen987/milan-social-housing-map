@@ -71,9 +71,10 @@
       "name": "Turin",
       "country": "Italy",
       "center": [
-        45.0703,
-        7.6869
+        45.1033,
+        7.6292
       ],
+      "count": 1,
       "status": "research"
     },
     {
@@ -105,7 +106,7 @@
         44.5014,
         11.3505
       ],
-      "count": 630,
+      "count": 622,
       "status": "research"
     },
     {

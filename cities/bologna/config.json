@@ -3,10 +3,10 @@
   "name": "Bologna",
   "country": "Italy",
   "introHeading": "ACER public-housing buildings in Bologna.",
-  "intro": "Explore 630 buildings from Bologna’s official ACER public-housing building map. Each marker is a building-footprint centroid, not an apartment or availability record.",
+  "intro": "Explore 622 records from Bologna’s official ACER layer. 536 have an unambiguous source building code; remaining records need building-identity review. Markers use source footprint centroids.",
   "mapLabel": "Interactive map of ACER public-housing buildings in Bologna",
   "searchPlaceholder": "Address data is being prepared",
-  "footnote": "<b>630 official building locations.</b> This map uses the Comune di Bologna’s ACER building layer. It covers the buildings represented in that layer, not necessarily every form of social or subsidised housing in the city.",
+  "footnote": "<b>622 documented records; 536 source-verified buildings.</b> Exact duplicate footprints sharing a building code were consolidated. Other repeated building codes remain explicitly under review. This is not a complete census or an occupancy check.",
   "sources": [
     {
       "key": "Comune di Bologna ACER building layer",

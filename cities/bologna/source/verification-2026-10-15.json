@@ -1,0 +1,15 @@
+{
+  "retrieved_on": "2026-10-15",
+  "url": "https://sit-test-mappe.comune.bologna.it/arcgis/rest/services/ACER/EDIFICI_PATRIMONIO_ALLOGGI_ACER/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+  "response_sha256": "d956b4c626e245c79017549ae4fe95d879f9004ec17c04debcf1979d17bb2862",
+  "source_features": 630,
+  "matched_source_ids": 630,
+  "new_source_ids": 0,
+  "source_as_of": null,
+  "ownership_types": {
+    "Condominio": 314,
+    "Piena Proprieta": 310,
+    "Affittanza passiva": 6
+  },
+  "limitation": "Building identity checked against layer; current social occupancy and tenure share not established."
+}

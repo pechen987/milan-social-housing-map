@@ -7,7 +7,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/A",
     "lat": 43.761713,
     "lon": 11.292131,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 0,
+    "record_uid": "florence:0",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Erbosa 41/B",
@@ -17,7 +25,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/B",
     "lat": 43.761776,
     "lon": 11.292148,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 1,
+    "record_uid": "florence:1",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Erbosa 41/C",
@@ -27,7 +43,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/C",
     "lat": 43.76177,
     "lon": 11.292301,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 2,
+    "record_uid": "florence:2",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Erbosa 41/D",
@@ -37,7 +61,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA ERBOSA 41/D",
     "lat": 43.761709,
     "lon": 11.292305,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 3,
+    "record_uid": "florence:3",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Bronzino 55",
@@ -47,7 +79,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA BRONZINO 55",
     "lat": 43.773134,
     "lon": 11.231926,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 4,
+    "record_uid": "florence:4",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Bronzino 55/1",
@@ -57,7 +97,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA BRONZINO 55/1",
     "lat": 43.773077,
     "lon": 11.232119,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 5,
+    "record_uid": "florence:5",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Bronzino 55/2",
@@ -67,7 +115,15 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIA BRONZINO 55/2",
     "lat": 43.77299,
     "lon": 11.231945,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 6,
+    "record_uid": "florence:6",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Viale Giovan Battista Morgagni 45",
@@ -77,6 +133,14 @@
     "original": "Published as a Casa S.p.A. ALLOGGIO property at VIALE GIOVAN BATTISTA MORGAGNI 45",
     "lat": 43.799791,
     "lon": 11.243788,
-    "precision": "Official Comune di Firenze civic-address point"
+    "precision": "Official Comune di Firenze civic-address point",
+    "id": 7,
+    "record_uid": "florence:7",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   }
 ]

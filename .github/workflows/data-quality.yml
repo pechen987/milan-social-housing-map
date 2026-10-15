@@ -1,0 +1,27 @@
+name: Data methodology
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/city.py validate --all
+      - run: python tools/audit_data.py
+      - name: Require new PR records to be verified buildings
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python tools/audit_data.py --base "$BASE_SHA"
+      - run: python -m unittest discover -s tools -p 'test_*.py'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/test-map-identity.cjs
+      - run: node --check assets/app.js

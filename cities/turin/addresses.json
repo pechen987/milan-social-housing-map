@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": 0,
+    "record_uid": "turin:0",
+    "address": "Viale dei Mughetti 20",
+    "manager": "ATC Piemonte Centrale",
+    "area": "Vallette",
+    "district": "5",
+    "lat": 45.1032941,
+    "lon": 7.6292177,
+    "source": "ATC Passione Popolare 2021–2024",
+    "page": 68,
+    "original": "VIALE DEI MUGHETTI 20, TORINO — Numero edifici: 1",
+    "precision": "OpenStreetMap civic entrance (scala A); not a building centroid",
+    "note": "One building with three staircases and 61 social homes according to ATC. The marker uses the published scala A address point; it does not represent an individual flat. Current occupancy and completion of refurbishment have not been rechecked.",
+    "entity_type": "building",
+    "verification_status": "source_verified",
+    "building_ref": "atc:torino:viale-dei-mughetti-20",
+    "source_record_id": "report-2021-2024:p68:mughetti20",
+    "coordinate_method": "address_point",
+    "coordinate_source": "https://www.openstreetmap.org/node/4733730503",
+    "tenure_scope": "all_social_reported",
+    "homes": 61,
+    "source_as_of": "2024",
+    "reviewed_on": "2026-10-15",
+    "methodology_version": 1,
+    "verification_note": "ATC report PDF page 68 explicitly identifies one building. Nominatim matches house number 20 scala A on the same street in Torino. Housing evidence and coordinate evidence are independent."
+  }
+]

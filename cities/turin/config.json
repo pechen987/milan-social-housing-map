@@ -2,17 +2,17 @@
   "id": "turin",
   "name": "Turin",
   "country": "Italy",
-  "status": "research",
-  "introHeading": "Turin social housing · research edition.",
-  "intro": "An address-level public source for Turin has been identified. Locations will appear after the register has been collected and checked.",
+  "introHeading": "Documented social-housing buildings in Turin.",
+  "intro": "Research edition: one source-verified building, containing 61 social homes in ATC’s report. This is the start of the building inventory, not complete city coverage.",
   "mapLabel": "Interactive map of Turin",
-  "searchPlaceholder": "Address data is being prepared",
-  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "searchPlaceholder": "Search a building address",
+  "footnote": "<b>1 source-verified building.</b> The marker is an entrance location. Housing status is reported in the 2021–2024 ATC publication; current occupancy is not verified.",
   "sources": [
     {
-      "key": "ATC Piemonte Centrale",
-      "label": "Official starting source",
-      "url": "https://www.atc.torino.it/notizia/13108"
+      "key": "ATC Passione Popolare 2021–2024",
+      "label": "ATC Passione Popolare 2021–2024, PDF page 68",
+      "url": "https://www.atc.torino.it/GetDocument.ashx?id=FD08A03F-C359-4F7B-B28C-8C5CCA20FE1E&t=script_preview",
+      "pageAnchor": true
     }
   ],
   "map": {
