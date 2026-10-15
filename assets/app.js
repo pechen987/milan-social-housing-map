@@ -109,6 +109,12 @@ async function boot() {
   if (skipped) toast(skipped + ' row' + (skipped === 1 ? ' was' : 's were') + ' skipped: missing address or coordinates.');
 }
 
+/* Anonymous usage events (PostHog, EU). Never pass anything the visitor typed. */
+function track(name, props, beacon) {
+  try { if (window.posthog) window.posthog.capture(name, props || {}, beacon ? { transport: 'sendBeacon' } : undefined); } catch (e) { /* analytics must never break the map */ }
+}
+document.addEventListener('click', e => { if (e.target.closest && e.target.closest('#support')) track('support_click', {}, true); });
+
 /* Side-panel notch: keeps the label and ARIA state in sync with the panel */
 function setPanelLabel(open) {
   const b = $('paneltoggle');
@@ -357,10 +363,10 @@ function buildUI() {
   $('fit').onclick = () => { if (visible.length) map.fitBounds(L.latLngBounds(visible.map(d => [d.lat, d.lon])), { padding: [60, 70], maxZoom: 16 }); };
   $('sources').onclick = $('coverage').onclick = openAbout;
   $('closeAbout').onclick = () => $('about').close();
-  $('export').onclick = () => $('download').showModal();
+  $('export').onclick = () => { track('download_dialog_open', { city: CITY_ID }); $('download').showModal(); };
   $('closeDownload').onclick = () => $('download').close();
-  $('csv').onclick = exportCSV;
-  $('geojson').onclick = exportGeoJSON;
+  $('csv').onclick = () => { track('download', { format: 'csv', city: CITY_ID }); exportCSV(); };
+  $('geojson').onclick = () => { track('download', { format: 'geojson', city: CITY_ID }); exportGeoJSON(); };
   let rt; $('search').oninput = () => { clearTimeout(rt); rt = setTimeout(render, 140); };
   $('list').onclick = e => { const c = e.target.closest('.card'); if (c) select(+c.dataset.id); };
 }
@@ -371,10 +377,11 @@ function fillPicker(currentId) {
   sel.innerHTML = '<option value="__all"' + (currentId ? '' : ' selected') + '>All cities</option>' +
     cities.map(c => '<option value="' + esc(c.id) + '"' + (c.id === currentId ? ' selected' : '') + '>' + esc(c.name || c.id) + '</option>').join('');
   sel.hidden = false;
-  sel.onchange = () => { location.href = sel.value === '__all' ? '?view=overview' : '?city=' + encodeURIComponent(sel.value); };
+  sel.onchange = () => { track('city_selected', { city: sel.value }, true); location.href = sel.value === '__all' ? '?view=overview' : '?city=' + encodeURIComponent(sel.value); };
 }
 
 async function openAbout() {
+  track('sources_open');
   if (!aboutLoaded) {
     aboutLoaded = true;
     let html = '';
@@ -629,6 +636,7 @@ async function geocode(q) {
   return r.json();
 }
 async function runCheck() {
+  track('address_check');   // no address text is sent
   const q = $('addr').value.trim(); if (!q || geoBusy) return;
   geoBusy = true; $('addrgo').disabled = true; $('checkresult').innerHTML = '<div class="res">Looking up…</div>';
   try {
@@ -651,6 +659,7 @@ function stopPicking() { picking = false; $('mapwrap').classList.remove('map-pic
 function startFeatures() {
   // share
   $('share').onclick = () => {
+    track('share_click');
     pushHash(); const u = location.href;
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(() => toast('Link to this view copied'), () => window.prompt('Copy this link', u));
     else window.prompt('Copy this link', u);
