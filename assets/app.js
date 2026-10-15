@@ -109,6 +109,14 @@ async function boot() {
   if (skipped) toast(skipped + ' row' + (skipped === 1 ? ' was' : 's were') + ' skipped: missing address or coordinates.');
 }
 
+/* Side-panel notch: keeps the label and ARIA state in sync with the panel */
+function setPanelLabel(open) {
+  const b = $('paneltoggle');
+  b.setAttribute('aria-expanded', String(open));
+  b.setAttribute('aria-label', open ? 'Hide panel' : 'Show panel');
+  b.title = open ? 'Hide panel' : 'Show panel';
+}
+
 /* ==========================================================================
    Overview: a map of all cities (shown when no city is chosen and there are 2+ cities)
    ========================================================================== */
@@ -165,7 +173,7 @@ function bootResearch() {
   $('fit').hidden = true;
   $('sources').onclick = $('coverage').onclick = openAbout;
   $('closeAbout').onclick = () => $('about').close();
-  $('paneltoggle').onclick = () => { document.querySelector('main').classList.toggle('panel-collapsed'); const closed = document.querySelector('main').classList.contains('panel-collapsed'); $('paneltoggle').textContent = closed ? 'Show panel' : 'Hide panel'; setTimeout(() => map.invalidateSize(), 220); };
+  $('paneltoggle').onclick = () => { const main = document.querySelector('main'); const open = main.classList.contains('panel-collapsed'); main.classList.toggle('panel-collapsed', !open); setPanelLabel(open); setTimeout(() => map.invalidateSize(), 220); };
   map = L.map('map', { zoomControl: false, minZoom: CFG.map.minZoom, maxZoom: 19, zoomSnap: 0.25, preferCanvas: true });
   L.control.zoom({ position: 'topleft' }).addTo(map);
   L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
@@ -306,8 +314,7 @@ function buildUI() {
   fillPicker(CITY_ID);
   const setPanel = open => {
     document.querySelector('main').classList.toggle('panel-collapsed', !open);
-    $('paneltoggle').textContent = open ? 'Hide panel' : 'Show panel';
-    $('paneltoggle').setAttribute('aria-expanded', String(open));
+    setPanelLabel(open);
     try { localStorage.setItem('housing-atlas-panel-open', open ? '1' : '0'); } catch (e) { /* optional preference */ }
     setTimeout(() => map && map.invalidateSize(), 220);
   };

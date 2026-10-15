@@ -140,6 +140,7 @@ h1{font-size:30px}
 h1 span{display:block;font-size:12px;margin:5px 0 0}
 .actions{flex-direction:column;gap:5px;align-items:stretch}
 .actions button,.actions select{padding:7px;font-size:10px;max-width:none}
+.actions .support{padding:7px;font-size:10px;text-align:center}
 main{height:auto;display:flex;flex-direction:column}
 main.panel-collapsed aside{display:none}
 main.panel-collapsed .mapwrap{height:calc(100dvh - 88px)}
@@ -177,3 +178,16 @@ header h1 span{display:none}
 
 /* Utility state must override component display rules (including research-only city pages). */
 [hidden] { display: none !important; }
+
+/* Panel notch: a small vertical tab on the left edge of the map, attached to the side panel */
+.notch{position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:1100;width:20px;height:72px;padding:0;display:flex;align-items:center;justify-content:center;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-left:0;border-radius:0 9px 9px 0;box-shadow:2px 0 10px #29433614}
+.notch::after{content:"";position:absolute;inset:-10px -10px -10px 0}
+.notch:hover{background:#ecefe7}
+.notch svg{transition:transform .2s ease}
+main.panel-collapsed .notch svg{transform:rotate(180deg)}
+
+/* Highlighted Support button (a link to donate.html, styled like the other header buttons) */
+.support{display:inline-block;background:var(--rust);color:#fff;border:1px solid var(--rust);border-radius:8px;padding:10px 13px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.support:hover{background:#a64d34;border-color:#a64d34}
+@media(prefers-reduced-motion:reduce){.notch svg{transition:none}}
+@media(max-width:780px){.notch svg{transform:rotate(-90deg)}main.panel-collapsed .notch svg{transform:rotate(90deg)}}
