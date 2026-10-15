@@ -2,17 +2,17 @@
   "id": "livorno",
   "name": "Livorno",
   "country": "Italy",
-  "status": "research",
-  "introHeading": "Livorno social housing · research edition.",
-  "intro": "An address-level public source for Livorno has been identified. Locations will appear after the register has been collected and checked.",
+  "status": "published",
+  "introHeading": "Published social-housing addresses in Livorno.",
+  "intro": "Explore 764 mapped records from CASALP’s December 2025 public property inventory. Each marker represents a published address, although most are placed at street level when open map data lacks a civic-number coordinate.",
   "mapLabel": "Interactive map of Livorno",
-  "searchPlaceholder": "Address data is being prepared",
-  "footnote": "<b>Research edition — no housing locations are published yet.</b> A source route has been identified, but markers will only be added once locations can be verified.",
+  "searchPlaceholder": "Search a Livorno address or neighbourhood",
+  "footnote": "<b>Address-level register, not a live census.</b> Based on the CASALP property inventory published for December 2025. Counts are distinct mapped address records, not homes; street-level matches are marked approximate in each card.",
   "sources": [
     {
-      "key": "CASALP",
-      "label": "Official starting source",
-      "url": "https://www.casalp.it/"
+      "key": "CASALP property inventory — December 2025",
+      "label": "CASALP property inventory — December 2025 (ODS)",
+      "url": "https://casalp.portaleamministrazionetrasparente.it/archiviofile/casalp/BENI_IMMOBILI_E_GESTIONE_PATRIMONIO/Patrimonio%20dicembre%202025.ods"
     }
   ],
   "map": {
