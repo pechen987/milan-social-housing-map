@@ -348,3 +348,16 @@ Basemaps are tried in order (CARTO → OpenStreetMap → the city's local image)
 - Basemap © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) (ODbL), tiles by [CARTO](https://carto.com/attributions); satellite imagery © Esri and its data providers; address search by [Nominatim](https://nominatim.org).
 - Each city's data has its own sources and licences: state them in that city's `config.json` / `about.html`.
 - Choose a licence for the code and data in this repository (e.g. MIT for the code, CC BY 4.0 for original data compilations) and add a `LICENSE` file.
+
+## Support the project
+
+This map is free, ad-free and does not track you. If it is useful to you, you can help cover hosting and research time:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/pechen)
+
+| Method | Address |
+|---|---|
+| Lightning address | `trustless@pay.hd-apps.com` |
+| Bitcoin on-chain | `bc1q835gw6aqf6jmgs5pja5xf5xzcp76w75cqfvek6` |
+
+QR codes and copy buttons: <https://socialmap.hd-apps.com/donate.html>
