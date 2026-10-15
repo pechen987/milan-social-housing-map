@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support the Social Housing Map</title>
+<meta name="description" content="Support the free, ad-free social housing atlas of Europe with Buy Me a Coffee, Bitcoin Lightning or on-chain Bitcoin.">
+<style>
+:root {
+  --bg: #eef2f3;
+  --surface: #ffffff;
+  --ink: #14232b;
+  --muted: #55666e;
+  --line: #cfd9dc;
+  --accent: #0f6b6b;
+  --focus: #0b57d0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11191d;
+    --surface: #182228;
+    --ink: #e8eff1;
+    --muted: #9db0b7;
+    --line: #2b3a41;
+    --accent: #5fc7c0;
+    --focus: #8ab4f8;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.back { font-size: 15px; }
+h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.1; margin: 24px 0 12px; letter-spacing: -0.02em; }
+.lede { color: var(--muted); max-width: 56ch; margin: 0 0 32px; }
+.coffee {
+  display: inline-block;
+  background: #FFDD00;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  margin-bottom: 36px;
+}
+.coffee:hover { background: #ffe933; }
+.method {
+  display: grid;
+  grid-template-columns: 1fr 168px;
+  gap: 20px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 16px;
+}
+.method h2 { margin: 0 0 4px; font-size: 20px; }
+.method p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+.addr {
+  display: block;
+  font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  word-break: break-all;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  user-select: all;
+}
+button {
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+button:hover { background: var(--bg); }
+.qr-wrap { background: #fff; border-radius: 8px; padding: 4px; line-height: 0; }
+.qr { width: 100%; height: auto; display: block; }
+.small { color: var(--muted); font-size: 14px; margin-top: 28px; }
+@media (max-width: 560px) {
+  .method { grid-template-columns: 1fr; }
+  .qr-wrap { max-width: 200px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">Back to the map</a>
+  <h1>Support the map</h1>
+  <p class="lede">The social housing atlas is free, has no ads and does not track you. Donations go toward hosting, map tiles and the time spent finding and checking public housing registers.</p>
+
+  <a class="coffee" href="https://buymeacoffee.com/pechen" target="_blank" rel="noopener">Buy me a coffee</a>
+
+  <section class="method" aria-labelledby="ln-h">
+    <div>
+      <h2 id="ln-h">Bitcoin Lightning</h2>
+      <p>Instant, low fee. Paste this Lightning address into any Lightning wallet, or scan the code.</p>
+      <code class="addr" id="ln">trustless@pay.hd-apps.com</code>
+      <button type="button" data-copy="ln">Copy address</button>
+    </div>
+    <div class="qr-wrap" role="img" aria-label="QR code for the Lightning address trustless@pay.hd-apps.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="qr"><path fill="#fff" d="M0 0h29v29h-29z"/><path stroke="#111" d="M2 2.5h7m2 0h3m4 0h1m1 0h7m-25 1h1m5 0h1m3 0h2m3 0h2m1 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h7m3 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m3 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h2m5 0h1m2 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h4m3 0h2m-17 1h1m1 0h5m2 0h1m1 0h1m1 0h3m2 0h5m-23 1h1m4 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2m3 0h1m-23 1h1m3 0h8m2 0h1m2 0h3m2 0h2m-24 1h1m1 0h1m1 0h1m3 0h4m2 0h1m2 0h1m-19 1h1m3 0h3m2 0h1m1 0h4m2 0h4m1 0h1m1 0h1m-25 1h3m1 0h2m1 0h2m3 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m-24 1h1m1 0h1m3 0h1m2 0h2m1 0h2m1 0h1m2 0h3m1 0h3m-25 1h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m5 0h1m-25 1h1m3 0h1m1 0h5m1 0h2m2 0h5m1 0h3m-17 1h1m3 0h2m1 0h2m3 0h1m2 0h1m-24 1h7m3 0h1m2 0h2m1 0h1m1 0h1m1 0h2m1 0h2m-25 1h1m5 0h1m1 0h3m4 0h2m3 0h1m2 0h2m-25 1h1m1 0h3m1 0h1m1 0h15m-23 1h1m1 0h3m1 0h1m1 0h1m2 0h1m5 0h4m1 0h3m-25 1h1m1 0h3m1 0h1m1 0h3m2 0h1m1 0h2m2 0h1m1 0h1m2 0h1m-25 1h1m5 0h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h2m4 0h1m-25 1h7m1 0h2m1 0h4m2 0h3m1 0h4"/></svg></div>
+  </section>
+
+  <section class="method" aria-labelledby="btc-h">
+    <div>
+      <h2 id="btc-h">Bitcoin on-chain</h2>
+      <p>Standard Bitcoin address. Best for larger amounts.</p>
+      <code class="addr" id="btc">bc1q835gw6aqf6jmgs5pja5xf5xzcp76w75cqfvek6</code>
+      <button type="button" data-copy="btc">Copy address</button>
+    </div>
+    <div class="qr-wrap" role="img" aria-label="QR code for the Bitcoin address bc1q835gw6aqf6jmgs5pja5xf5xzcp76w75cqfvek6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" class="qr"><path fill="#fff" d="M0 0h37v37h-37z"/><path stroke="#111" d="M2 2.5h7m1 0h1m2 0h1m1 0h4m3 0h1m1 0h3m1 0h7m-33 1h1m5 0h1m6 0h2m3 0h3m3 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h1m1 0h6m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h5m3 0h2m6 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h4m2 0h1m2 0h1m3 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h2m3 0h3m1 0h1m2 0h2m4 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h2m1 0h1m2 0h1m2 0h1m1 0h3m-22 1h1m3 0h1m1 0h4m2 0h1m1 0h2m1 0h1m2 0h2m3 0h5m2 0h1m-33 1h5m3 0h2m1 0h1m3 0h4m3 0h3m-25 1h1m1 0h2m2 0h1m1 0h3m2 0h4m1 0h1m1 0h1m2 0h3m1 0h1m-28 1h1m1 0h1m1 0h1m5 0h1m1 0h2m1 0h2m4 0h3m1 0h2m5 0h1m-33 1h2m2 0h5m4 0h1m2 0h1m2 0h4m1 0h6m2 0h1m-33 1h2m1 0h3m2 0h1m3 0h1m1 0h1m2 0h4m1 0h2m5 0h3m-32 1h3m3 0h3m1 0h1m1 0h1m2 0h1m5 0h1m1 0h2m1 0h3m2 0h1m-32 1h1m3 0h2m2 0h2m2 0h6m3 0h1m1 0h2m1 0h3m3 0h1m-33 1h2m4 0h1m3 0h1m1 0h2m2 0h2m1 0h1m1 0h2m3 0h1m1 0h2m1 0h2m-32 1h2m1 0h1m4 0h3m1 0h1m1 0h2m1 0h1m4 0h1m1 0h1m1 0h1m1 0h3m-32 1h3m1 0h1m1 0h1m1 0h3m1 0h4m1 0h1m2 0h1m2 0h3m2 0h2m1 0h1m-32 1h1m4 0h1m1 0h2m1 0h2m3 0h1m1 0h2m2 0h3m2 0h2m-28 1h2m4 0h2m1 0h3m1 0h2m3 0h5m3 0h3m2 0h1m-32 1h2m1 0h1m3 0h2m5 0h1m1 0h2m1 0h2m2 0h2m2 0h1m3 0h1m-28 1h3m3 0h3m1 0h1m1 0h3m4 0h2m4 0h1m1 0h1m-28 1h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h5m2 0h1m1 0h3m3 0h1m-33 1h5m1 0h3m1 0h1m1 0h2m1 0h3m1 0h4m1 0h6m1 0h2m-25 1h5m2 0h1m1 0h2m3 0h3m3 0h1m1 0h1m-31 1h7m1 0h1m1 0h1m2 0h1m1 0h1m2 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h3m1 0h2m3 0h1m2 0h1m-32 1h1m1 0h3m1 0h1m1 0h1m5 0h1m1 0h1m2 0h1m1 0h2m1 0h5m3 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m3 0h1m1 0h1m2 0h1m2 0h1m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h2m1 0h3m2 0h1m1 0h1m2 0h1m2 0h1m1 0h3m-31 1h1m5 0h1m3 0h1m1 0h1m2 0h5m1 0h1m2 0h2m-26 1h7m1 0h5m1 0h1m1 0h2m3 0h1m2 0h1m2 0h2m3 0h1"/></svg></div>
+  </section>
+
+  <p class="small">Check the first and last characters of the address in your wallet before sending. The same addresses are listed in the <a href="https://github.com/pechen987/social-housing-map#support-the-project">project README</a>; if the two ever differ, do not send.</p>
+</main>
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.getElementById(btn.dataset.copy).textContent.trim();
+    var done = function () {
+      var old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = old; }, 1500);
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { window.getSelection().selectAllChildren(document.getElementById(btn.dataset.copy)); });
+    } catch (e) {
+      window.getSelection().selectAllChildren(document.getElementById(btn.dataset.copy));
+    }
+  });
+});
+</script>
+</body>
+</html>
