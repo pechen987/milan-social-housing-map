@@ -15,10 +15,10 @@
     <h1 id="title">Social housing in Europe</h1>
   </div>
   <div class="actions">
-    <button id="paneltoggle" aria-expanded="true" aria-controls="sidebar" title="Show or hide the research panel">Hide panel</button>
     <select id="citypick" aria-label="Choose a city" hidden></select>
     <button id="sources">Sources &amp; coverage ↗</button>
-    <button id="export" class="primary">Download map data ↓</button>
+    <button id="export">Download map data ↓</button>
+    <a id="support" class="support" href="donate.html" title="Support this free, ad-free map"><span aria-hidden="true">♥</span> Support</a>
   </div>
 </header>
 
@@ -59,6 +59,7 @@
   </aside>
 
   <section class="mapwrap" id="mapwrap" aria-label="Interactive map">
+    <button id="paneltoggle" class="notch" type="button" aria-expanded="true" aria-controls="sidebar" aria-label="Hide panel" title="Hide panel"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><polyline points="10,3 5,8 10,13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div id="map"></div>
     <div class="maptools">
       <button id="sat" aria-pressed="false" title="Switch between map and satellite imagery">Satellite</button>
