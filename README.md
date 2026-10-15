@@ -320,7 +320,7 @@ Reviewers: `about.html`, `footnote` and link URLs come from contributors. The ap
 
 Basemaps are tried in order (CARTO → OpenStreetMap → the city's local image), moving on after three failed tiles. Satellite imagery is Esri World Imagery, loaded on demand.
 
-**Privacy.** There is no server and no analytics. The only third parties contacted are the tile providers, Nominatim (only when someone uses the address check, and only the text they type), and Google Maps (only when someone clicks a Street View link).
+**Privacy.** There is no server of our own, no ads and no cookies. The site uses PostHog (EU Cloud) for anonymous, cookie-free usage statistics: page views and a handful of button clicks (data downloads, city choice, Support, Share, Sources, and that the address check was used). Nothing a visitor types is sent to PostHog, session recording and surveys are off, no profiles are created, IP addresses are discarded, and Do Not Track is honoured. The other third parties contacted are the tile providers, Nominatim (only when someone uses the address check, and only the text they type), and Google Maps (only when someone clicks a Street View link).
 
 ## Scaling
 
@@ -351,7 +351,7 @@ Basemaps are tried in order (CARTO → OpenStreetMap → the city's local image)
 
 ## Support the project
 
-This map is free, ad-free and does not track you. If it is useful to you, you can help cover hosting and research time:
+This map is free, ad-free and cookie-free. If it is useful to you, you can help cover hosting and research time:
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/pechen)
 
