@@ -144,10 +144,11 @@
       "name": "Livorno",
       "country": "Italy",
       "center": [
-        43.5485,
-        10.3106
+        43.546,
+        10.3301
       ],
-      "status": "research"
+      "count": 764,
+      "status": "published"
     }
   ]
 }
