@@ -20,10 +20,58 @@ Features: a Europe overview map of all cities, per-city maps with clustering, sa
 6. [Configuration: `config.json`](#configuration-configjson)
 7. [Optional extras](#optional-extras): study area, local basemap, about text
 8. [The `city.py` helper](#the-citypy-helper)
-9. [Checklist for pull requests](#checklist-for-pull-requests)
+9. [Research methodology](#research-methodology-version-1) and [Checklist for pull requests](#checklist-for-pull-requests)
 10. [How it works](#how-it-works) · [Scaling](#scaling) · [Troubleshooting](#troubleshooting) · [Credits & licences](#credits--licences)
 
 ---
+
+## Research methodology (version 1)
+
+**Target: one marker represents one physical residential building with documented social housing.** It never represents one apartment, household, staircase, financing award or entire estate. Several entrances to one building are one entity; several detached buildings in one estate are separate entities only when evidence distinguishes them. Mixed-tenure buildings are eligible: the presence of social homes does not mean all homes are social housing.
+
+### What is actually published today
+
+The existing import mixes buildings, addresses, programmes and property assets. We must not relabel those as buildings without evidence. During migration every record carries an explicit `entity_type` and `verification_status`, shown on its card and in exports. The site counts **documented records** separately from **source-verified buildings**. Legacy entries remain discoverable but are not included in verified-building totals. The [complete entity audit](docs/entity-audit.md) and [record-level review queue](docs/entity-audit.json) track this work. “Source-verified” verifies identity against a published source, not current occupancy or exhaustive city coverage.
+
+### The same research process for every city
+
+1. **Define scope:** use the municipal boundary, with its source/version, and list every district and public/social housing provider. Record boundary changes and cross-border estates. Do not use arbitrary ring roads for citywide coverage. Commercial rentals, offices, community facilities and proposed developments are not existing social-housing buildings. Planned/demolished/former housing belongs in a separate research log until a lifecycle layer exists.
+2. **Inventory sources:** first use municipal/regional housing registers and housing-provider GIS or inventories; then official asset registers, allocation documents and redevelopment reports. OpenStreetMap, aerial images and street imagery establish position or shape, never social-housing status. A general public-property register alone does not prove social tenure.
+3. **Preserve evidence:** log publisher, URL, source identifier/page, publication/as-of date (unknown explicitly), retrieval date, licence/redistribution basis, query/filter and known exclusions. Preserve source IDs and a checksum where practical. Keep raw evidence outside published personal data; never publish tenants, individual-flat identifiers or residents. An access date is not the date of the housing stock.
+4. **Extract candidates before mapping:** record the source’s actual unit: building, address, programme, property asset, estate or dwelling. Keep original wording and relationships. Public ownership or the word “residential” is insufficient without housing evidence. Never create one marker per listed dwelling. Never sum different programme awards as unique homes without reconciliation.
+5. **Resolve buildings:** prefer a stable official building ID/footprint; otherwise require explicit single-building evidence and an unambiguous address match. Preserve multiple addresses, sources and providers as relationships rather than multiplying buildings. Split estates only with building-level evidence. Ambiguous candidates stay in `cities/<id>/source/` with a reason and next action.
+6. **Locate honestly:** prefer a point inside a verified building footprint (check centroids of concave shapes); a matched civic entrance is acceptable when building identity is independently established. Store `coordinate_method` and coordinate source separately from housing evidence. Street centres, postcode/neighbourhood centres and fuzzy number matches are not acceptable for new published buildings. Do not move a point onto the nearest rooftop without evidence. Do not add random offsets to separate overlapping points.
+7. **Deduplicate by identity:** compare building IDs, source IDs, address aliases, footprints and date. Same coordinates can represent a shared geocoder point; different coordinates can be entrances of one building. Neither condition alone proves a duplicate. Retain the evidence and stable share-link IDs when merging; document redirects/retired IDs before removing existing records.
+8. **Verify and release:** run both validators below; inspect every new/changed building against its source, boundary and position. Record reviewer/date and uncertainties. Compare counts to source totals using the same unit and date. Publish city/provider/district coverage and outstanding research; never describe a subset as complete. Repeat source review at least annually and when a register changes, recording removals and changes rather than silently overwriting history.
+
+### Shared record contract
+
+All cities use the same fields; unknown values must remain unknown.
+
+| Field | Meaning |
+|---|---|
+| `record_uid`, `id` | Stable `<city>:<id>` identity and numeric share-link ID. Do not regenerate on sorting. |
+| `methodology_version` | `1` for this contract. |
+| `entity_type` | `building`, or legacy `address`, `programme`, `property_asset`. |
+| `verification_status` | `source_verified` for a documented single building; `legacy_review_required` for imports awaiting individual review. All **new** mapped records must be source-verified buildings. |
+| `building_ref` | Stable, namespaced building identity; required for verified buildings. Never an apartment count. |
+| `source`, `source_record_id`, `page`, `original` | Traceable housing evidence, with the source key linked in the city config. |
+| `source_as_of`, `reviewed_on`, `verification_note` | Evidence date (nullable), actual verification date and how identity was checked. Source dates must not be invented. |
+| `coordinate_method`, `coordinate_source`, `precision` | Machine-readable method, evidence URL and human-readable positional limitation. Legacy programme/asset/street points are explicitly distinguished. |
+| `tenure_scope` | `unknown`, `all_social_reported` or `mixed_reported`. Public ownership alone does not establish tenure share. |
+| `homes` | Optional sourced social-dwelling count and date in the evidence; never used as a cluster weight or building count. |
+| `manager`, `area`, `district` | Provider and administrative context. Unknown district assignments remain blank until matched to official boundaries. |
+
+Cluster numbers count displayed **records**, not apartments or verified buildings. Until legacy migration finishes, comparisons of raw city totals are not comparable building-stock statistics. Address-check distance describes proximity to published points and their positional accuracy; it is not a measure of crime, safety or neighbourhood quality.
+
+### Required audit and contribution gate
+
+```bash
+python3 tools/city.py validate --all
+python3 tools/audit_data.py --write
+```
+
+Include the updated audit, city source/research log, coverage text and index in each data PR. The structural audit checks every row and lists collision candidates; it does not replace source review. Existing legacy records are grandfathered explicitly, not silently certified. New unresolved candidates must remain unpublished. To refresh the audit without writing files, omit `--write`.
 
 ## Project layout
 
@@ -91,7 +139,7 @@ No build step, no `npm install`.
 
 ## Adding a city
 
-You need: Python 3.8+ (nothing to install) and a list of addresses. About 15 minutes for a small city, longer for the research.
+Start with the research methodology above. A list of addresses alone is not a verified building inventory; research and building resolution take as long as the sources require.
 
 ### 1. Create the folder
 
@@ -103,7 +151,7 @@ This copies `cities/_template/` to `cities/turin/` and adds Turin to `site.json`
 
 ### 2. Put your addresses in a CSV
 
-Edit `cities/turin/source/addresses.csv`. The only required column is `address`. Everything else is optional:
+Edit `cities/turin/source/addresses.csv`. The geocoder requires `address`. The following columns support candidate preparation; the result still needs methodology metadata and building verification before publication:
 
 | column | meaning |
 |---|---|
@@ -172,7 +220,7 @@ Open a pull request with the new `cities/turin/` folder and the updated `site.js
 
 ## Data format: `addresses.json`
 
-A JSON list with one object per address. Only the first three fields are required.
+A JSON list with one object per mapped entity. The renderer requires address and coordinates; publication also requires the methodology fields above. Legacy examples below show the renderer format, not a sufficient publication record.
 
 ```json
 [
@@ -299,7 +347,9 @@ python3 tools/city.py list
 
 ## Checklist for pull requests
 
-- [ ] `python3 tools/city.py validate <id>` passes without errors
+- [ ] `python3 tools/city.py validate <id>` and `python3 tools/audit_data.py` pass without errors
+- [ ] New mapped entries are individually evidenced buildings, not raw geocoder or programme rows; source and position evidence are recorded
+- [ ] Updated the audit and city research log; stable IDs preserved
 - [ ] Every record comes from a source named in `config.json`; `original` and `page` filled in where the source has them
 - [ ] Street-level (approximate) matches were checked or fixed
 - [ ] `about.html` says what the sources are, their dates, and what is **not** covered

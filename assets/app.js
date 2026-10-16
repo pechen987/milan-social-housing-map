@@ -136,9 +136,9 @@ function bootOverview(cities) {
   const total = cities.reduce((n, c) => n + (c.count || 0), 0);
   $('introH').textContent = 'Social housing, city by city.';
   $('introP').textContent = SITE.intro;
-  $('stats').innerHTML = '<div class="stat"><strong>' + cities.length + '</strong><span>cities</span></div>' + (total ? '<div class="stat"><strong>' + total + '</strong><span>address locations</span></div>' : '');
+  $('stats').innerHTML = '<div class="stat"><strong>' + cities.length + '</strong><span>cities</span></div>' + (total ? '<div class="stat"><strong>' + total + '</strong><span>documented records</span></div>' : '');
   const sorted = cities.slice().sort((a, b) => (a.name || a.id).localeCompare(b.name || b.id));
-  $('list').innerHTML = sorted.map(c => '<a class="card" href="?city=' + encodeURIComponent(c.id) + '"><span class="cardtop">' + esc(c.country || 'City') + '</span><span class="addr">' + esc(c.name || c.id) + '</span><span class="neighbourhood">' + (c.count ? c.count + ' documented addresses' : c.status === 'research' ? 'research edition' : 'open the map') + '</span></a>').join('');
+  $('list').innerHTML = sorted.map(c => '<a class="card" href="?city=' + encodeURIComponent(c.id) + '"><span class="cardtop">' + esc(c.country || 'City') + '</span><span class="addr">' + esc(c.name || c.id) + '</span><span class="neighbourhood">' + (c.count ? c.count + ' documented records' : c.status === 'research' ? 'research edition' : 'open the map') + '</span></a>').join('');
   $('footnote').innerHTML = sanitizeHTML(SITE.footnote || '<b>Documented locations, not a live census.</b> Each city lists the addresses found in its public registers; absence from a map never proves absence of social housing.') +
     (isHttp(SITE.repo) ? ' <a href="' + esc(SITE.repo) + '" target="_blank" rel="noopener">Add your city ↗</a>' : '');
   map = L.map('map', { zoomControl: false, minZoom: 3, maxZoom: 12, zoomSnap: 0.25 });
@@ -212,6 +212,7 @@ function loadRecords(raw) {
   if (new Set(out.map(d => d.id)).size !== out.length) out.forEach((d, i) => d.id = i);     // ids must be unique
   DATA = out;
   BY_ID = new Map(out.map(d => [d.id, d]));
+  out.forEach(d => (d.legacy_ids || []).forEach(id => { if (!BY_ID.has(id)) BY_ID.set(id, d); }));
   return skipped;
 }
 
@@ -330,7 +331,7 @@ function buildUI() {
   $('paneltoggle').onclick = () => setPanel(document.querySelector('main').classList.contains('panel-collapsed'));
 
   // Provider is retained on individual location cards, while all cities use one neutral map symbol and citywide total.
-  $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>documented locations</span></div>';
+  $('stats').innerHTML = '<div class="stat"><strong id="total">—</strong><span>documented records</span></div><div class="stat"><strong>' + DATA.filter(d => d.entity_type === 'building' && d.verification_status === 'source_verified').length + '</strong><span>source-verified buildings in city</span></div>';
 
   // area select (only if the data has areas)
   const areas = [...new Set(DATA.map(d => d.area).filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -509,9 +510,11 @@ function popup(d) {
   const src = SRC[d.source], url = sourceURL(d);
   const where = [d.area, d.district != null && d.district !== '' ? CFG.terms.district + ' ' + d.district : ''].filter(Boolean).join(' · ');
   return '<span class="badge">' + esc(d.manager) + (d.source ? ' · ' + esc(d.source) : '') + '</span><h3>' + esc(d.address) + '</h3>' +
+    '<div class="detail-row"><small>What this marker represents</small>' + esc(({ building: d.verification_status === 'source_verified' ? 'One documented building' : 'Building source record — identity under review', address: 'Civic address — building identity unresolved', programme: 'Housing programme — may cover multiple buildings', property_asset: 'Property asset — building identity unresolved' })[d.entity_type] || 'Unclassified record') + '<br>' + (d.verification_status === 'source_verified' ? 'Building identity checked against source' : 'Legacy record — individual review pending') + '</div>' +
     (where ? '<div class="detail-row"><small>' + esc(CFG.terms.area) + '</small>' + esc(where) + '</div>' : '') +
     '<div class="detail-row"><small>Mapped position</small>' + (d.precision ? esc(d.precision) + '<br>' : '') + '<small>' + d.lat.toFixed(6) + ', ' + d.lon.toFixed(6) + '</small></div>' +
     (d.note ? '<p>' + esc(d.note) + '</p>' : '') +
+    (d.verification_note ? '<p>' + esc(d.verification_note) + '</p>' : '') +
     (d.edge && STUDY ? '<p class="warning">' + esc(STUDY.edgeWarning) + '</p>' : '') +
     (d.original ? '<div class="detail-row"><small>Original register entry</small>' + esc(d.original) + '</div>' : '') +
     (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc((src && src.label) || 'Source') + (d.page ? ' · page ' + esc(d.page) : '') + ' ↗</a><br>' : '') +
@@ -520,6 +523,7 @@ function popup(d) {
 }
 
 function select(id, pan = true) {
+  id = BY_ID.get(id)?.id ?? id; // Preserve links to consolidated duplicate records.
   selected = id;
   setTimeout(pushHash, 0);
   document.querySelectorAll('.card').forEach(c => c.classList.toggle('selected', +c.dataset.id === id));
@@ -539,7 +543,7 @@ function render() {
   visible = DATA.filter(d => (!area || d.area === area) && (!q || d._hay.includes(q)));
   layer.clearLayers(); markers.clear(); map.closePopup();
 
-  $('resultcount').textContent = visible.length + ' of ' + DATA.length + ' addresses';
+  $('resultcount').textContent = visible.length + ' of ' + DATA.length + ' records';
   $('total').textContent = visible.length;
 
   const shown = visible.slice(0, CFG.listLimit);
@@ -617,7 +621,7 @@ function setPin(lat, lon, label, o = {}) {
     const w = list.filter(x => x.m <= r);
     return '<tr><td>Within ' + r + ' m</td><td><b>' + w.length + '</b></td></tr>';
   };
-  const notes = ['Counts are documented addresses, not apartments.'];
+  const notes = ['Counts are documented records, not apartments. Legacy addresses, programmes and assets are not verified building counts.'];
   if (STUDY && studyDistM(lat, lon) < 500) notes.push('<b>Close to the edge of the study area:</b> addresses outside it are not included.');
   if (!STUDY && n.m > CFG.coverageWarnMeters) notes.push('<b>The nearest address is ' + (n.m / 1000).toFixed(1) + ' km away:</b> this spot may be outside the area this map covers.');
   notes.push('The map is not a complete census, so “none nearby” does not prove there is none.');

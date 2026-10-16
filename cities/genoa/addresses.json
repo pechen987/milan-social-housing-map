@@ -7,7 +7,15 @@
     "original": "ERP register: VIA LINNEO 37; annual rent total €57,478.96",
     "lat": 44.443291,
     "lon": 8.901088,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 0,
+    "record_uid": "genoa:0",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Salita Di Oregina 13r",
@@ -17,7 +25,15 @@
     "original": "ERP register: SALITA OREGINA 13; annual rent total €12,796.59",
     "lat": 44.420018,
     "lon": 8.921818,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 1,
+    "record_uid": "genoa:1",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Pierino Negrotto Cambiaso 36r",
@@ -27,7 +43,15 @@
     "original": "ERP register: VIA NEGROTTO CAMBIASO 36; annual rent total €59,362.70",
     "lat": 44.439182,
     "lon": 8.894558,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 2,
+    "record_uid": "genoa:2",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Macellari 25r",
@@ -37,7 +61,15 @@
     "original": "ERP register: VICO MACELLARI 25; annual rent total €31,018.64",
     "lat": 44.415631,
     "lon": 8.924723,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 3,
+    "record_uid": "genoa:3",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Palmetta 7",
@@ -47,7 +79,15 @@
     "original": "ERP register: PIAZZA PALMETTA 7; annual rent total €10,111.15",
     "lat": 44.421072,
     "lon": 8.887033,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 4,
+    "record_uid": "genoa:4",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Cordanieri 6r",
@@ -57,7 +97,15 @@
     "original": "ERP register: VIA CORDANIERI 6; annual rent total €5,441.35",
     "lat": 44.428478,
     "lon": 8.788083,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 5,
+    "record_uid": "genoa:5",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Degli Indoratori 4",
@@ -67,7 +115,15 @@
     "original": "ERP register: VICO INDORATORI 4; annual rent total €2,852.63",
     "lat": 44.408805,
     "lon": 8.930927,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 6,
+    "record_uid": "genoa:6",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ezio Lucarno 66",
@@ -77,7 +133,15 @@
     "original": "ERP register: VIA LUCARNO 66; annual rent total €99,098.49",
     "lat": 44.450346,
     "lon": 9.003454,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 7,
+    "record_uid": "genoa:7",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Tonale 27",
@@ -87,7 +151,15 @@
     "original": "ERP register: VIA TONALE 27; annual rent total €29,117.77",
     "lat": 44.416603,
     "lon": 8.86659,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 8,
+    "record_uid": "genoa:8",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Vado 2r",
@@ -97,7 +169,15 @@
     "original": "ERP register: VIA VADO 2; annual rent total €2,582.30",
     "lat": 44.426327,
     "lon": 8.845522,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 9,
+    "record_uid": "genoa:9",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Di Pre' 29",
@@ -107,7 +187,15 @@
     "original": "ERP register: VIA PRE 29; annual rent total €39,395.17",
     "lat": 44.414693,
     "lon": 8.924944,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 10,
+    "record_uid": "genoa:10",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Alla Costa Di Begato 7",
@@ -117,7 +205,15 @@
     "original": "ERP register: VIA ALLA COSTA DI BEGATO 7; annual rent total €14,182.11",
     "lat": 44.450813,
     "lon": 8.91102,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 11,
+    "record_uid": "genoa:11",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Giovanni Carbone 7",
@@ -127,7 +223,15 @@
     "original": "ERP register: VIA CARBONE 7; annual rent total €11,350.47",
     "lat": 44.424617,
     "lon": 8.926671,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 12,
+    "record_uid": "genoa:12",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Tommaso Albinoni 3",
@@ -137,7 +241,15 @@
     "original": "ERP register: VIA ALBINONI 3; annual rent total €6,844.43",
     "lat": 44.444423,
     "lon": 8.901617,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 13,
+    "record_uid": "genoa:13",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Giulio Pastore 132",
@@ -147,7 +259,15 @@
     "original": "ERP register: VIA PASTORE GIULIO 132; annual rent total €212,354.05",
     "lat": 44.43472,
     "lon": 8.757805,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 14,
+    "record_uid": "genoa:14",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Durazzo 12r",
@@ -157,7 +277,15 @@
     "original": "ERP register: VICO DURAZZO 12; annual rent total €5,592.40",
     "lat": 44.415129,
     "lon": 8.925043,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 15,
+    "record_uid": "genoa:15",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Del Dragone 6",
@@ -167,7 +295,15 @@
     "original": "ERP register: VICO DEL DRAGONE 6; annual rent total €3,728.52",
     "lat": 44.405181,
     "lon": 8.93372,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 16,
+    "record_uid": "genoa:16",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Paolo Della Cella 29",
@@ -177,7 +313,15 @@
     "original": "ERP register: VIA DELLA CELLA PAOLO 29; annual rent total €17,285.77",
     "lat": 44.425304,
     "lon": 8.92622,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 17,
+    "record_uid": "genoa:17",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Salita Mermi 10",
@@ -187,7 +331,15 @@
     "original": "ERP register: SALITA MERMI 10; annual rent total €4,882.97",
     "lat": 44.439351,
     "lon": 8.982468,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 18,
+    "record_uid": "genoa:18",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Cesare Pedrini 46",
@@ -197,7 +349,15 @@
     "original": "ERP register: VIA PEDRINI 46; annual rent total €73,914.21",
     "lat": 44.453883,
     "lon": 8.904624,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 19,
+    "record_uid": "genoa:19",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Cavour 2",
@@ -207,7 +367,15 @@
     "original": "ERP register: PIAZZA CAVOUR 2; annual rent total €1,543.15",
     "lat": 44.406231,
     "lon": 8.927175,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 20,
+    "record_uid": "genoa:20",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Isonzo 2",
@@ -217,7 +385,15 @@
     "original": "ERP register: VIA ISONZO 2; annual rent total €2,561.11",
     "lat": 44.397728,
     "lon": 8.980645,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 21,
+    "record_uid": "genoa:21",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Dei Platani 44r",
@@ -227,7 +403,15 @@
     "original": "ERP register: VIA DEI PLATANI 44; annual rent total €43,536.77",
     "lat": 44.421252,
     "lon": 8.952947,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 22,
+    "record_uid": "genoa:22",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Elba 1",
@@ -237,7 +421,15 @@
     "original": "ERP register: VICO ELBA 1; annual rent total €466.92",
     "lat": 44.415426,
     "lon": 8.925056,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 23,
+    "record_uid": "genoa:23",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Salvatore Quasimodo 49",
@@ -247,7 +439,15 @@
     "original": "ERP register: VIA QUASIMODO 49; annual rent total €91,746.62",
     "lat": 44.431608,
     "lon": 8.792861,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 24,
+    "record_uid": "genoa:24",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Dora 7r",
@@ -257,7 +457,15 @@
     "original": "ERP register: VICO DORA 7; annual rent total €16,874.51",
     "lat": 44.414895,
     "lon": 8.924409,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 25,
+    "record_uid": "genoa:25",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Del Pozzo 5r",
@@ -267,7 +475,15 @@
     "original": "ERP register: VICO DEL POZZO 5; annual rent total €6,664.82",
     "lat": 44.413686,
     "lon": 8.926754,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 26,
+    "record_uid": "genoa:26",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Di Mezzagalera 6r",
@@ -277,7 +493,15 @@
     "original": "ERP register: VICO DI MEZZAGALERA 6; annual rent total €2,481.59",
     "lat": 44.405422,
     "lon": 8.932552,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 27,
+    "record_uid": "genoa:27",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Alla Stazione Di Voltri 8r",
@@ -287,7 +511,15 @@
     "original": "ERP register: VIA VOLTRI 8; annual rent total €7,352.57",
     "lat": 44.42843,
     "lon": 8.760453,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 28,
+    "record_uid": "genoa:28",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Felice Maritano 65",
@@ -297,7 +529,15 @@
     "original": "ERP register: VIA MARITANO 65; annual rent total €72,884.16",
     "lat": 44.451586,
     "lon": 8.907093,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 29,
+    "record_uid": "genoa:29",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Vico Salvaghi 5",
@@ -307,6 +547,14 @@
     "original": "ERP register: VICO SALVAGHI 5; annual rent total €4,454.46",
     "lat": 44.410549,
     "lon": 8.932491,
-    "precision": "Official Comune di Genova civic-address point"
+    "precision": "Official Comune di Genova civic-address point",
+    "id": 30,
+    "record_uid": "genoa:30",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   }
 ]

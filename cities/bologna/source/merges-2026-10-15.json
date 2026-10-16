@@ -1,0 +1,90 @@
+[
+  {
+    "retained": 143,
+    "retired_ids": [
+      294
+    ],
+    "source_ids": [
+      "544",
+      "548"
+    ],
+    "building_code": "595"
+  },
+  {
+    "retained": 191,
+    "retired_ids": [
+      193
+    ],
+    "source_ids": [
+      "574",
+      "576"
+    ],
+    "building_code": "570"
+  },
+  {
+    "retained": 287,
+    "retired_ids": [
+      292
+    ],
+    "source_ids": [
+      "542",
+      "546"
+    ],
+    "building_code": "593"
+  },
+  {
+    "retained": 288,
+    "retired_ids": [
+      293
+    ],
+    "source_ids": [
+      "543",
+      "547"
+    ],
+    "building_code": "594"
+  },
+  {
+    "retained": 346,
+    "retired_ids": [
+      347
+    ],
+    "source_ids": [
+      "1219",
+      "1220"
+    ],
+    "building_code": "427"
+  },
+  {
+    "retained": 461,
+    "retired_ids": [
+      560
+    ],
+    "source_ids": [
+      "1550",
+      "1383"
+    ],
+    "building_code": "451"
+  },
+  {
+    "retained": 599,
+    "retired_ids": [
+      601
+    ],
+    "source_ids": [
+      "1079",
+      "1082"
+    ],
+    "building_code": "1119"
+  },
+  {
+    "retained": 620,
+    "retired_ids": [
+      621
+    ],
+    "source_ids": [
+      "1170",
+      "1171"
+    ],
+    "building_code": "473"
+  }
+]

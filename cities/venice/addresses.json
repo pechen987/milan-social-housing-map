@@ -11,7 +11,14 @@
     "id": 0,
     "lat": 45.483712,
     "lon": 12.202141,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:0",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Vittorino Da Feltre 2, Chirignago, Venezia",
@@ -25,7 +32,14 @@
     "id": 1,
     "lat": 45.483687,
     "lon": 12.202375,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:1",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Vittorino Da Feltre 3, Chirignago, Venezia",
@@ -39,7 +53,14 @@
     "id": 2,
     "lat": 45.483603,
     "lon": 12.202544,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:2",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Vittorino Da Feltre 4, Chirignago, Venezia",
@@ -53,7 +74,14 @@
     "id": 3,
     "lat": 45.483475,
     "lon": 12.202696,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:3",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Vittorino Da Feltre 5, Chirignago, Venezia",
@@ -67,7 +95,14 @@
     "id": 4,
     "lat": 45.483349,
     "lon": 12.202799,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:4",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Vittorino Da Feltre 6, Chirignago, Venezia",
@@ -81,7 +116,14 @@
     "id": 5,
     "lat": 45.48317,
     "lon": 12.202847,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:5",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Piazza Vittorino Da Feltre 16, Chirignago, Venezia",
@@ -95,7 +137,14 @@
     "id": 6,
     "lat": 45.483731,
     "lon": 12.202019,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:6",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Indri 6, Favaro Veneto, Venezia",
@@ -109,7 +158,14 @@
     "id": 7,
     "lat": 45.509912,
     "lon": 12.281503,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:7",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Indri 6A, Favaro Veneto, Venezia",
@@ -123,7 +179,14 @@
     "id": 8,
     "lat": 45.510126,
     "lon": 12.281507,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:8",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Indri 6B, Favaro Veneto, Venezia",
@@ -137,7 +200,14 @@
     "id": 9,
     "lat": 45.510142,
     "lon": 12.281196,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:9",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Indri 6C, Favaro Veneto, Venezia",
@@ -151,7 +221,14 @@
     "id": 10,
     "lat": 45.509716,
     "lon": 12.281363,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:10",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Passo San Boldo 33, Favaro Veneto, Venezia",
@@ -165,7 +242,14 @@
     "id": 11,
     "lat": 45.506817,
     "lon": 12.278084,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:11",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Passo San Boldo 35, Favaro Veneto, Venezia",
@@ -179,7 +263,14 @@
     "id": 12,
     "lat": 45.507165,
     "lon": 12.278394,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:12",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Passo San Boldo 37, Favaro Veneto, Venezia",
@@ -193,7 +284,14 @@
     "id": 13,
     "lat": 45.50745,
     "lon": 12.278433,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:13",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61A, Marghera, Venezia",
@@ -207,7 +305,14 @@
     "id": 14,
     "lat": 45.478916,
     "lon": 12.204367,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:14",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61B, Marghera, Venezia",
@@ -221,7 +326,14 @@
     "id": 15,
     "lat": 45.47897,
     "lon": 12.204173,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:15",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61C, Marghera, Venezia",
@@ -235,7 +347,14 @@
     "id": 16,
     "lat": 45.479002,
     "lon": 12.204488,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:16",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61D, Marghera, Venezia",
@@ -249,7 +368,14 @@
     "id": 17,
     "lat": 45.479145,
     "lon": 12.204552,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:17",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61E, Marghera, Venezia",
@@ -263,7 +389,14 @@
     "id": 18,
     "lat": 45.4791,
     "lon": 12.204924,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:18",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61F, Marghera, Venezia",
@@ -277,7 +410,14 @@
     "id": 19,
     "lat": 45.479049,
     "lon": 12.205152,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:19",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61H, Marghera, Venezia",
@@ -291,7 +431,14 @@
     "id": 20,
     "lat": 45.478963,
     "lon": 12.205444,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:20",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61I, Marghera, Venezia",
@@ -305,7 +452,14 @@
     "id": 21,
     "lat": 45.478798,
     "lon": 12.205372,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:21",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61L, Marghera, Venezia",
@@ -319,7 +473,14 @@
     "id": 22,
     "lat": 45.478674,
     "lon": 12.205234,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:22",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61M, Marghera, Venezia",
@@ -333,7 +494,14 @@
     "id": 23,
     "lat": 45.478718,
     "lon": 12.205042,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:23",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Catene 61N, Marghera, Venezia",
@@ -347,7 +515,14 @@
     "id": 24,
     "lat": 45.478765,
     "lon": 12.204833,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:24",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 17, Mestre, Venezia",
@@ -361,7 +536,14 @@
     "id": 25,
     "lat": 45.485878,
     "lon": 12.248223,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:25",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 19, Mestre, Venezia",
@@ -375,7 +557,14 @@
     "id": 26,
     "lat": 45.485842,
     "lon": 12.248198,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:26",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 21, Mestre, Venezia",
@@ -389,7 +578,14 @@
     "id": 27,
     "lat": 45.48579,
     "lon": 12.248159,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:27",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 23, Mestre, Venezia",
@@ -403,7 +599,14 @@
     "id": 28,
     "lat": 45.48575,
     "lon": 12.248132,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:28",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 25, Mestre, Venezia",
@@ -417,7 +620,14 @@
     "id": 29,
     "lat": 45.48571,
     "lon": 12.248101,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:29",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 27, Mestre, Venezia",
@@ -431,7 +641,14 @@
     "id": 30,
     "lat": 45.485674,
     "lon": 12.24806,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:30",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 29, Mestre, Venezia",
@@ -445,7 +662,14 @@
     "id": 31,
     "lat": 45.485631,
     "lon": 12.248022,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:31",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 31, Mestre, Venezia",
@@ -459,7 +683,14 @@
     "id": 32,
     "lat": 45.485585,
     "lon": 12.247986,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:32",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 33, Mestre, Venezia",
@@ -473,7 +704,14 @@
     "id": 33,
     "lat": 45.485536,
     "lon": 12.247947,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:33",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 35, Mestre, Venezia",
@@ -487,7 +725,14 @@
     "id": 34,
     "lat": 45.485498,
     "lon": 12.247916,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:34",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 37, Mestre, Venezia",
@@ -501,7 +746,14 @@
     "id": 35,
     "lat": 45.48545,
     "lon": 12.247877,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:35",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 39, Mestre, Venezia",
@@ -515,7 +767,14 @@
     "id": 36,
     "lat": 45.485402,
     "lon": 12.247834,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:36",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 41, Mestre, Venezia",
@@ -529,7 +788,14 @@
     "id": 37,
     "lat": 45.485359,
     "lon": 12.247799,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:37",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 43, Mestre, Venezia",
@@ -543,7 +809,14 @@
     "id": 38,
     "lat": 45.485317,
     "lon": 12.247766,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:38",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 45, Mestre, Venezia",
@@ -557,7 +830,14 @@
     "id": 39,
     "lat": 45.485271,
     "lon": 12.24773,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:39",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 47, Mestre, Venezia",
@@ -571,7 +851,14 @@
     "id": 40,
     "lat": 45.485225,
     "lon": 12.247694,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:40",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 49, Mestre, Venezia",
@@ -585,7 +872,14 @@
     "id": 41,
     "lat": 45.485183,
     "lon": 12.24766,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:41",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 51, Mestre, Venezia",
@@ -599,7 +893,14 @@
     "id": 42,
     "lat": 45.485148,
     "lon": 12.247625,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:42",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 53, Mestre, Venezia",
@@ -613,7 +914,14 @@
     "id": 43,
     "lat": 45.485106,
     "lon": 12.247591,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:43",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 55, Mestre, Venezia",
@@ -627,7 +935,14 @@
     "id": 44,
     "lat": 45.485065,
     "lon": 12.247565,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:44",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 57, Mestre, Venezia",
@@ -641,7 +956,14 @@
     "id": 45,
     "lat": 45.485828,
     "lon": 12.248298,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:45",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 59, Mestre, Venezia",
@@ -655,7 +977,14 @@
     "id": 46,
     "lat": 45.485779,
     "lon": 12.248263,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:46",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 61, Mestre, Venezia",
@@ -669,7 +998,14 @@
     "id": 47,
     "lat": 45.485735,
     "lon": 12.248232,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:47",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 63, Mestre, Venezia",
@@ -683,7 +1019,14 @@
     "id": 48,
     "lat": 45.485696,
     "lon": 12.248201,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:48",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 65, Mestre, Venezia",
@@ -697,7 +1040,14 @@
     "id": 49,
     "lat": 45.485645,
     "lon": 12.248167,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:49",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 67, Mestre, Venezia",
@@ -711,7 +1061,14 @@
     "id": 50,
     "lat": 45.485602,
     "lon": 12.248129,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:50",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 69, Mestre, Venezia",
@@ -725,7 +1082,14 @@
     "id": 51,
     "lat": 45.485557,
     "lon": 12.248093,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:51",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 71, Mestre, Venezia",
@@ -739,7 +1103,14 @@
     "id": 52,
     "lat": 45.485508,
     "lon": 12.248054,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:52",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 73, Mestre, Venezia",
@@ -753,7 +1124,14 @@
     "id": 53,
     "lat": 45.485469,
     "lon": 12.248023,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:53",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 75, Mestre, Venezia",
@@ -767,7 +1145,14 @@
     "id": 54,
     "lat": 45.485396,
     "lon": 12.247961,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:54",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 77, Mestre, Venezia",
@@ -781,7 +1166,14 @@
     "id": 55,
     "lat": 45.485348,
     "lon": 12.247921,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:55",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 79, Mestre, Venezia",
@@ -795,7 +1187,14 @@
     "id": 56,
     "lat": 45.485307,
     "lon": 12.247881,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:56",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 81, Mestre, Venezia",
@@ -809,7 +1208,14 @@
     "id": 57,
     "lat": 45.485264,
     "lon": 12.247849,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:57",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 83, Mestre, Venezia",
@@ -823,7 +1229,14 @@
     "id": 58,
     "lat": 45.485219,
     "lon": 12.247814,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:58",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 85, Mestre, Venezia",
@@ -837,7 +1250,14 @@
     "id": 59,
     "lat": 45.485174,
     "lon": 12.247779,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:59",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 87, Mestre, Venezia",
@@ -851,7 +1271,14 @@
     "id": 60,
     "lat": 45.485132,
     "lon": 12.247747,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:60",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 89, Mestre, Venezia",
@@ -865,7 +1292,14 @@
     "id": 61,
     "lat": 45.485095,
     "lon": 12.247712,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:61",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Altobello 91, Mestre, Venezia",
@@ -879,7 +1313,14 @@
     "id": 62,
     "lat": 45.485055,
     "lon": 12.247677,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:62",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ca' Marcello 47, Mestre, Venezia",
@@ -893,7 +1334,14 @@
     "id": 63,
     "lat": 45.481547,
     "lon": 12.241875,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:63",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ca' Marcello 49, Mestre, Venezia",
@@ -907,7 +1355,14 @@
     "id": 64,
     "lat": 45.481654,
     "lon": 12.241947,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:64",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ca' Marcello 51, Mestre, Venezia",
@@ -921,7 +1376,14 @@
     "id": 65,
     "lat": 45.481668,
     "lon": 12.242103,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:65",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ca' Marcello 53, Mestre, Venezia",
@@ -935,7 +1397,14 @@
     "id": 66,
     "lat": 45.481506,
     "lon": 12.242034,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:66",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ca' Marcello 49A, Mestre, Venezia",
@@ -949,7 +1418,14 @@
     "id": 67,
     "lat": 45.481708,
     "lon": 12.241939,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:67",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Ca' Marcello 51A, Mestre, Venezia",
@@ -963,7 +1439,14 @@
     "id": 68,
     "lat": 45.481626,
     "lon": 12.242067,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:68",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 1, Mestre, Venezia",
@@ -977,7 +1460,14 @@
     "id": 69,
     "lat": 45.488911,
     "lon": 12.268798,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:69",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 3, Mestre, Venezia",
@@ -991,7 +1481,14 @@
     "id": 70,
     "lat": 45.488633,
     "lon": 12.268764,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:70",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 5, Mestre, Venezia",
@@ -1005,7 +1502,14 @@
     "id": 71,
     "lat": 45.488738,
     "lon": 12.2693,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:71",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 7, Mestre, Venezia",
@@ -1019,7 +1523,14 @@
     "id": 72,
     "lat": 45.488523,
     "lon": 12.269277,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:72",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 9, Mestre, Venezia",
@@ -1033,7 +1544,14 @@
     "id": 73,
     "lat": 45.488571,
     "lon": 12.269283,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:73",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 11, Mestre, Venezia",
@@ -1047,7 +1565,14 @@
     "id": 74,
     "lat": 45.488623,
     "lon": 12.269284,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:74",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 13, Mestre, Venezia",
@@ -1061,7 +1586,14 @@
     "id": 75,
     "lat": 45.488843,
     "lon": 12.269311,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:75",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 15, Mestre, Venezia",
@@ -1075,7 +1607,14 @@
     "id": 76,
     "lat": 45.488907,
     "lon": 12.269316,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:76",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 17, Mestre, Venezia",
@@ -1089,7 +1628,14 @@
     "id": 77,
     "lat": 45.48896,
     "lon": 12.269325,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:77",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 29, Mestre, Venezia",
@@ -1103,7 +1649,14 @@
     "id": 78,
     "lat": 45.488341,
     "lon": 12.268732,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:78",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 31, Mestre, Venezia",
@@ -1117,7 +1670,14 @@
     "id": 79,
     "lat": 45.488044,
     "lon": 12.268705,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:79",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 33, Mestre, Venezia",
@@ -1131,7 +1691,14 @@
     "id": 80,
     "lat": 45.488166,
     "lon": 12.269239,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:80",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 35, Mestre, Venezia",
@@ -1145,7 +1712,14 @@
     "id": 81,
     "lat": 45.487951,
     "lon": 12.269216,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:81",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 37, Mestre, Venezia",
@@ -1159,7 +1733,14 @@
     "id": 82,
     "lat": 45.488,
     "lon": 12.269222,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:82",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 39, Mestre, Venezia",
@@ -1173,7 +1754,14 @@
     "id": 83,
     "lat": 45.488052,
     "lon": 12.269223,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:83",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 41, Mestre, Venezia",
@@ -1187,7 +1775,14 @@
     "id": 84,
     "lat": 45.488271,
     "lon": 12.26925,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:84",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 43, Mestre, Venezia",
@@ -1201,7 +1796,14 @@
     "id": 85,
     "lat": 45.488335,
     "lon": 12.269255,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:85",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 45, Mestre, Venezia",
@@ -1215,7 +1817,14 @@
     "id": 86,
     "lat": 45.488389,
     "lon": 12.269264,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:86",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 57, Mestre, Venezia",
@@ -1229,7 +1838,14 @@
     "id": 87,
     "lat": 45.487753,
     "lon": 12.268691,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:87",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 59, Mestre, Venezia",
@@ -1243,7 +1859,14 @@
     "id": 88,
     "lat": 45.487468,
     "lon": 12.268658,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:88",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 61, Mestre, Venezia",
@@ -1257,7 +1880,14 @@
     "id": 89,
     "lat": 45.487584,
     "lon": 12.269187,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:89",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 63, Mestre, Venezia",
@@ -1271,7 +1901,14 @@
     "id": 90,
     "lat": 45.487369,
     "lon": 12.269164,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:90",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 65, Mestre, Venezia",
@@ -1285,7 +1922,14 @@
     "id": 91,
     "lat": 45.487418,
     "lon": 12.26917,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:91",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 67, Mestre, Venezia",
@@ -1299,7 +1943,14 @@
     "id": 92,
     "lat": 45.48747,
     "lon": 12.269171,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:92",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 69, Mestre, Venezia",
@@ -1313,7 +1964,14 @@
     "id": 93,
     "lat": 45.487689,
     "lon": 12.269198,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:93",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 71, Mestre, Venezia",
@@ -1327,7 +1985,14 @@
     "id": 94,
     "lat": 45.487753,
     "lon": 12.269203,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:94",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Camporese 73, Mestre, Venezia",
@@ -1341,7 +2006,14 @@
     "id": 95,
     "lat": 45.487585,
     "lon": 12.269606,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:95",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 14, Mestre, Venezia",
@@ -1355,7 +2027,14 @@
     "id": 96,
     "lat": 45.487524,
     "lon": 12.248854,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:96",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 16, Mestre, Venezia",
@@ -1369,7 +2048,14 @@
     "id": 97,
     "lat": 45.487292,
     "lon": 12.248596,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:97",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 20, Mestre, Venezia",
@@ -1383,7 +2069,14 @@
     "id": 98,
     "lat": 45.48716,
     "lon": 12.24836,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:98",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 22, Mestre, Venezia",
@@ -1397,7 +2090,14 @@
     "id": 99,
     "lat": 45.48711,
     "lon": 12.248339,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:99",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 24, Mestre, Venezia",
@@ -1411,7 +2111,14 @@
     "id": 100,
     "lat": 45.487083,
     "lon": 12.248421,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:100",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 26, Mestre, Venezia",
@@ -1425,7 +2132,14 @@
     "id": 101,
     "lat": 45.487077,
     "lon": 12.248457,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:101",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Fornace 28, Mestre, Venezia",
@@ -1439,7 +2153,14 @@
     "id": 102,
     "lat": 45.487126,
     "lon": 12.248501,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:102",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 56, Mestre, Venezia",
@@ -1453,7 +2174,14 @@
     "id": 103,
     "lat": 45.485782,
     "lon": 12.248419,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:103",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 58, Mestre, Venezia",
@@ -1467,7 +2195,14 @@
     "id": 104,
     "lat": 45.485735,
     "lon": 12.248382,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:104",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 60, Mestre, Venezia",
@@ -1481,7 +2216,14 @@
     "id": 105,
     "lat": 45.485691,
     "lon": 12.248354,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:105",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 62, Mestre, Venezia",
@@ -1495,7 +2237,14 @@
     "id": 106,
     "lat": 45.485649,
     "lon": 12.248321,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:106",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 64, Mestre, Venezia",
@@ -1509,7 +2258,14 @@
     "id": 107,
     "lat": 45.485599,
     "lon": 12.248285,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:107",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 66, Mestre, Venezia",
@@ -1523,7 +2279,14 @@
     "id": 108,
     "lat": 45.485555,
     "lon": 12.24831,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:108",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 68, Mestre, Venezia",
@@ -1537,7 +2300,14 @@
     "id": 109,
     "lat": 45.485551,
     "lon": 12.24825,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:109",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 70, Mestre, Venezia",
@@ -1551,7 +2321,14 @@
     "id": 110,
     "lat": 45.48551,
     "lon": 12.248211,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:110",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 72, Mestre, Venezia",
@@ -1565,7 +2342,14 @@
     "id": 111,
     "lat": 45.485463,
     "lon": 12.248164,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:111",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 74, Mestre, Venezia",
@@ -1579,7 +2363,14 @@
     "id": 112,
     "lat": 45.485427,
     "lon": 12.248136,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:112",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 76, Mestre, Venezia",
@@ -1593,7 +2384,14 @@
     "id": 113,
     "lat": 45.485352,
     "lon": 12.248067,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:113",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 78, Mestre, Venezia",
@@ -1607,7 +2405,14 @@
     "id": 114,
     "lat": 45.4853,
     "lon": 12.248034,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:114",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 80, Mestre, Venezia",
@@ -1621,7 +2426,14 @@
     "id": 115,
     "lat": 45.485261,
     "lon": 12.247998,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:115",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 82, Mestre, Venezia",
@@ -1635,7 +2447,14 @@
     "id": 116,
     "lat": 45.48522,
     "lon": 12.247967,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:116",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 84, Mestre, Venezia",
@@ -1649,7 +2468,14 @@
     "id": 117,
     "lat": 45.485181,
     "lon": 12.247996,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:117",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 86, Mestre, Venezia",
@@ -1663,7 +2489,14 @@
     "id": 118,
     "lat": 45.485173,
     "lon": 12.247939,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:118",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 88, Mestre, Venezia",
@@ -1677,7 +2510,14 @@
     "id": 119,
     "lat": 45.48513,
     "lon": 12.247907,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:119",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 90, Mestre, Venezia",
@@ -1691,7 +2531,14 @@
     "id": 120,
     "lat": 45.485081,
     "lon": 12.247867,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:120",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 92, Mestre, Venezia",
@@ -1705,7 +2552,14 @@
     "id": 121,
     "lat": 45.485048,
     "lon": 12.247839,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:121",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "Via Squero 94, Mestre, Venezia",
@@ -1719,6 +2573,13 @@
     "id": 122,
     "lat": 45.485011,
     "lon": 12.247795,
-    "precision": "Comune di Venezia civic coordinate"
+    "precision": "Comune di Venezia civic coordinate",
+    "record_uid": "venice:122",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   }
 ]

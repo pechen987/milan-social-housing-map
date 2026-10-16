@@ -7,7 +7,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.552484,
     "lon": 10.313208,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 0,
+    "record_uid": "livorno:0",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "SCALI DELLE BARCHETTE 10",
@@ -17,7 +25,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.55322,
     "lon": 10.304916,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 1,
+    "record_uid": "livorno:1",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "SCALI DELLE BARCHETTE 9",
@@ -27,7 +43,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.553125,
     "lon": 10.305036,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 2,
+    "record_uid": "livorno:2",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "SCALI FINOCCHIETTI 6",
@@ -37,7 +61,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.552675,
     "lon": 10.307688,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 3,
+    "record_uid": "livorno:3",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ACHILLE GRANDI 14",
@@ -47,7 +79,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.564856,
     "lon": 10.325722,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 4,
+    "record_uid": "livorno:4",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ACHILLE GRANDI 16",
@@ -57,7 +97,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565247,
     "lon": 10.325539,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 5,
+    "record_uid": "livorno:5",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ACHILLE GRANDI 31",
@@ -67,7 +115,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565604,
     "lon": 10.325437,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 6,
+    "record_uid": "livorno:6",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ACHILLE GRANDI 8",
@@ -77,7 +133,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.564445,
     "lon": 10.325786,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 7,
+    "record_uid": "livorno:7",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ADEMOLLO 11",
@@ -87,7 +151,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.550095,
     "lon": 10.333826,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 8,
+    "record_uid": "livorno:8",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ADEMOLLO 13",
@@ -97,7 +169,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549675,
     "lon": 10.333959,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 9,
+    "record_uid": "livorno:9",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ADEMOLLO 15",
@@ -107,7 +187,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549799,
     "lon": 10.333858,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 10,
+    "record_uid": "livorno:10",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA AGNOLETTI 11",
@@ -117,7 +205,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565431,
     "lon": 10.329497,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 11,
+    "record_uid": "livorno:11",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA AGNOLETTI 13",
@@ -127,7 +223,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565431,
     "lon": 10.329497,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 12,
+    "record_uid": "livorno:12",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA AGNOLETTI 5",
@@ -137,7 +241,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565431,
     "lon": 10.329497,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 13,
+    "record_uid": "livorno:13",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA AGNOLETTI 7",
@@ -147,7 +259,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565431,
     "lon": 10.329497,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 14,
+    "record_uid": "livorno:14",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA AGNOLETTI 9",
@@ -157,7 +277,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565431,
     "lon": 10.329497,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 15,
+    "record_uid": "livorno:15",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ASPROMONTE 1",
@@ -167,7 +295,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566814,
     "lon": 10.330996,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 16,
+    "record_uid": "livorno:16",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ASPROMONTE 2",
@@ -177,7 +313,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566826,
     "lon": 10.330794,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 17,
+    "record_uid": "livorno:17",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ASPROMONTE 3",
@@ -187,7 +331,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566546,
     "lon": 10.330865,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 18,
+    "record_uid": "livorno:18",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ASPROMONTE 4",
@@ -197,7 +349,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566401,
     "lon": 10.330652,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 19,
+    "record_uid": "livorno:19",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA ASPROMONTE 5",
@@ -207,7 +367,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.56613,
     "lon": 10.330653,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 20,
+    "record_uid": "livorno:20",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 1",
@@ -217,7 +385,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.534067,
     "lon": 10.329965,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 21,
+    "record_uid": "livorno:21",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 28",
@@ -227,7 +403,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.550408,
     "lon": 10.333467,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 22,
+    "record_uid": "livorno:22",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 3",
@@ -237,7 +421,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.534173,
     "lon": 10.329835,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 23,
+    "record_uid": "livorno:23",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 30",
@@ -247,7 +439,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.550387,
     "lon": 10.332892,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 24,
+    "record_uid": "livorno:24",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 5",
@@ -257,7 +457,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.534193,
     "lon": 10.329599,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 25,
+    "record_uid": "livorno:25",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 7",
@@ -267,7 +475,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.534492,
     "lon": 10.329358,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 26,
+    "record_uid": "livorno:26",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BADALONI 9",
@@ -277,7 +493,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.534525,
     "lon": 10.329297,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 27,
+    "record_uid": "livorno:27",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 107",
@@ -287,7 +511,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548948,
     "lon": 10.33494,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 28,
+    "record_uid": "livorno:28",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 72",
@@ -297,7 +529,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.550205,
     "lon": 10.334416,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 29,
+    "record_uid": "livorno:29",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 74",
@@ -307,7 +547,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549715,
     "lon": 10.33443,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 30,
+    "record_uid": "livorno:30",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 76",
@@ -317,7 +565,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549839,
     "lon": 10.334481,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 31,
+    "record_uid": "livorno:31",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 95",
@@ -327,7 +583,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549273,
     "lon": 10.334964,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 32,
+    "record_uid": "livorno:32",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 97",
@@ -337,7 +601,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549287,
     "lon": 10.335191,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 33,
+    "record_uid": "livorno:33",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 97/A",
@@ -347,7 +619,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549169,
     "lon": 10.33524,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 34,
+    "record_uid": "livorno:34",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BENGASI 97/B",
@@ -357,7 +637,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549031,
     "lon": 10.335263,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 35,
+    "record_uid": "livorno:35",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BEZZECCA 1",
@@ -367,7 +655,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566345,
     "lon": 10.329856,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 36,
+    "record_uid": "livorno:36",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BEZZECCA 3",
@@ -377,7 +673,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566264,
     "lon": 10.330051,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 37,
+    "record_uid": "livorno:37",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BEZZECCA 7",
@@ -387,7 +691,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566173,
     "lon": 10.330382,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 38,
+    "record_uid": "livorno:38",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 15",
@@ -397,7 +709,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523853,
     "lon": 10.323565,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 39,
+    "record_uid": "livorno:39",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 17",
@@ -407,7 +727,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.52373,
     "lon": 10.323759,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 40,
+    "record_uid": "livorno:40",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 25",
@@ -417,7 +745,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523041,
     "lon": 10.324028,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 41,
+    "record_uid": "livorno:41",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 27",
@@ -427,7 +763,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522864,
     "lon": 10.323943,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 42,
+    "record_uid": "livorno:42",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 29",
@@ -437,7 +781,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.52268,
     "lon": 10.323928,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 43,
+    "record_uid": "livorno:43",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 31",
@@ -447,7 +799,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522498,
     "lon": 10.323987,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 44,
+    "record_uid": "livorno:44",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 33",
@@ -457,7 +817,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522316,
     "lon": 10.324046,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 45,
+    "record_uid": "livorno:45",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 37",
@@ -467,7 +835,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.521951,
     "lon": 10.324164,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 46,
+    "record_uid": "livorno:46",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA BIKONACKI 39",
@@ -477,7 +853,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.521769,
     "lon": 10.324223,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 47,
+    "record_uid": "livorno:47",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA CAMBINI 19",
@@ -487,7 +871,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.543244,
     "lon": 10.314524,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 48,
+    "record_uid": "livorno:48",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 16",
@@ -497,7 +889,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544541,
     "lon": 10.317849,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 49,
+    "record_uid": "livorno:49",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 18",
@@ -507,7 +907,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.5445,
     "lon": 10.317929,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 50,
+    "record_uid": "livorno:50",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 20",
@@ -517,7 +925,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544475,
     "lon": 10.317975,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 51,
+    "record_uid": "livorno:51",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 22",
@@ -527,7 +943,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544439,
     "lon": 10.31805,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 52,
+    "record_uid": "livorno:52",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 24",
@@ -537,7 +961,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544416,
     "lon": 10.318095,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 53,
+    "record_uid": "livorno:53",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 26",
@@ -547,7 +979,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544386,
     "lon": 10.318157,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 54,
+    "record_uid": "livorno:54",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 28",
@@ -557,7 +997,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544369,
     "lon": 10.318187,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 55,
+    "record_uid": "livorno:55",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 30",
@@ -567,7 +1015,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544345,
     "lon": 10.318233,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 56,
+    "record_uid": "livorno:56",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 31",
@@ -577,7 +1033,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.54447,
     "lon": 10.318215,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 57,
+    "record_uid": "livorno:57",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 32",
@@ -587,7 +1051,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544272,
     "lon": 10.318384,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 58,
+    "record_uid": "livorno:58",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 34",
@@ -597,7 +1069,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544213,
     "lon": 10.318501,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 59,
+    "record_uid": "livorno:59",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 36",
@@ -607,7 +1087,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544158,
     "lon": 10.318614,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 60,
+    "record_uid": "livorno:60",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA COSTANZA 8",
@@ -617,7 +1105,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.544739,
     "lon": 10.317445,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 61,
+    "record_uid": "livorno:61",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DE SANCTIS 1",
@@ -627,7 +1123,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.526301,
     "lon": 10.322139,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 62,
+    "record_uid": "livorno:62",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DE SANCTIS 10",
@@ -637,7 +1141,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.526153,
     "lon": 10.32185,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 63,
+    "record_uid": "livorno:63",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEGLI AMMAZZATOI 14",
@@ -647,7 +1159,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.555309,
     "lon": 10.306202,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 64,
+    "record_uid": "livorno:64",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CEDRO 5",
@@ -657,7 +1177,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558881,
     "lon": 10.311698,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 65,
+    "record_uid": "livorno:65",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 1",
@@ -667,7 +1195,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560454,
     "lon": 10.332789,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 66,
+    "record_uid": "livorno:66",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 12",
@@ -677,7 +1213,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560757,
     "lon": 10.332764,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 67,
+    "record_uid": "livorno:67",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 13",
@@ -687,7 +1231,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560741,
     "lon": 10.332634,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 68,
+    "record_uid": "livorno:68",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 15",
@@ -697,7 +1249,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560904,
     "lon": 10.332503,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 69,
+    "record_uid": "livorno:69",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 16",
@@ -707,7 +1267,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560962,
     "lon": 10.332716,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 70,
+    "record_uid": "livorno:70",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 2",
@@ -717,7 +1285,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560485,
     "lon": 10.332908,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 71,
+    "record_uid": "livorno:71",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 3",
@@ -727,7 +1303,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560541,
     "lon": 10.332745,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 72,
+    "record_uid": "livorno:72",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL CORALLO 9",
@@ -737,7 +1321,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.560647,
     "lon": 10.332684,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 73,
+    "record_uid": "livorno:73",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL VASCELLO 12",
@@ -747,7 +1339,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558432,
     "lon": 10.319409,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 74,
+    "record_uid": "livorno:74",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DEL VASCELLO 14",
@@ -757,7 +1357,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558432,
     "lon": 10.319409,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 75,
+    "record_uid": "livorno:75",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DELLA LECCIA 1",
@@ -767,7 +1375,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.529313,
     "lon": 10.343414,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 76,
+    "record_uid": "livorno:76",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DELLA LECCIA 3",
@@ -777,7 +1393,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.529512,
     "lon": 10.34333,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 77,
+    "record_uid": "livorno:77",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DELLA VECCHIA CASINA 1",
@@ -787,7 +1411,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.546964,
     "lon": 10.306483,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 78,
+    "record_uid": "livorno:78",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DELLA VENEZIA 16",
@@ -797,7 +1429,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.55369,
     "lon": 10.306029,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 79,
+    "record_uid": "livorno:79",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DELLE CAVE 17",
@@ -807,7 +1447,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.51761,
     "lon": 10.326594,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 80,
+    "record_uid": "livorno:80",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DELL`ARDENZA 137",
@@ -817,7 +1465,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.519032,
     "lon": 10.324283,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 81,
+    "record_uid": "livorno:81",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DI SALVIANO 52",
@@ -827,7 +1483,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.547072,
     "lon": 10.33059,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 82,
+    "record_uid": "livorno:82",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA DONNINI 146",
@@ -837,7 +1501,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.559247,
     "lon": 10.33372,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 83,
+    "record_uid": "livorno:83",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GEMIGNANI 11",
@@ -847,7 +1519,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.5582,
     "lon": 10.331068,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 84,
+    "record_uid": "livorno:84",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GEMIGNANI 13",
@@ -857,7 +1537,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.5582,
     "lon": 10.331068,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 85,
+    "record_uid": "livorno:85",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GEMIGNANI 15",
@@ -867,7 +1555,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.5582,
     "lon": 10.331068,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 86,
+    "record_uid": "livorno:86",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GEMIGNANI 5",
@@ -877,7 +1573,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558223,
     "lon": 10.331751,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 87,
+    "record_uid": "livorno:87",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GEMIGNANI 7",
@@ -887,7 +1591,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558223,
     "lon": 10.331751,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 88,
+    "record_uid": "livorno:88",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIOBERTI 10",
@@ -897,7 +1609,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524546,
     "lon": 10.317914,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 89,
+    "record_uid": "livorno:89",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIOBERTI 2",
@@ -907,7 +1627,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524546,
     "lon": 10.317914,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 90,
+    "record_uid": "livorno:90",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIOBERTI 4",
@@ -917,7 +1645,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524546,
     "lon": 10.317914,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 91,
+    "record_uid": "livorno:91",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIOBERTI 8",
@@ -927,7 +1663,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524546,
     "lon": 10.317914,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 92,
+    "record_uid": "livorno:92",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIOLITTI 17",
@@ -937,7 +1681,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565962,
     "lon": 10.322936,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 93,
+    "record_uid": "livorno:93",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIOLITTI 19",
@@ -947,7 +1699,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.565962,
     "lon": 10.322936,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 94,
+    "record_uid": "livorno:94",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GIORDANO BRUNO 12",
@@ -957,7 +1717,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.559395,
     "lon": 10.322589,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 95,
+    "record_uid": "livorno:95",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GUADALAJARA 27",
@@ -967,7 +1735,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.530299,
     "lon": 10.343501,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 96,
+    "record_uid": "livorno:96",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GUADALAJARA 29",
@@ -977,7 +1753,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.530299,
     "lon": 10.343501,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 97,
+    "record_uid": "livorno:97",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GUADALAJARA 31",
@@ -987,7 +1771,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.530299,
     "lon": 10.343501,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 98,
+    "record_uid": "livorno:98",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GUADALAJARA 33",
@@ -997,7 +1789,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.530299,
     "lon": 10.343501,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 99,
+    "record_uid": "livorno:99",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA GUADALAJARA 35",
@@ -1007,7 +1807,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.530456,
     "lon": 10.34419,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 100,
+    "record_uid": "livorno:100",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MACHIAVELLI 104",
@@ -1017,7 +1825,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524543,
     "lon": 10.324811,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 101,
+    "record_uid": "livorno:101",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MACHIAVELLI 61",
@@ -1027,7 +1843,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.525272,
     "lon": 10.325123,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 102,
+    "record_uid": "livorno:102",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MACHIAVELLI 94",
@@ -1037,7 +1861,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524412,
     "lon": 10.324227,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 103,
+    "record_uid": "livorno:103",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MACHIAVELLI 96",
@@ -1047,7 +1879,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524438,
     "lon": 10.324344,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 104,
+    "record_uid": "livorno:104",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MACHIAVELLI 98",
@@ -1057,7 +1897,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524464,
     "lon": 10.324461,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 105,
+    "record_uid": "livorno:105",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MARCHIANI 2",
@@ -1067,7 +1915,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566339,
     "lon": 10.329186,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 106,
+    "record_uid": "livorno:106",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MARCHIANI 4",
@@ -1077,7 +1933,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566377,
     "lon": 10.329043,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 107,
+    "record_uid": "livorno:107",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MEDAGLIE D`ORO 10",
@@ -1087,7 +1951,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.535968,
     "lon": 10.320082,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 108,
+    "record_uid": "livorno:108",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MEDAGLIE D`ORO 8",
@@ -1097,7 +1969,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.536117,
     "lon": 10.319984,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 109,
+    "record_uid": "livorno:109",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MURATORI 11",
@@ -1107,7 +1987,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522786,
     "lon": 10.325842,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 110,
+    "record_uid": "livorno:110",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MURATORI 13",
@@ -1117,7 +2005,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522877,
     "lon": 10.326271,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 111,
+    "record_uid": "livorno:111",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA MURATORI 35",
@@ -1127,7 +2023,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522982,
     "lon": 10.326832,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 112,
+    "record_uid": "livorno:112",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA PASSAPONTI 27",
@@ -1137,7 +2041,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.559132,
     "lon": 10.320895,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 113,
+    "record_uid": "livorno:113",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA PIAVE 22",
@@ -1147,7 +2059,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549621,
     "lon": 10.308039,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 114,
+    "record_uid": "livorno:114",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA PIAVE 28",
@@ -1157,7 +2077,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.549092,
     "lon": 10.308385,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 115,
+    "record_uid": "livorno:115",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA PICCIONI 13",
@@ -1167,7 +2095,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.538997,
     "lon": 10.338076,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 116,
+    "record_uid": "livorno:116",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA PICCIONI 5",
@@ -1177,7 +2113,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.538216,
     "lon": 10.338324,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 117,
+    "record_uid": "livorno:117",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA PUCCINI 1",
@@ -1187,7 +2131,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.457873,
     "lon": 10.369221,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 118,
+    "record_uid": "livorno:118",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SAN FRANCESCO 24",
@@ -1197,7 +2149,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548929,
     "lon": 10.306216,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 119,
+    "record_uid": "livorno:119",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 1",
@@ -1207,7 +2167,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522569,
     "lon": 10.325511,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 120,
+    "record_uid": "livorno:120",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 10",
@@ -1217,7 +2185,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523161,
     "lon": 10.325754,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 121,
+    "record_uid": "livorno:121",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 11",
@@ -1227,7 +2203,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.52348,
     "lon": 10.325146,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 122,
+    "record_uid": "livorno:122",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 16",
@@ -1237,7 +2221,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523468,
     "lon": 10.325635,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 123,
+    "record_uid": "livorno:123",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 18",
@@ -1247,7 +2239,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.52357,
     "lon": 10.325595,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 124,
+    "record_uid": "livorno:124",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 2",
@@ -1257,7 +2257,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523088,
     "lon": 10.326263,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 125,
+    "record_uid": "livorno:125",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 32",
@@ -1267,7 +2275,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524023,
     "lon": 10.325677,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 126,
+    "record_uid": "livorno:126",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 34",
@@ -1277,7 +2293,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524226,
     "lon": 10.325595,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 127,
+    "record_uid": "livorno:127",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 36",
@@ -1287,7 +2311,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.52443,
     "lon": 10.325513,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 128,
+    "record_uid": "livorno:128",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 4",
@@ -1297,7 +2329,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523329,
     "lon": 10.32622,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 129,
+    "record_uid": "livorno:129",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 40",
@@ -1307,7 +2347,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.524838,
     "lon": 10.325349,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 130,
+    "record_uid": "livorno:130",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 5",
@@ -1317,7 +2365,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522933,
     "lon": 10.325365,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 131,
+    "record_uid": "livorno:131",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 6",
@@ -1327,7 +2383,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523572,
     "lon": 10.326116,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 132,
+    "record_uid": "livorno:132",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA SETTEMBRINI 8",
@@ -1337,7 +2401,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.523815,
     "lon": 10.326011,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 133,
+    "record_uid": "livorno:133",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA TOMMASI 60",
@@ -1347,7 +2419,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.522566,
     "lon": 10.321919,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 134,
+    "record_uid": "livorno:134",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA TOSCANA 70",
@@ -1357,7 +2437,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.536968,
     "lon": 10.329275,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 135,
+    "record_uid": "livorno:135",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA TRIPOLI 37",
@@ -1367,7 +2455,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.552692,
     "lon": 10.330616,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 136,
+    "record_uid": "livorno:136",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA TRIPOLI 39",
@@ -1377,7 +2473,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.552707,
     "lon": 10.330958,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 137,
+    "record_uid": "livorno:137",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA TRIPOLI 41",
@@ -1387,7 +2491,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.552757,
     "lon": 10.332072,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 138,
+    "record_uid": "livorno:138",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VALENTI 1",
@@ -1397,7 +2509,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566014,
     "lon": 10.328772,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 139,
+    "record_uid": "livorno:139",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VALENTI 3",
@@ -1407,7 +2527,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.566121,
     "lon": 10.328391,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 140,
+    "record_uid": "livorno:140",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VALENTI 5",
@@ -1417,7 +2545,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.56628,
     "lon": 10.328443,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 141,
+    "record_uid": "livorno:141",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VILLA GLORI 10",
@@ -1427,7 +2563,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.559044,
     "lon": 10.319644,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 142,
+    "record_uid": "livorno:142",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VILLA GLORI 4",
@@ -1437,7 +2581,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558708,
     "lon": 10.319302,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 143,
+    "record_uid": "livorno:143",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VILLA GLORI 6",
@@ -1447,7 +2599,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.55882,
     "lon": 10.319416,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 144,
+    "record_uid": "livorno:144",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VILLA GLORI 8",
@@ -1457,7 +2617,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.558932,
     "lon": 10.31953,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 145,
+    "record_uid": "livorno:145",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VINCENZO GIOBERTI 14",
@@ -1467,7 +2635,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.525142,
     "lon": 10.318158,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 146,
+    "record_uid": "livorno:146",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIA VINCENZO GIOBERTI 16",
@@ -1477,7 +2653,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.525493,
     "lon": 10.318625,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 147,
+    "record_uid": "livorno:147",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE ALFIERI 85",
@@ -1487,7 +2671,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548955,
     "lon": 10.327795,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 148,
+    "record_uid": "livorno:148",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE ALFIERI 87",
@@ -1497,7 +2689,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548946,
     "lon": 10.327795,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 149,
+    "record_uid": "livorno:149",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE ALFIERI 89",
@@ -1507,7 +2707,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548937,
     "lon": 10.327796,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 150,
+    "record_uid": "livorno:150",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE CARDUCCI 142",
@@ -1517,7 +2725,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.553584,
     "lon": 10.331104,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 151,
+    "record_uid": "livorno:151",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE CARDUCCI 144",
@@ -1527,7 +2743,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.553594,
     "lon": 10.331226,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 152,
+    "record_uid": "livorno:152",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE CARDUCCI 150",
@@ -1537,7 +2761,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.553619,
     "lon": 10.331544,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 153,
+    "record_uid": "livorno:153",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE CARDUCCI 152",
@@ -1547,7 +2779,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.553625,
     "lon": 10.331624,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 154,
+    "record_uid": "livorno:154",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE MAMELI 62",
@@ -1557,7 +2797,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.53905,
     "lon": 10.317724,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 155,
+    "record_uid": "livorno:155",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE MAMELI 98",
@@ -1567,7 +2815,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.539798,
     "lon": 10.320272,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 156,
+    "record_uid": "livorno:156",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE V. ALFIERI 81",
@@ -1577,7 +2833,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548972,
     "lon": 10.327793,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 157,
+    "record_uid": "livorno:157",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE V. ALFIERI 83",
@@ -1587,7 +2851,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548963,
     "lon": 10.327794,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 158,
+    "record_uid": "livorno:158",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE V. ALFIERI 91",
@@ -1597,7 +2869,15 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548928,
     "lon": 10.327797,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 159,
+    "record_uid": "livorno:159",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   },
   {
     "address": "VIALE V. ALFIERI 93",
@@ -1607,6 +2887,14 @@
     "note": "One marker represents one or more units at this civic address in the December 2025 inventory.",
     "lat": 43.548705,
     "lon": 10.327817,
-    "precision": "Geocoded address (OpenStreetMap)"
+    "precision": "Geocoded address (OpenStreetMap)",
+    "id": 160,
+    "record_uid": "livorno:160",
+    "entity_type": "address",
+    "verification_status": "legacy_review_required",
+    "tenure_scope": "unknown",
+    "source_as_of": null,
+    "coordinate_method": "address_point",
+    "methodology_version": 1
   }
 ]
