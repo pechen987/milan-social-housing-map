@@ -19,6 +19,7 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: python tools/audit_data.py --base "$BASE_SHA"
+      - run: pip install shapely==2.2.0
       - run: python -m unittest discover -s tools -p 'test_*.py'
       - uses: actions/setup-node@v4
         with:
