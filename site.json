@@ -103,10 +103,10 @@
       "name": "Bologna",
       "country": "Italy",
       "center": [
-        44.5014,
-        11.3505
+        44.5009,
+        11.3469
       ],
-      "count": 622,
+      "count": 582,
       "status": "research"
     },
     {

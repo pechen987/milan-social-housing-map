@@ -1891,45 +1891,16 @@
       "street_level_records": []
     },
     "bologna": {
-      "records": 622,
-      "verified_buildings": 536,
-      "legacy_review_required": 86,
+      "records": 582,
+      "verified_buildings": 576,
+      "legacy_review_required": 6,
       "entity_types": {
-        "building": 622
+        "building": 582
       },
       "coordinate_methods": {
-        "footprint_centroid": 622
+        "footprint_point": 582
       },
-      "coincident_coordinate_groups": [
-        [
-          "bologna:25",
-          "bologna:331"
-        ],
-        [
-          "bologna:99",
-          "bologna:287"
-        ],
-        [
-          "bologna:100",
-          "bologna:288"
-        ],
-        [
-          "bologna:101",
-          "bologna:143"
-        ],
-        [
-          "bologna:178",
-          "bologna:481"
-        ],
-        [
-          "bologna:270",
-          "bologna:480"
-        ],
-        [
-          "bologna:435",
-          "bologna:436"
-        ]
-      ],
+      "coincident_coordinate_groups": [],
       "repeated_address_groups": [],
       "street_level_records": []
     },

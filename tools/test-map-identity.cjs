@@ -13,7 +13,7 @@ for (const row of rows) {
   assert.equal(context.BY_ID.get(row.id).id, row.id);
   for (const alias of row.legacy_ids || []) assert.equal(context.BY_ID.get(alias).id, row.id);
 }
-assert.equal(context.DATA.length, 622);
-assert.equal(context.DATA.filter(r=>r.verification_status === 'source_verified').length, 536);
+assert.equal(context.DATA.length, 582);
+assert.equal(context.DATA.filter(r=>r.verification_status === 'source_verified').length, 576);
 assert.equal(JSON.parse(fs.readFileSync('cities/turin/addresses.json')).length, 1);
 console.log('Building records, duplicate aliases and single-building Turin import verified.');

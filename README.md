@@ -57,7 +57,7 @@ All cities use the same fields; unknown values must remain unknown.
 | `building_ref` | Stable, namespaced building identity; required for verified buildings. Never an apartment count. |
 | `source`, `source_record_id`, `page`, `original` | Traceable housing evidence, with the source key linked in the city config. |
 | `source_as_of`, `reviewed_on`, `verification_note` | Evidence date (nullable), actual verification date and how identity was checked. Source dates must not be invented. |
-| `coordinate_method`, `coordinate_source`, `precision` | Machine-readable method, evidence URL and human-readable positional limitation. Legacy programme/asset/street points are explicitly distinguished. |
+| `coordinate_method`, `coordinate_source`, `precision` | `footprint_point` means a point checked inside a source footprint; it is not necessarily a centroid or entrance. Also supports `footprint_centroid` and matched `address_point`. Store evidence URL and human-readable positional limitation. Legacy programme/asset/street points are explicitly distinguished. |
 | `tenure_scope` | `unknown`, `all_social_reported` or `mixed_reported`. Public ownership alone does not establish tenure share. |
 | `homes` | Optional sourced social-dwelling count and date in the evidence; never used as a cluster weight or building count. |
 | `manager`, `area`, `district` | Provider and administrative context. Unknown district assignments remain blank until matched to official boundaries. |

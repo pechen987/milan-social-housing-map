@@ -15,7 +15,7 @@ Repeated coordinates/addresses are review candidates, not automatic duplicates. 
 | turin | 1 | 1 | 0 | 0 | 0 |
 | palermo | 0 | 0 | 0 | 0 | 0 |
 | genoa | 31 | 0 | 31 | 0 | 0 |
-| bologna | 622 | 536 | 86 | 7 | 0 |
+| bologna | 582 | 576 | 6 | 0 | 0 |
 | florence | 8 | 0 | 8 | 0 | 0 |
 | bari | 0 | 0 | 0 | 0 | 0 |
 | catania | 0 | 0 | 0 | 0 | 0 |

@@ -1,0 +1,1711 @@
+{
+  "decisions": [
+    {
+      "building_code": "311",
+      "source_ids": [
+        "1396",
+        "1797"
+      ],
+      "previous_ids": [
+        25,
+        331
+      ],
+      "minimum_overlap_fraction": 0.999704385815813,
+      "decision": "merge",
+      "retained_id": 25
+    },
+    {
+      "building_code": "577",
+      "source_ids": [
+        "583",
+        "595"
+      ],
+      "previous_ids": [
+        68,
+        199
+      ],
+      "minimum_overlap_fraction": 0.8944684327420257,
+      "decision": "merge",
+      "retained_id": 68
+    },
+    {
+      "building_code": "578",
+      "source_ids": [
+        "584",
+        "596"
+      ],
+      "previous_ids": [
+        69,
+        200
+      ],
+      "minimum_overlap_fraction": 0.8574424411248994,
+      "decision": "merge",
+      "retained_id": 69
+    },
+    {
+      "building_code": "579",
+      "source_ids": [
+        "585",
+        "597"
+      ],
+      "previous_ids": [
+        70,
+        201
+      ],
+      "minimum_overlap_fraction": 0.8639685254136373,
+      "decision": "merge",
+      "retained_id": 70
+    },
+    {
+      "building_code": "580",
+      "source_ids": [
+        "586",
+        "598"
+      ],
+      "previous_ids": [
+        71,
+        202
+      ],
+      "minimum_overlap_fraction": 0.8580242104644131,
+      "decision": "merge",
+      "retained_id": 71
+    },
+    {
+      "building_code": "584",
+      "source_ids": [
+        "590",
+        "601"
+      ],
+      "previous_ids": [
+        72,
+        203
+      ],
+      "minimum_overlap_fraction": 0.7862970511400525,
+      "decision": "merge",
+      "retained_id": 72
+    },
+    {
+      "building_code": "565",
+      "source_ids": [
+        "570",
+        "602"
+      ],
+      "previous_ids": [
+        73,
+        187
+      ],
+      "minimum_overlap_fraction": 0.8573753293641488,
+      "decision": "merge",
+      "retained_id": 73
+    },
+    {
+      "building_code": "566",
+      "source_ids": [
+        "571",
+        "603"
+      ],
+      "previous_ids": [
+        74,
+        188
+      ],
+      "minimum_overlap_fraction": 0.8490018416418939,
+      "decision": "merge",
+      "retained_id": 74
+    },
+    {
+      "building_code": "567",
+      "source_ids": [
+        "572",
+        "604"
+      ],
+      "previous_ids": [
+        75,
+        189
+      ],
+      "minimum_overlap_fraction": 0.8423693615207825,
+      "decision": "merge",
+      "retained_id": 75
+    },
+    {
+      "building_code": "568",
+      "source_ids": [
+        "573",
+        "605"
+      ],
+      "previous_ids": [
+        76,
+        190
+      ],
+      "minimum_overlap_fraction": 0.8719819617951093,
+      "decision": "merge",
+      "retained_id": 76
+    },
+    {
+      "building_code": "569",
+      "source_ids": [
+        "575",
+        "606"
+      ],
+      "previous_ids": [
+        77,
+        192
+      ],
+      "minimum_overlap_fraction": 0.8568269516775079,
+      "decision": "merge",
+      "retained_id": 77
+    },
+    {
+      "building_code": "586",
+      "source_ids": [
+        "592",
+        "608"
+      ],
+      "previous_ids": [
+        79,
+        204
+      ],
+      "minimum_overlap_fraction": 0.843856202374212,
+      "decision": "merge",
+      "retained_id": 79
+    },
+    {
+      "building_code": "570",
+      "source_ids": [
+        "574",
+        "576",
+        "609"
+      ],
+      "previous_ids": [
+        80,
+        191
+      ],
+      "minimum_overlap_fraction": 0.7671633420310033,
+      "decision": "merge",
+      "retained_id": 80
+    },
+    {
+      "building_code": "571",
+      "source_ids": [
+        "577",
+        "610"
+      ],
+      "previous_ids": [
+        81,
+        194
+      ],
+      "minimum_overlap_fraction": 0.8635413590825043,
+      "decision": "merge",
+      "retained_id": 81
+    },
+    {
+      "building_code": "564",
+      "source_ids": [
+        "569",
+        "611"
+      ],
+      "previous_ids": [
+        82,
+        186
+      ],
+      "minimum_overlap_fraction": 0.8692764625273313,
+      "decision": "merge",
+      "retained_id": 82
+    },
+    {
+      "building_code": "563",
+      "source_ids": [
+        "568",
+        "612"
+      ],
+      "previous_ids": [
+        83,
+        185
+      ],
+      "minimum_overlap_fraction": 0.8609232892292762,
+      "decision": "merge",
+      "retained_id": 83
+    },
+    {
+      "building_code": "562",
+      "source_ids": [
+        "567",
+        "613"
+      ],
+      "previous_ids": [
+        84,
+        184
+      ],
+      "minimum_overlap_fraction": 0.8138948858237912,
+      "decision": "merge",
+      "retained_id": 84
+    },
+    {
+      "building_code": "587",
+      "source_ids": [
+        "593",
+        "614"
+      ],
+      "previous_ids": [
+        85,
+        205
+      ],
+      "minimum_overlap_fraction": 0.8296532710038527,
+      "decision": "merge",
+      "retained_id": 85
+    },
+    {
+      "building_code": "572",
+      "source_ids": [
+        "578",
+        "615"
+      ],
+      "previous_ids": [
+        86,
+        195
+      ],
+      "minimum_overlap_fraction": 0.8551356803800995,
+      "decision": "merge",
+      "retained_id": 86
+    },
+    {
+      "building_code": "573",
+      "source_ids": [
+        "579",
+        "616"
+      ],
+      "previous_ids": [
+        87,
+        196
+      ],
+      "minimum_overlap_fraction": 0.8374949098229097,
+      "decision": "merge",
+      "retained_id": 87
+    },
+    {
+      "building_code": "574",
+      "source_ids": [
+        "580",
+        "617"
+      ],
+      "previous_ids": [
+        88,
+        197
+      ],
+      "minimum_overlap_fraction": 0.907068804545783,
+      "decision": "merge",
+      "retained_id": 88
+    },
+    {
+      "building_code": "575",
+      "source_ids": [
+        "581",
+        "618"
+      ],
+      "previous_ids": [
+        89,
+        198
+      ],
+      "minimum_overlap_fraction": 0.8434845204805659,
+      "decision": "merge",
+      "retained_id": 89
+    },
+    {
+      "building_code": "605",
+      "source_ids": [
+        "557",
+        "620"
+      ],
+      "previous_ids": [
+        90,
+        297
+      ],
+      "minimum_overlap_fraction": 0.8402533356011909,
+      "decision": "merge",
+      "retained_id": 90
+    },
+    {
+      "building_code": "606",
+      "source_ids": [
+        "558",
+        "621"
+      ],
+      "previous_ids": [
+        91,
+        298
+      ],
+      "minimum_overlap_fraction": 0.797166800290496,
+      "decision": "merge",
+      "retained_id": 91
+    },
+    {
+      "building_code": "607",
+      "source_ids": [
+        "559",
+        "622"
+      ],
+      "previous_ids": [
+        92,
+        299
+      ],
+      "minimum_overlap_fraction": 0.77300180118612,
+      "decision": "merge",
+      "retained_id": 92
+    },
+    {
+      "building_code": "608",
+      "source_ids": [
+        "560",
+        "623"
+      ],
+      "previous_ids": [
+        93,
+        300
+      ],
+      "minimum_overlap_fraction": 0.8411976154586389,
+      "decision": "merge",
+      "retained_id": 93
+    },
+    {
+      "building_code": "609",
+      "source_ids": [
+        "561",
+        "624"
+      ],
+      "previous_ids": [
+        94,
+        301
+      ],
+      "minimum_overlap_fraction": 0.8675789656700024,
+      "decision": "merge",
+      "retained_id": 94
+    },
+    {
+      "building_code": "610",
+      "source_ids": [
+        "562",
+        "625"
+      ],
+      "previous_ids": [
+        95,
+        302
+      ],
+      "minimum_overlap_fraction": 0.8390726693128622,
+      "decision": "merge",
+      "retained_id": 95
+    },
+    {
+      "building_code": "611",
+      "source_ids": [
+        "563",
+        "626"
+      ],
+      "previous_ids": [
+        96,
+        303
+      ],
+      "minimum_overlap_fraction": 0.8568027486262036,
+      "decision": "merge",
+      "retained_id": 96
+    },
+    {
+      "building_code": "613",
+      "source_ids": [
+        "565",
+        "628"
+      ],
+      "previous_ids": [
+        97,
+        305
+      ],
+      "minimum_overlap_fraction": 0.8582510721715729,
+      "decision": "merge",
+      "retained_id": 97
+    },
+    {
+      "building_code": "614",
+      "source_ids": [
+        "566",
+        "629"
+      ],
+      "previous_ids": [
+        98,
+        306
+      ],
+      "minimum_overlap_fraction": 0.8711676294451935,
+      "decision": "merge",
+      "retained_id": 98
+    },
+    {
+      "building_code": "593",
+      "source_ids": [
+        "542",
+        "546",
+        "636"
+      ],
+      "previous_ids": [
+        99,
+        287
+      ],
+      "minimum_overlap_fraction": 0.9999999999999999,
+      "decision": "merge",
+      "retained_id": 99
+    },
+    {
+      "building_code": "594",
+      "source_ids": [
+        "543",
+        "547",
+        "637"
+      ],
+      "previous_ids": [
+        100,
+        288
+      ],
+      "minimum_overlap_fraction": 0.9999999999999997,
+      "decision": "merge",
+      "retained_id": 100
+    },
+    {
+      "building_code": "595",
+      "source_ids": [
+        "544",
+        "548",
+        "638"
+      ],
+      "previous_ids": [
+        101,
+        143
+      ],
+      "minimum_overlap_fraction": 0.999999999999999,
+      "decision": "merge",
+      "retained_id": 101
+    },
+    {
+      "building_code": "597",
+      "source_ids": [
+        "550",
+        "640"
+      ],
+      "previous_ids": [
+        102,
+        296
+      ],
+      "minimum_overlap_fraction": 0.8266528007588406,
+      "decision": "merge",
+      "retained_id": 102
+    },
+    {
+      "building_code": "598",
+      "source_ids": [
+        "549",
+        "641"
+      ],
+      "previous_ids": [
+        103,
+        295
+      ],
+      "minimum_overlap_fraction": 0.8443356435178037,
+      "decision": "merge",
+      "retained_id": 103
+    },
+    {
+      "building_code": "318",
+      "source_ids": [
+        "1062",
+        "1065"
+      ],
+      "previous_ids": [
+        150,
+        152
+      ],
+      "minimum_overlap_fraction": 0.38782644408492606,
+      "decision": "retain_unresolved",
+      "retained_id": null
+    },
+    {
+      "building_code": "320",
+      "source_ids": [
+        "1064",
+        "1067"
+      ],
+      "previous_ids": [
+        151,
+        154
+      ],
+      "minimum_overlap_fraction": 0.49012184254171476,
+      "decision": "retain_unresolved",
+      "retained_id": null
+    },
+    {
+      "building_code": "1314",
+      "source_ids": [
+        "530",
+        "1625"
+      ],
+      "previous_ids": [
+        178,
+        481
+      ],
+      "minimum_overlap_fraction": 0.999797682306888,
+      "decision": "merge",
+      "retained_id": 178
+    },
+    {
+      "building_code": "1282",
+      "source_ids": [
+        "531",
+        "1626"
+      ],
+      "previous_ids": [
+        182,
+        482
+      ],
+      "minimum_overlap_fraction": 0.4466214753145246,
+      "decision": "retain_unresolved",
+      "retained_id": null
+    },
+    {
+      "building_code": "1301",
+      "source_ids": [
+        "515",
+        "1624"
+      ],
+      "previous_ids": [
+        270,
+        480
+      ],
+      "minimum_overlap_fraction": 0.9998289040033502,
+      "decision": "merge",
+      "retained_id": 270
+    },
+    {
+      "building_code": "1736",
+      "source_ids": [
+        "1528",
+        "1529"
+      ],
+      "previous_ids": [
+        435,
+        436
+      ],
+      "minimum_overlap_fraction": 0.9442870722274918,
+      "decision": "merge",
+      "retained_id": 435
+    },
+    {
+      "building_code": "1636",
+      "source_ids": [
+        "1638",
+        "1640"
+      ],
+      "previous_ids": [
+        487,
+        508
+      ],
+      "minimum_overlap_fraction": 0.9542261136710755,
+      "decision": "merge",
+      "retained_id": 487
+    }
+  ],
+  "relocated_markers": [
+    {
+      "id": 20,
+      "source_record_id": "1791",
+      "before": [
+        11.373072,
+        44.494816
+      ],
+      "after": [
+        11.372776345739297,
+        44.4948062073525
+      ]
+    },
+    {
+      "id": 21,
+      "source_record_id": "1792",
+      "before": [
+        11.373543,
+        44.494745
+      ],
+      "after": [
+        11.373713529967556,
+        44.4947482774396
+      ]
+    },
+    {
+      "id": 22,
+      "source_record_id": "1793",
+      "before": [
+        11.366449,
+        44.494734
+      ],
+      "after": [
+        11.36599306724304,
+        44.494774838152054
+      ]
+    },
+    {
+      "id": 23,
+      "source_record_id": "1794",
+      "before": [
+        11.366391,
+        44.49522
+      ],
+      "after": [
+        11.366837785293157,
+        44.49518313601568
+      ]
+    },
+    {
+      "id": 24,
+      "source_record_id": "1795",
+      "before": [
+        11.324987,
+        44.518706
+      ],
+      "after": [
+        11.324849441907107,
+        44.51863903277064
+      ]
+    },
+    {
+      "id": 39,
+      "source_record_id": "1776",
+      "before": [
+        11.355792,
+        44.548094
+      ],
+      "after": [
+        11.355691424381298,
+        44.5480916475745
+      ]
+    },
+    {
+      "id": 57,
+      "source_record_id": "1972",
+      "before": [
+        11.343102,
+        44.512299
+      ],
+      "after": [
+        11.343140066236167,
+        44.51218582526588
+      ]
+    },
+    {
+      "id": 58,
+      "source_record_id": "1973",
+      "before": [
+        11.342932,
+        44.511776
+      ],
+      "after": [
+        11.343027723612103,
+        44.51183882403329
+      ]
+    },
+    {
+      "id": 62,
+      "source_record_id": "449",
+      "before": [
+        11.332367,
+        44.490727
+      ],
+      "after": [
+        11.332440016280497,
+        44.49070679328494
+      ]
+    },
+    {
+      "id": 105,
+      "source_record_id": "680",
+      "before": [
+        11.340369,
+        44.50035
+      ],
+      "after": [
+        11.340438951958301,
+        44.50033764355938
+      ]
+    },
+    {
+      "id": 106,
+      "source_record_id": "681",
+      "before": [
+        11.34021,
+        44.500373
+      ],
+      "after": [
+        11.340147346651083,
+        44.500387661713255
+      ]
+    },
+    {
+      "id": 120,
+      "source_record_id": "698",
+      "before": [
+        11.341513,
+        44.499312
+      ],
+      "after": [
+        11.341625153357969,
+        44.499282842593956
+      ]
+    },
+    {
+      "id": 124,
+      "source_record_id": "711",
+      "before": [
+        11.342091,
+        44.487408
+      ],
+      "after": [
+        11.342056637206717,
+        44.48732972009959
+      ]
+    },
+    {
+      "id": 131,
+      "source_record_id": "745",
+      "before": [
+        11.287623,
+        44.497975
+      ],
+      "after": [
+        11.287727792418725,
+        44.497958119509875
+      ]
+    },
+    {
+      "id": 141,
+      "source_record_id": "750",
+      "before": [
+        11.28265,
+        44.492539
+      ],
+      "after": [
+        11.282781422563502,
+        44.49256119548258
+      ]
+    },
+    {
+      "id": 158,
+      "source_record_id": "920",
+      "before": [
+        11.316009,
+        44.526612
+      ],
+      "after": [
+        11.315854398803896,
+        44.52661537906668
+      ]
+    },
+    {
+      "id": 179,
+      "source_record_id": "53",
+      "before": [
+        11.350534,
+        44.442699
+      ],
+      "after": [
+        11.350328325459419,
+        44.442691615228114
+      ]
+    },
+    {
+      "id": 206,
+      "source_record_id": "736",
+      "before": [
+        11.288298,
+        44.49595
+      ],
+      "after": [
+        11.28818154155351,
+        44.49594498325362
+      ]
+    },
+    {
+      "id": 211,
+      "source_record_id": "3",
+      "before": [
+        11.23318,
+        44.532529
+      ],
+      "after": [
+        11.233210531597031,
+        44.532508847652515
+      ]
+    },
+    {
+      "id": 216,
+      "source_record_id": "173",
+      "before": [
+        11.316184,
+        44.532643
+      ],
+      "after": [
+        11.316368514018635,
+        44.532642687613745
+      ]
+    },
+    {
+      "id": 219,
+      "source_record_id": "303",
+      "before": [
+        11.342816,
+        44.487565
+      ],
+      "after": [
+        11.342827613018995,
+        44.487668204861144
+      ]
+    },
+    {
+      "id": 221,
+      "source_record_id": "312",
+      "before": [
+        11.342955,
+        44.486963
+      ],
+      "after": [
+        11.343052065068703,
+        44.486973892914506
+      ]
+    },
+    {
+      "id": 226,
+      "source_record_id": "174",
+      "before": [
+        11.315676,
+        44.533002
+      ],
+      "after": [
+        11.315546750154738,
+        44.53300243881401
+      ]
+    },
+    {
+      "id": 227,
+      "source_record_id": "175",
+      "before": [
+        11.315579,
+        44.532772
+      ],
+      "after": [
+        11.315708390501083,
+        44.53277185957042
+      ]
+    },
+    {
+      "id": 228,
+      "source_record_id": "176",
+      "before": [
+        11.316281,
+        44.532874
+      ],
+      "after": [
+        11.316465314458704,
+        44.532873534121485
+      ]
+    },
+    {
+      "id": 229,
+      "source_record_id": "177",
+      "before": [
+        11.316,
+        44.533781
+      ],
+      "after": [
+        11.315871081949897,
+        44.5337810028018
+      ]
+    },
+    {
+      "id": 235,
+      "source_record_id": "257",
+      "before": [
+        11.341596,
+        44.486913
+      ],
+      "after": [
+        11.341580340587432,
+        44.48688217609079
+      ]
+    },
+    {
+      "id": 241,
+      "source_record_id": "265",
+      "before": [
+        11.340847,
+        44.487223
+      ],
+      "after": [
+        11.34086997170012,
+        44.48725687021464
+      ]
+    },
+    {
+      "id": 243,
+      "source_record_id": "267",
+      "before": [
+        11.341516,
+        44.487118
+      ],
+      "after": [
+        11.341526369333138,
+        44.4871526968922
+      ]
+    },
+    {
+      "id": 248,
+      "source_record_id": "272",
+      "before": [
+        11.341841,
+        44.487109
+      ],
+      "after": [
+        11.341881385961376,
+        44.48718546753466
+      ]
+    },
+    {
+      "id": 251,
+      "source_record_id": "180",
+      "before": [
+        11.315903,
+        44.53355
+      ],
+      "after": [
+        11.316032372444125,
+        44.53355076145827
+      ]
+    },
+    {
+      "id": 252,
+      "source_record_id": "181",
+      "before": [
+        11.316508,
+        44.533422
+      ],
+      "after": [
+        11.316692472142956,
+        44.53342157877945
+      ]
+    },
+    {
+      "id": 254,
+      "source_record_id": "183",
+      "before": [
+        11.316605,
+        44.533652
+      ],
+      "after": [
+        11.316789425485336,
+        44.53365202929946
+      ]
+    },
+    {
+      "id": 262,
+      "source_record_id": "397",
+      "before": [
+        11.354968,
+        44.495207
+      ],
+      "after": [
+        11.355142792533432,
+        44.495151936128536
+      ]
+    },
+    {
+      "id": 270,
+      "source_record_id": "515",
+      "before": [
+        11.395184,
+        44.509804
+      ],
+      "after": [
+        11.395254733458604,
+        44.509832360559535
+      ]
+    },
+    {
+      "id": 271,
+      "source_record_id": "516",
+      "before": [
+        11.398469,
+        44.509567
+      ],
+      "after": [
+        11.397885041757098,
+        44.509580511300285
+      ]
+    },
+    {
+      "id": 276,
+      "source_record_id": "459",
+      "before": [
+        11.333027,
+        44.492077
+      ],
+      "after": [
+        11.332944926071594,
+        44.492064508222136
+      ]
+    },
+    {
+      "id": 277,
+      "source_record_id": "460",
+      "before": [
+        11.33284,
+        44.491655
+      ],
+      "after": [
+        11.332942397879203,
+        44.49163944555997
+      ]
+    },
+    {
+      "id": 278,
+      "source_record_id": "461",
+      "before": [
+        11.333616,
+        44.493342
+      ],
+      "after": [
+        11.333409276579845,
+        44.49332509816812
+      ]
+    },
+    {
+      "id": 283,
+      "source_record_id": "501",
+      "before": [
+        11.398016,
+        44.493674
+      ],
+      "after": [
+        11.398096944692979,
+        44.49367361561119
+      ]
+    },
+    {
+      "id": 284,
+      "source_record_id": "502",
+      "before": [
+        11.397519,
+        44.493831
+      ],
+      "after": [
+        11.39760114852865,
+        44.49383104454401
+      ]
+    },
+    {
+      "id": 285,
+      "source_record_id": "503",
+      "before": [
+        11.396734,
+        44.492569
+      ],
+      "after": [
+        11.396816518307478,
+        44.49256885278603
+      ]
+    },
+    {
+      "id": 286,
+      "source_record_id": "504",
+      "before": [
+        11.397231,
+        44.49241
+      ],
+      "after": [
+        11.397311824045381,
+        44.49240988653815
+      ]
+    },
+    {
+      "id": 307,
+      "source_record_id": "647",
+      "before": [
+        11.331126,
+        44.496555
+      ],
+      "after": [
+        11.331229031296958,
+        44.496547113738615
+      ]
+    },
+    {
+      "id": 323,
+      "source_record_id": "442",
+      "before": [
+        11.332364,
+        44.491035
+      ],
+      "after": [
+        11.332572177226172,
+        44.49100948313421
+      ]
+    },
+    {
+      "id": 329,
+      "source_record_id": "1369",
+      "before": [
+        11.283192,
+        44.491875
+      ],
+      "after": [
+        11.283247953788168,
+        44.49182757779862
+      ]
+    },
+    {
+      "id": 332,
+      "source_record_id": "1282",
+      "before": [
+        11.312665,
+        44.491601
+      ],
+      "after": [
+        11.312538082898573,
+        44.49153053413397
+      ]
+    },
+    {
+      "id": 333,
+      "source_record_id": "1280",
+      "before": [
+        11.312786,
+        44.492878
+      ],
+      "after": [
+        11.312973454940277,
+        44.49287030402154
+      ]
+    },
+    {
+      "id": 345,
+      "source_record_id": "1262",
+      "before": [
+        11.374688,
+        44.501133
+      ],
+      "after": [
+        11.374509988124524,
+        44.50114688186547
+      ]
+    },
+    {
+      "id": 352,
+      "source_record_id": "1574",
+      "before": [
+        11.289011,
+        44.499536
+      ],
+      "after": [
+        11.288984049556682,
+        44.49957967064517
+      ]
+    },
+    {
+      "id": 361,
+      "source_record_id": "1595",
+      "before": [
+        11.342467,
+        44.510288
+      ],
+      "after": [
+        11.342626555180704,
+        44.51021332941656
+      ]
+    },
+    {
+      "id": 365,
+      "source_record_id": "1599",
+      "before": [
+        11.359422,
+        44.502996
+      ],
+      "after": [
+        11.359337032415551,
+        44.503021793113405
+      ]
+    },
+    {
+      "id": 366,
+      "source_record_id": "1600",
+      "before": [
+        11.359519,
+        44.502903
+      ],
+      "after": [
+        11.35960343716567,
+        44.50287436810626
+      ]
+    },
+    {
+      "id": 369,
+      "source_record_id": "1606",
+      "before": [
+        11.364078,
+        44.495874
+      ],
+      "after": [
+        11.364165880641021,
+        44.49581173434631
+      ]
+    },
+    {
+      "id": 370,
+      "source_record_id": "1607",
+      "before": [
+        11.365972,
+        44.501138
+      ],
+      "after": [
+        11.366081216053258,
+        44.501122171397306
+      ]
+    },
+    {
+      "id": 383,
+      "source_record_id": "1548",
+      "before": [
+        11.284389,
+        44.492181
+      ],
+      "after": [
+        11.284461725731799,
+        44.4921253667398
+      ]
+    },
+    {
+      "id": 392,
+      "source_record_id": "1542",
+      "before": [
+        11.283431,
+        44.496538
+      ],
+      "after": [
+        11.283117578862573,
+        44.49655249334059
+      ]
+    },
+    {
+      "id": 411,
+      "source_record_id": "1897",
+      "before": [
+        11.342523,
+        44.511905
+      ],
+      "after": [
+        11.342468834852443,
+        44.51199654059353
+      ]
+    },
+    {
+      "id": 415,
+      "source_record_id": "1714",
+      "before": [
+        11.395862,
+        44.479006
+      ],
+      "after": [
+        11.395981938621691,
+        44.47927920715006
+      ]
+    },
+    {
+      "id": 416,
+      "source_record_id": "1715",
+      "before": [
+        11.375105,
+        44.504301
+      ],
+      "after": [
+        11.375196275463265,
+        44.50427927853589
+      ]
+    },
+    {
+      "id": 420,
+      "source_record_id": "1822",
+      "before": [
+        11.29406,
+        44.494558
+      ],
+      "after": [
+        11.293911244253653,
+        44.49453404584923
+      ]
+    },
+    {
+      "id": 422,
+      "source_record_id": "1467",
+      "before": [
+        11.344076,
+        44.509517
+      ],
+      "after": [
+        11.344383797095265,
+        44.5095172873754
+      ]
+    },
+    {
+      "id": 425,
+      "source_record_id": "1470",
+      "before": [
+        11.364967,
+        44.494843
+      ],
+      "after": [
+        11.365576872318927,
+        44.49487196003919
+      ]
+    },
+    {
+      "id": 428,
+      "source_record_id": "1502",
+      "before": [
+        11.364624,
+        44.502133
+      ],
+      "after": [
+        11.3647012155154,
+        44.50222432795865
+      ]
+    },
+    {
+      "id": 437,
+      "source_record_id": "1530",
+      "before": [
+        11.285089,
+        44.492361
+      ],
+      "after": [
+        11.28516387646762,
+        44.49233703015116
+      ]
+    },
+    {
+      "id": 451,
+      "source_record_id": "1445",
+      "before": [
+        11.330073,
+        44.502987
+      ],
+      "after": [
+        11.330456466355535,
+        44.50303395461853
+      ]
+    },
+    {
+      "id": 455,
+      "source_record_id": "1491",
+      "before": [
+        11.362753,
+        44.502499
+      ],
+      "after": [
+        11.362653130787063,
+        44.50254043259953
+      ]
+    },
+    {
+      "id": 471,
+      "source_record_id": "1563",
+      "before": [
+        11.287802,
+        44.495009
+      ],
+      "after": [
+        11.287902648067979,
+        44.49498255663958
+      ]
+    },
+    {
+      "id": 479,
+      "source_record_id": "1344",
+      "before": [
+        11.307824,
+        44.501142
+      ],
+      "after": [
+        11.307729734172687,
+        44.501082389234256
+      ]
+    },
+    {
+      "id": 484,
+      "source_record_id": "1628",
+      "before": [
+        11.330987,
+        44.505496
+      ],
+      "after": [
+        11.331044462373098,
+        44.505646470541755
+      ]
+    },
+    {
+      "id": 485,
+      "source_record_id": "1635",
+      "before": [
+        11.3985,
+        44.510937
+      ],
+      "after": [
+        11.39747759941654,
+        44.510923918932406
+      ]
+    },
+    {
+      "id": 488,
+      "source_record_id": "1651",
+      "before": [
+        11.329098,
+        44.503158
+      ],
+      "after": [
+        11.329463429770353,
+        44.503181343725814
+      ]
+    },
+    {
+      "id": 490,
+      "source_record_id": "1655",
+      "before": [
+        11.394572,
+        44.513901
+      ],
+      "after": [
+        11.39508055872344,
+        44.513645861366214
+      ]
+    },
+    {
+      "id": 499,
+      "source_record_id": "1382",
+      "before": [
+        11.337283,
+        44.500297
+      ],
+      "after": [
+        11.337062965515962,
+        44.5003513317469
+      ]
+    },
+    {
+      "id": 504,
+      "source_record_id": "1629",
+      "before": [
+        11.395618,
+        44.508914
+      ],
+      "after": [
+        11.395764303625185,
+        44.50889423223783
+      ]
+    },
+    {
+      "id": 505,
+      "source_record_id": "1632",
+      "before": [
+        11.395198,
+        44.509065
+      ],
+      "after": [
+        11.394888874844213,
+        44.50902525014736
+      ]
+    },
+    {
+      "id": 509,
+      "source_record_id": "1642",
+      "before": [
+        11.383637,
+        44.472248
+      ],
+      "after": [
+        11.384080525792044,
+        44.47226702955841
+      ]
+    },
+    {
+      "id": 510,
+      "source_record_id": "1643",
+      "before": [
+        11.384594,
+        44.469874
+      ],
+      "after": [
+        11.384098108231244,
+        44.469873335157615
+      ]
+    },
+    {
+      "id": 511,
+      "source_record_id": "1644",
+      "before": [
+        11.382685,
+        44.471064
+      ],
+      "after": [
+        11.383100075195676,
+        44.4710640064217
+      ]
+    },
+    {
+      "id": 519,
+      "source_record_id": "1671",
+      "before": [
+        11.374187,
+        44.480325
+      ],
+      "after": [
+        11.37415387282472,
+        44.48027674682666
+      ]
+    },
+    {
+      "id": 520,
+      "source_record_id": "1688",
+      "before": [
+        11.366159,
+        44.493924
+      ],
+      "after": [
+        11.36603885700409,
+        44.493926242170986
+      ]
+    },
+    {
+      "id": 521,
+      "source_record_id": "1689",
+      "before": [
+        11.366476,
+        44.493999
+      ],
+      "after": [
+        11.36654156286728,
+        44.49399665477074
+      ]
+    },
+    {
+      "id": 522,
+      "source_record_id": "1690",
+      "before": [
+        11.366984,
+        44.494237
+      ],
+      "after": [
+        11.366935208323117,
+        44.49419329788572
+      ]
+    },
+    {
+      "id": 540,
+      "source_record_id": "1487",
+      "before": [
+        11.368482,
+        44.464028
+      ],
+      "after": [
+        11.368558376471128,
+        44.46403197691936
+      ]
+    },
+    {
+      "id": 562,
+      "source_record_id": "1447",
+      "before": [
+        11.297278,
+        44.509991
+      ],
+      "after": [
+        11.297608862129607,
+        44.509999650503346
+      ]
+    },
+    {
+      "id": 571,
+      "source_record_id": "1466",
+      "before": [
+        11.343172,
+        44.51016
+      ],
+      "after": [
+        11.342997582204546,
+        44.510168709989706
+      ]
+    },
+    {
+      "id": 579,
+      "source_record_id": "922",
+      "before": [
+        11.316192,
+        44.525899
+      ],
+      "after": [
+        11.316296010458503,
+        44.52590541225235
+      ]
+    },
+    {
+      "id": 602,
+      "source_record_id": "1050",
+      "before": [
+        11.364812,
+        44.489247
+      ],
+      "after": [
+        11.364524786818226,
+        44.489079349932524
+      ]
+    },
+    {
+      "id": 604,
+      "source_record_id": "1094",
+      "before": [
+        11.370097,
+        44.473432
+      ],
+      "after": [
+        11.370001064706717,
+        44.47344802314251
+      ]
+    },
+    {
+      "id": 617,
+      "source_record_id": "1248",
+      "before": [
+        11.36705,
+        44.502714
+      ],
+      "after": [
+        11.366784970202122,
+        44.50272751812521
+      ]
+    },
+    {
+      "id": 626,
+      "source_record_id": "1324",
+      "before": [
+        11.318582,
+        44.523823
+      ],
+      "after": [
+        11.318664147646249,
+        44.523826550878084
+      ]
+    }
+  ],
+  "reviewed_on": "2026-10-16",
+  "source_url": "https://sit-test-mappe.comune.bologna.it/arcgis/rest/services/ACER/EDIFICI_PATRIMONIO_ALLOGGI_ACER/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+  "source_sha256": "d956b4c626e245c79017549ae4fe95d879f9004ec17c04debcf1979d17bb2862",
+  "input_sha256": "3ce7945d6184f9d8a937f531e14d2680ec4d19641f01d0f62b04014e64c147b7",
+  "previous_records": 622,
+  "published_records": 582,
+  "verified_buildings": 576
+}

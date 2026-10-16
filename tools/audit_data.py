@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TYPES = {'building', 'address', 'programme', 'property_asset'}
-METHODS = {'footprint_centroid', 'address_point', 'street_point', 'programme_point', 'asset_point'}
+METHODS = {'footprint_centroid', 'footprint_point', 'address_point', 'street_point', 'programme_point', 'asset_point'}
 
 def audit(root=ROOT):
     report = {'methodology_version': 1, 'cities': {}, 'errors': []}
@@ -41,7 +41,7 @@ def audit(root=ROOT):
                 for field in ['building_ref', 'source_record_id', 'reviewed_on', 'verification_note', 'coordinate_source']:
                     if not row.get(field): fail(f'verified building requires {field}')
                 if row.get('entity_type') != 'building': fail('verified entity must be a building')
-                if row.get('coordinate_method') not in {'footprint_centroid', 'address_point'}: fail('building needs footprint or matched entrance position')
+                if row.get('coordinate_method') not in {'footprint_centroid', 'footprint_point', 'address_point'}: fail('building needs footprint or matched entrance position')
             coords[(row['lat'], row['lon'])].append(uid)
             addresses[' '.join(row['address'].casefold().split())].append(uid)
             if row.get('building_ref'): refs[row['building_ref']].append(uid)
